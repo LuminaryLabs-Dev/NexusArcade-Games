@@ -1,0 +1,18 @@
+{
+  "schema": "nexus-arcade-prototype-composition/1",
+  "title": "Arboria: Planet of Roots",
+  "domainPath": "n:arcade:arboria",
+  "seed": 76123,
+  "session": { "durationSeconds": 300, "startEnergy": 120, "startingTerritory": 3 },
+  "domains": [
+    { "id": "world", "owns": ["642 spherical cells", "land/water", "adjacency", "restoration"] },
+    { "id": "territory", "owns": ["claimed cells", "adjacent claim rule"], "claimCost": 15 },
+    { "id": "resource", "owns": ["Sun Energy", "earn/spend"] },
+    { "id": "vegetation", "owns": ["tree instances", "species", "growth", "hydration", "energy yield"] },
+    { "id": "weather", "owns": ["rain active state", "rain timer"], "rainCost": 50, "rainSeconds": 18 },
+    { "id": "restoration", "owns": ["cell restoration effects", "derived vitality"] },
+    { "id": "objectives", "owns": ["six missions", "mission rewards", "mastery"] },
+    { "id": "session", "owns": ["mode", "timer", "score", "result", "records"] }
+  ],
+  "presentation": { "renderer": "Canvas2D", "authority": "snapshot-only", "externalRuntimeDependencies": [] }
+}
