@@ -95,11 +95,18 @@ async function evaluate(sessionId, expression) {
 }
 async function waitFor(sessionId, expression, timeoutMs = 15000) {
   const deadline = Date.now() + timeoutMs;
+  let lastError = null;
   while (Date.now() < deadline) {
-    if (await evaluate(sessionId, `Boolean(${expression})`)) return;
+    try {
+      if (await evaluate(sessionId, `Boolean(${expression})`)) return;
+      lastError = null;
+    } catch (error) {
+      // Navigation can briefly replace the execution context before the new page is evaluable.
+      lastError = error;
+    }
     await delay(150);
   }
-  throw new Error(`Condition did not become true: ${expression}`);
+  throw new Error(`Condition did not become true: ${expression}${lastError ? ` (last evaluation: ${lastError.message})` : ''}`);
 }
 async function screenshot(sessionId, filename) {
   const { data } = await call('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false }, sessionId);
@@ -118,9 +125,10 @@ async function scenario(name, pathname, ready, action, assertion, timeoutMs = 15
   listeners.add(capture);
   try {
     await Promise.all([call('Page.enable', {}, sessionId), call('Runtime.enable', {}, sessionId), call('Log.enable', {}, sessionId)]);
-    const loaded = event('Page.loadEventFired', sessionId, timeoutMs);
     await call('Page.navigate', { url: `http://127.0.0.1:${port}/${pathname}` }, sessionId);
-    await loaded;
+    // Prove the game's own readiness instead of blocking on the browser load event.
+    // Some games intentionally use pinned network runtime dependencies that can keep
+    // Page.loadEventFired pending even after the game has successfully booted.
     await waitFor(sessionId, ready, timeoutMs);
     if (action) await evaluate(sessionId, action);
     await waitFor(sessionId, assertion, timeoutMs);
