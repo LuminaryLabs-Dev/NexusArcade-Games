@@ -28,8 +28,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 6756,
-      "sha256": "19dc23382ad997f01bc24ebc62b348cff37fda3a7660702771ecf642c8473e53"
+      "bytes": 6026,
+      "sha256": "0b6861aa049ba86e129e2fa3d9dfcee18f044f48defd1f21e6c5c4cd98b758a6"
+    },
+    {
+      "path": "opening.css",
+      "bytes": 1174,
+      "sha256": "7e1911e36f1377e39a7cd7fc97dab982a6149a6914220ad1b746c8531a813765"
     },
     {
       "path": "src/audio.mjs",
@@ -38,8 +43,8 @@
     },
     {
       "path": "src/director.mjs",
-      "bytes": 6090,
-      "sha256": "e9c4822443adf24d47c9e4bc37310f876c052ff82d686b4bd97bccc99da90614"
+      "bytes": 6328,
+      "sha256": "5057c834e6db9b907021edd6c4fa76173c499441ea9f17ca5ad38cc981e102bb"
     },
     {
       "path": "src/elevator.mjs",
@@ -53,23 +58,23 @@
     },
     {
       "path": "src/game.mjs",
-      "bytes": 5790,
-      "sha256": "0f8bda4886c7da33d41170516a13edd47640501e5001f1a6fc5056dbdadb56d7"
+      "bytes": 5930,
+      "sha256": "e8aab4ad97194717d4595ff8b3abee72f74aafb75b271e5d1645b3b844194acd"
     },
     {
       "path": "src/input.mjs",
-      "bytes": 4904,
-      "sha256": "e7984801701f123d0843b203306b0f1ba448928251ba9515c60d507687f7c2d6"
+      "bytes": 5611,
+      "sha256": "1ce831c9137c430614a24e39eba89cc4656895a2ceb686bad2660c65441a5e5c"
     },
     {
       "path": "src/main.mjs",
-      "bytes": 6960,
-      "sha256": "5bfb0c5c79d98f6ff5eaf71c5473cb405d276ca050e82ae06c2e69011693e719"
+      "bytes": 10043,
+      "sha256": "c0a284632a540ec2541f7b790289d18b753c991b03fcbc2814fa14d231d11001"
     },
     {
       "path": "src/scene.mjs",
-      "bytes": 27435,
-      "sha256": "42f68c45cf105c87775a81979e6b0284bb7013e990524dd5046e611b24643339"
+      "bytes": 31838,
+      "sha256": "5fa2583ec527622c526c11ee6482e3a861a079ca063123ee7c8fa512d161197b"
     },
     {
       "path": "src/storage.mjs",
@@ -78,8 +83,8 @@
     },
     {
       "path": "src/ui.mjs",
-      "bytes": 8657,
-      "sha256": "5221aa7b8d322255bd2138ac0d4bbc1b4f935717f650055e411580f3f1e986e0"
+      "bytes": 8737,
+      "sha256": "7556f39232f8b3ab68313adcfc2bb1b83e729749b4f58a968067cc34d6736bea"
     },
     {
       "path": "styles.css",
