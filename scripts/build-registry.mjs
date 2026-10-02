@@ -8,33 +8,29 @@ import { assertPublishablePath, fileRecord, hashDirectory } from "./hash-game-fi
 
 const exec = promisify(execFile);
 const ROOT = process.cwd();
-const REGISTRY_VERSION = "0.1.0";
-const LOCAL_REPOSITORY = "LuminaryLabs-Dev/NexusArcade-Prototypes";
-const EXCLUDED_LOCAL = new Set(["game.json", "game.ref.json", "index.parts.json"]);
+const REGISTRY_VERSION = "0.2.0";
+const LOCAL_REPOSITORY = "LuminaryLabs-Dev/NexusArcade-Games";
 
 async function json(relative) {
   return JSON.parse(await readFile(path.join(ROOT, relative), "utf8"));
 }
-
 async function gitBytes(ref, file) {
   const { stdout } = await exec("git", ["show", `${ref}:${file}`], { cwd: ROOT, encoding: "buffer", maxBuffer: 100 * 1024 * 1024 });
   return stdout;
 }
-
+async function gitExists(ref, file) {
+  try { await exec("git", ["cat-file", "-e", `${ref}:${file}`], { cwd: ROOT }); return true; }
+  catch { return false; }
+}
 async function localFiles(sourceRef, slug) {
-  const prefix = `prototypes/${slug}/`;
+  const prefix = `games/${slug}/build/`;
   const { stdout } = await exec("git", ["ls-tree", "-r", "--name-only", sourceRef, "--", prefix], { cwd: ROOT, maxBuffer: 20 * 1024 * 1024 });
-  const paths = stdout.trim().split("\n").filter(Boolean).map((file) => file.slice(prefix.length)).filter((relative) => {
-    if (EXCLUDED_LOCAL.has(relative)) return false;
-    if (relative.startsWith(".parts/")) return false;
-    return true;
-  }).sort((a, b) => a.localeCompare(b));
+  const paths = stdout.trim().split("\n").filter(Boolean).map((file) => file.slice(prefix.length)).sort((a, b) => a.localeCompare(b));
   return Promise.all(paths.map(async (relative) => {
     assertPublishablePath(relative);
     return fileRecord(relative, await gitBytes(sourceRef, `${prefix}${relative}`));
   }));
 }
-
 function thumbnailUrl(source, thumbnail) {
   if (!thumbnail) return undefined;
   return `https://cdn.jsdelivr.net/gh/${source.repository}@${source.ref}/${source.basePath}/${thumbnail}`;
@@ -45,26 +41,28 @@ async function build() {
   const registryLock = await json("registry/ref-lock.json");
   if (!/^[a-f0-9]{40}$/.test(lock.localSourceRef || "")) throw new Error("registry/source-lock.json requires localSourceRef as a full commit SHA");
   if (!/^(?:registry-v\d+\.\d+\.\d+|[a-f0-9]{40})$/.test(registryLock.ref || "")) throw new Error("registry/ref-lock.json requires an immutable tag or full commit SHA");
-  const entries = (await readdir(path.join(ROOT, "prototypes"), { withFileTypes: true }))
+  const entries = (await readdir(path.join(ROOT, "games"), { withFileTypes: true }))
     .filter((entry) => entry.isDirectory() && !entry.name.startsWith("_") && !entry.name.startsWith("."))
     .sort((a, b) => a.name.localeCompare(b.name));
   const games = [];
   const manifests = new Map();
   for (const entry of entries) {
     const slug = entry.name;
-    const localPath = `prototypes/${slug}/game.json`;
-    let metadata;
+    const metadata = await json(`games/${slug}/install/game.json`);
+    if (metadata.registryPending === true) continue;
     let source;
     let files;
-    try {
-      metadata = await json(localPath);
-      source = { repository: LOCAL_REPOSITORY, ref: lock.localSourceRef, basePath: `prototypes/${slug}` };
-      files = await localFiles(lock.localSourceRef, slug);
-    } catch (error) {
-      if (error.code !== "ENOENT") throw error;
-      metadata = await json(`prototypes/${slug}/game.ref.json`);
+    if (metadata.source && typeof metadata.source === "object") {
       source = { repository: metadata.source.repository, ref: metadata.source.ref, basePath: metadata.source.deployPath };
-      files = await hashDirectory(path.join(ROOT, "_site", "games", slug));
+      files = await hashDirectory(path.join(ROOT, "_site", "games", slug), (relative) => !metadata.source.publishPaths?.length || metadata.source.publishPaths.some((allowed) => relative === allowed || relative.startsWith(`${allowed}/`)));
+    } else {
+      const buildPath = `games/${slug}/build`;
+      if (!(await gitExists(lock.localSourceRef, buildPath))) {
+        console.log(`registry pending: ${metadata.id} ${slug} has no build at ${lock.localSourceRef}`);
+        continue;
+      }
+      source = { repository: LOCAL_REPOSITORY, ref: lock.localSourceRef, basePath: buildPath };
+      files = await localFiles(lock.localSourceRef, slug);
     }
     const manifest = buildGameManifest({ metadata, source, files });
     manifests.set(metadata.id, manifest);
@@ -73,7 +71,7 @@ async function build() {
       slug,
       title: metadata.title,
       description: metadata.description || "",
-      genre: metadata.genre || "Prototype",
+      genre: metadata.genre || "Arcade",
       version: metadata.version,
       status: metadata.status || "prototype",
       featured: metadata.featured === true,
@@ -95,7 +93,13 @@ async function serialize(output) {
   const records = new Map([
     ["registry/latest.json", output.latest],
     ["registry/index.json", output.index],
-    ...[...output.manifests].map(([id, manifest]) => [`registry/games/${id}.json`, manifest]),
+    ...[...output.manifests].flatMap(([id, manifest]) => {
+      const game = output.index.games.find((entry) => entry.id === id);
+      return [
+        [`registry/games/${id}.json`, manifest],
+        [`games/${game.slug}/install/manifest.json`, manifest],
+      ];
+    }),
   ]);
   return new Map([...records].map(([file, value]) => [file, `${JSON.stringify(value, null, 2)}\n`]));
 }
@@ -106,10 +110,13 @@ if (process.argv.includes("--check")) {
     const actual = await readFile(path.join(ROOT, file), "utf8");
     if (actual !== expected) throw new Error(`${file} is stale; run npm run build:registry`);
   }
-  console.log(`registry is deterministic and current (${output.size - 2} games)`);
+  console.log(`registry is deterministic and current (${(output.size - 2) / 2} games)`);
 } else {
   await mkdir(path.join(ROOT, "registry", "games"), { recursive: true });
-  for (const [file, contents] of output) await writeFile(path.join(ROOT, file), contents);
+  for (const [file, contents] of output) {
+    await mkdir(path.dirname(path.join(ROOT, file)), { recursive: true });
+    await writeFile(path.join(ROOT, file), contents);
+  }
   const digest = createHash("sha256").update([...output.values()].join("\n")).digest("hex");
-  console.log(`built ${output.size - 2} game manifests (registry digest ${digest})`);
+  console.log(`built ${(output.size - 2) / 2} game manifests (registry digest ${digest})`);
 }

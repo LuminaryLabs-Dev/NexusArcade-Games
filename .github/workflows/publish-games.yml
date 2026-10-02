@@ -1,0 +1,94 @@
+name: Publish NexusArcade games
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      wrong_floor_full_review:
+        description: Run Wrong Floor's five-minute browser acceptance review
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nexusarcade-games-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Validate game contracts and JavaScript
+        run: npm test
+
+      - name: Build game catalog
+        env:
+          NEXUS_ARCADE_REPO_TOKEN: ${{ secrets.NEXUS_ARCADE_REPO_TOKEN }}
+        run: node scripts/build-site.mjs
+
+      - name: Verify external publish allowlists
+        run: |
+          test ! -e _site/games/the-long-haul/tests
+          test ! -e _site/games/the-long-haul/package.json
+          test -f _site/games/the-long-haul/src/app/bootstrap.mjs
+
+      - name: Open every game in Chrome
+        env:
+          KNOCKOUT_REVIEW_DIR: ${{ contains(github.event.head_commit.message, '[record-gameplay]') && '_review/knockout-circuit' || '' }}
+          WRONG_FLOOR_REVIEW: ${{ github.event_name == 'workflow_dispatch' && inputs.wrong_floor_full_review && '1' || '0' }}
+          WRONG_FLOOR_REVIEW_DIR: ${{ github.event_name == 'workflow_dispatch' && inputs.wrong_floor_full_review && '_review/wrong-floor' || '' }}
+          WRONG_FLOOR_FULL_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.wrong_floor_full_review && '1' || '0' }}
+        run: node tests/browser-smoke.mjs
+
+      - name: Upload gameplay review evidence
+        if: always() && contains(github.event.head_commit.message, '[record-gameplay]')
+        uses: actions/upload-artifact@v4
+        with:
+          name: knockout-circuit-60s-review
+          path: _review/knockout-circuit
+          if-no-files-found: error
+
+      - name: Upload Wrong Floor review evidence
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.wrong_floor_full_review
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrong-floor-review
+          path: _review/wrong-floor
+          if-no-files-found: warn
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createGame } from '../prototypes/wrong-floor/src/game.mjs';
-import { createSchedule, validateSchedule, ENCOUNTERS } from '../prototypes/wrong-floor/src/director.mjs';
-import { ElevatorDoors } from '../prototypes/wrong-floor/src/elevator.mjs';
-import { loadSave, writeSave, recordResult, sanitizeSave, SAVE_KEY } from '../prototypes/wrong-floor/src/storage.mjs';
+import { createGame } from '../games/wrong-floor/source/src/game.mjs';
+import { createSchedule, validateSchedule, ENCOUNTERS } from '../games/wrong-floor/source/src/director.mjs';
+import { ElevatorDoors } from '../games/wrong-floor/source/src/elevator.mjs';
+import { loadSave, writeSave, recordResult, sanitizeSave, SAVE_KEY } from '../games/wrong-floor/source/src/storage.mjs';
 
 function play(game, dt = 1 / 60, strategy = snapshot => snapshot.round.danger && snapshot.clueVisible && snapshot.roundTime >= snapshot.round.clueAt + 0.1) {
   let iterations = 0;

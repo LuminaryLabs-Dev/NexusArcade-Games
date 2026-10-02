@@ -1,107 +1,93 @@
-# NexusArcade Prototypes
+# NexusArcade Games
 
-A launchable prototype library for NexusArcade games.
+Authoritative source, runnable builds, install metadata, registry data, and public catalog inputs for NexusArcade games.
 
-## Installation registry
+## Repository contract
 
-The public installer contract lives under `registry/`. `registry/latest.json` is the only moving pointer; it selects an immutable release commit (or `registry-v*` tag) containing the sorted master index and one integrity manifest per permanent game ID.
-
-Game files are installed through jsDelivr from full 40-character commit SHAs. The registry records every file's exact byte length and SHA-256 digest. Run `npm test` to rebuild the Pages output, validate IDs and verify each manifest against its immutable source bytes.
-
-To prepare a registry release after changing game files:
-
-1. Commit the game/source changes.
-2. Put that commit SHA in `registry/source-lock.json`.
-3. Run `npm run build:registry` and commit the generated registry.
-4. Put that immutable registry commit SHA (or release tag) in `registry/ref-lock.json`, regenerate, and commit the moving pointer.
-
-Permanent IDs are never reassigned. Catalog display order remains independent through `featured` and `sortOrder`.
-
-## Deployment states
-
-A game can exist in one of two states.
-
-### 1. Local prototype
-
-The complete prototype lives in this repository:
+Every game lives at:
 
 ```text
-prototypes/<game-slug>/
-  index.html
-  game.json
-  ...public assets
+games/<slug>/
+├── source/      # developer/agent-owned source
+├── build/       # browser-runnable files; immutable install source after commit
+└── install/
+    ├── game.json
+    └── manifest.json   # generated once the game is registered
 ```
 
-Every local prototype must contain `game.json` and either `index.html` or `index.parts.json`. Multipart HTML is reassembled into a normal public `index.html` during the build; it is only a repository-storage option for large single-file games.
+`source/` is where humans and agents edit the game. `build/` is the CDN-addressable runtime payload. `install/game.json` is the authoritative game metadata. `install/manifest.json` mirrors the immutable registry manifest for registered games.
 
-### 2. Promoted / referenced game
+The old `prototypes/` layout is retired. Permanent `NXA-######` IDs are preserved.
 
-After a game is promoted into its own repository, its source becomes independent. NexusArcade-Prototypes keeps only a deployment reference:
+## File-by-file installation
+
+NexusArcade does not need a ZIP. Registered manifests list every installable file with:
 
 ```text
-prototypes/<game-slug>/
-  game.ref.json
+path
+bytes
+sha256
 ```
 
-Example:
-
-```json
-{
-  "title": "Rift Runner",
-  "slug": "rift-runner",
-  "description": "High-speed arcade shooter.",
-  "genre": "Arcade Shooter",
-  "status": "promoted",
-  "version": "1.0.0",
-  "controls": ["WASD", "Mouse"],
-  "source": {
-    "repository": "LuminaryLabs-Dev/NexusArcade-RiftRunner",
-    "ref": "0123456789abcdef0123456789abcdef01234567",
-    "deployPath": "dist",
-    "publishPaths": ["index.html", "assets"]
-  }
-}
-```
-
-`ref` must be a full commit SHA so an unrelated upstream push cannot change an Arcade deployment. `deployPath` is the public directory in the standalone repository and must contain `index.html`. Optional `publishPaths` is an allowlist relative to that directory; when present it must include `index.html` and prevents tests, package metadata, and other repository files from being published.
-
-## Private repositories
-
-The Pages build can read referenced private repositories through the optional repository secret:
+Each local game's manifest points to an immutable commit:
 
 ```text
-NEXUS_ARCADE_REPO_TOKEN
+repository: LuminaryLabs-Dev/NexusArcade-Games
+ref: <40-character commit SHA>
+basePath: games/<slug>/build
 ```
 
-Use a read-only credential scoped only to the game repositories the library must deploy. The token is used only inside the GitHub Actions build and is never written into `_site`.
+The NexusArcade installer turns those fields into jsDelivr URLs, downloads each file separately, verifies its size and SHA-256 digest, and only then commits the installation.
 
-The build rejects secret-like files inside a deployment directory, including `.env*` files (except `.env.example`), private keys, certificates, credential files, and `.npmrc`/`.pypirc`.
+## Editing a game
 
-Runtime secrets must never be included in a browser game. If a public game needs a secret while running, it must call a backend that owns that secret.
+1. Edit `games/<slug>/source/`.
+2. Run `npm run sync:builds` to refresh local `build/` folders.
+3. Run `npm test`.
+4. Commit the source/build change.
+5. Put that immutable commit SHA in `registry/source-lock.json`.
+6. Run `npm run build:site` and `npm run build:registry`.
+7. Commit the generated registry + `install/manifest.json` files.
+8. Put that registry commit SHA in `registry/ref-lock.json`, rebuild the registry pointer, and commit.
 
-## Publish flow
+This two-stage promotion prevents an unrelated push from changing installed bytes.
+
+## External/reference games
+
+A game may keep source in another repository. Its `install/game.json` contains a `source` object with an immutable commit SHA, deploy path, and optional publish allowlist. CI materializes that build for Pages and hashes the exact published files into the install manifest.
+
+## Registry
 
 ```text
-push to main
-   ↓
-resolve local prototypes + referenced repositories
-   ↓
-validate public deployment contents
-   ↓
-build catalog.json + copy games to _site
-   ↓
-open every built game in headless Chrome
-   ↓
-GitHub Pages
+registry/
+├── latest.json
+├── index.json
+├── source-lock.json
+├── ref-lock.json
+└── games/
+    └── NXA-######.json
 ```
 
-The public library is the Pages root. Each game launches at:
+`registry/latest.json` is the moving pointer. It selects an immutable registry commit. The registry and each game's `install/manifest.json` carry identical install manifests.
 
-```text
-.../NexusArcade-Prototypes/games/<slug>/
+Games marked `"registryPending": true` in `install/game.json` can exist in source/build form without entering the installer registry yet.
+
+## Public catalog
+
+GitHub Pages is generated into `_site/`. The catalog remains a presentation surface; installers consume the registry rather than scraping Pages.
+
+## Private external repositories
+
+CI may use the optional read-only `NEXUS_ARCADE_REPO_TOKEN` to materialize explicitly referenced private game repositories. The token is never written into the site or game manifests.
+
+Runtime browser secrets are prohibited.
+
+## Commands
+
+```bash
+npm run sync:builds
+npm run build:site
+npm run build:registry
+npm run build
+npm test
 ```
-
-The build fails rather than publishing a malformed prototype or a deployment directory containing secret-like files. CI also parses every script, runs deterministic multiplayer and save checks, verifies reference allowlists, and opens every built game in Chrome before upload.
-# Wrong Floor
-
-`prototypes/wrong-floor/` is a thirty-stop procedural elevator horror game (`NXA-000010`). Hold Space/gamepad A to close, use WASD/arrows/stick to inspect, and Escape/Start to pause. See [the game documentation](docs/wrong-floor/README.md) for rules, factory provenance, accessibility, saves and validation limitations. The [standalone wrapper](standalone/wrong-floor/README.md) packages the same runtime for Windows and Linux. `npm test` includes its deterministic rules; the Chrome smoke gate captures its gameplay review evidence.

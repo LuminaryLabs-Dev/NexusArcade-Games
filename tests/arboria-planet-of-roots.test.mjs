@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createArboriaGame, generatePlanet } from '../prototypes/arboria-planet-of-roots/src/core.mjs';
+import { createArboriaGame, generatePlanet } from '../games/arboria-planet-of-roots/source/src/core.mjs';
 
 const snap = game => game.snapshot();
 const firstUnlockedLand = s => s.cells.find(c => c.unlocked && !c.isWater);

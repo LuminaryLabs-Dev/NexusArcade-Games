@@ -8,7 +8,7 @@ import {
   createKnockoutSimulationAdapter,
   hashKnockoutState,
   stepKnockoutState
-} from "../prototypes/knockout-circuit/simulation.mjs";
+} from "../games/knockout-circuit/source/simulation.mjs";
 
 const replay = () => {
   let state = createInitialKnockoutState({ authoritative: true });
@@ -50,7 +50,7 @@ assert.deepEqual(KNOCKOUT_BOSSES.map((boss) => boss.name), ["Boiler Bruiser", "V
 assert.deepEqual(new Set(KNOCKOUT_BOSSES.map((boss) => boss.pattern)), new Set(["jab", "double", "charge", "counter", "fury"]));
 assert.deepEqual(KNOCKOUT_UPGRADES.map((upgrade) => upgrade.id), ["power", "armor", "drive"]);
 const upgraded = createInitialKnockoutState({ mode: "campaign", bossIndex: 2, upgrades: { power: 2, armor: 1, drive: 1 } });
-assert.equal(upgraded.winTarget, 1, "campaign bosses remain single fights");
+assert.equal(upgraded.winTarget, 1);
 assert.equal(upgraded.fighters[0].damage, 22);
 assert.equal(upgraded.fighters[0].maxHp, 115);
 assert.equal(upgraded.fighters[0].speed, 3.3);
@@ -64,11 +64,11 @@ for (let bossIndex = 0; bossIndex < KNOCKOUT_BOSSES.length; bossIndex += 1) {
   assert.equal(state.phase, "ended", `${KNOCKOUT_BOSSES[bossIndex].name} can complete deterministically`);
 }
 
-const html = await readFile(new URL("../prototypes/knockout-circuit/index.html", import.meta.url), "utf8");
-const app = await readFile(new URL("../prototypes/knockout-circuit/app.mjs", import.meta.url), "utf8");
+const html = await readFile(new URL("../games/knockout-circuit/build/index.html", import.meta.url), "utf8");
+const app = await readFile(new URL("../games/knockout-circuit/source/app.mjs", import.meta.url), "utf8");
 assert.match(html, /NexusEngine@8a60167f/);
 assert.match(html, /NexusEngine-Kits@2ef76f0/);
-assert.match(html, /multiplayer-host-kit\/controller\.js/, "browser loads the lean controller without the full NexusEngine bootstrap");
+assert.match(html, /multiplayer-host-kit\/controller\.js/);
 assert.doesNotMatch(html, /reliable:true/);
 assert.match(html, /Create room/);
 assert.match(html, /Copy/);
@@ -76,12 +76,12 @@ assert.match(html, /Install one upgrade/);
 assert.match(html, /Invite link/);
 assert.match(html, /Forfeit/);
 assert.match(html, /Ready/);
-assert.match(app, /import\("nexus-kits-host"\)/, "campaign boot does not require the network Kit");
+assert.match(app, /import\("nexus-kits-host"\)/);
 assert.match(app, /visibilitychange/);
 assert.match(app, /preventDefault/);
 assert.match(app, /knockout-circuit-campaign\/1/);
 assert.match(app, /requestRematch/);
 assert.match(app, /recoveryGraceTicks/);
-assert.match(app, /target = frame\.tick - 6/, "remote interpolation uses the session clock across round and rematch resets");
-assert.match(app, /punchTicks - left\.state\.fighters\[remote\]\.punchTicks\) \* alpha/, "remote punch animation is interpolated between snapshots");
+assert.match(app, /target = frame\.tick - 6/);
+assert.match(app, /punchTicks - left\.state\.fighters\[remote\]\.punchTicks\) \* alpha/);
 console.log("knockout-circuit multiplayer and campaign proof ok");

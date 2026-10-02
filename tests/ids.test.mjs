@@ -13,12 +13,12 @@ const expected = new Map([
   ["the-long-haul", "NXA-000008"],
   ["stormbound-shelter-run", "NXA-000009"],
   ["wrong-floor", "NXA-000010"],
+  ["moonline-express", "NXA-000011"],
+  ["arboria-planet-of-roots", "NXA-000012"]
 ]);
 const seen = new Set();
 for (const [slug, id] of expected) {
-  let manifest;
-  try { manifest = JSON.parse(await readFile(path.join("prototypes", slug, "game.json"), "utf8")); }
-  catch { manifest = JSON.parse(await readFile(path.join("prototypes", slug, "game.ref.json"), "utf8")); }
+  const manifest = JSON.parse(await readFile(path.join("games", slug, "install", "game.json"), "utf8"));
   assert.equal(manifest.slug, slug);
   assert.equal(manifest.id, id, `${slug} must keep its permanent ID`);
   assert(!seen.has(id), `${id} is duplicated`);

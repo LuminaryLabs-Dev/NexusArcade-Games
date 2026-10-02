@@ -1,0 +1,4 @@
+{
+  "external": true,
+  "note": "Build is materialized from the immutable external source declared in ../install/game.json during catalog/registry generation."
+}

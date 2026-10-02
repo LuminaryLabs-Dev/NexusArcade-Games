@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#061019"><meta name="description" content="Arboria: Planet of Roots — restore a tiny world in five minutes.">
+<title>Arboria: Planet of Roots · Nexus Arcade</title><link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main class="app">
+  <canvas id="planet" aria-label="Rotating planet of restoration cells"></canvas>
+  <section id="hud" class="hud" hidden>
+    <header class="top"><div class="brand"><b>ARBORIA</b><span>Planet of Roots</span></div><div class="metrics"><span><small>TIME</small><b id="time">5:00</b></span><span><small>SCORE</small><b id="score">0</b></span><span><small>ENERGY</small><b id="energy">120</b></span><span><small>VITALITY</small><b id="vitality">0%</b></span></div></header>
+    <aside class="mission glass"><div class="eyebrow"><span id="missionTier">Tier 1</span><span id="missionText">Plant 3 trees in your starting grove.</span></div><div class="bar"><i id="missionFill"></i></div><div class="substats"><span>Territory <b id="territory">3</b></span><span>Trees <b id="trees">0</b></span></div></aside>
+    <div class="target glass"><small>TARGET</small><b id="target">Plantable soil</b></div>
+    <footer class="dock glass">
+      <button id="species" class="species-main"><small>SELECTED TREE · B</small><b id="selectedSpecies">Green Oak</b><span id="selectedCost">20 ☀</span></button>
+      <div class="species-strip" aria-label="Tree species"><button data-species="oak">1 · Oak</button><button data-species="pine">2 · Pine</button><button data-species="cherry">3 · Sakura</button><button data-species="willow">4 · Willow</button></div>
+      <div class="actions"><button id="primary" class="primary">A · ACT</button><button id="water">X · WATER</button><button id="rain">Y · CALL RAIN</button></div>
+      <p>Joystick / arrows rotate · A / Enter / Space claim or plant · B cycle · X water · Y rain · Esc pause</p>
+    </footer>
+  </section>
+  <div id="toast" class="toast" role="status"></div>
+  <section id="titleScreen" class="overlay"><div class="title-card"><div class="kicker">NEXUS ARCADE · RESTORATION STRATEGY</div><h1>ARBORIA</h1><h2>PLANET OF ROOTS</h2><p>Restore a tiny world in five minutes. Expand territory, grow forests, exploit coastal energy and bring Arboria back to life.</p><div class="rules"><span>5:00 restoration run</span><span>3 starting cells</span><span>120 Sun Energy</span></div><button id="play">A / ENTER · PLAY</button><small>Mouse: drag planet · click to act · wheel to zoom</small></div></section>
+  <section id="pauseScreen" class="overlay" hidden><div class="modal"><div class="kicker">RESTORATION PAUSED</div><h2>Take your bearings.</h2><button id="resume">RESUME</button><button id="restart" class="ghost">RESTART RUN</button></div></section>
+  <section id="resultScreen" class="overlay" hidden><div class="modal result"><div class="kicker">RESTORATION REPORT</div><h2 id="resultTitle">TIME EXPIRED</h2><div class="scoreline"><span>SCORE</span><b id="resultScore">0</b></div><p id="resultStats"></p><p>Best score <b id="bestScore">0</b></p><button id="resultRestart">A / ENTER · PLAY AGAIN</button></div></section>
+</main>
+<script type="module" src="./src/main.mjs"></script>
+</body></html>

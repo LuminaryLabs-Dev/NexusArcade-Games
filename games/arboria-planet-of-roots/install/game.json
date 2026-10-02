@@ -1,0 +1,24 @@
+{
+  "id": "NXA-000012",
+  "title": "Arboria: Planet of Roots",
+  "slug": "arboria-planet-of-roots",
+  "description": "Restore a tiny world in five minutes. Expand territory, grow forests, exploit coastal energy, and bring Arboria back to life.",
+  "genre": "Strategy / Restoration",
+  "status": "prototype",
+  "version": "0.1.0",
+  "featured": false,
+  "thumbnail": "cover.svg",
+  "accent": "green",
+  "sortOrder": 4,
+  "controls": [
+    "Joystick / Arrows: rotate planet",
+    "A / Enter / Space: claim or plant",
+    "B: cycle tree species",
+    "X: water",
+    "Y: call rain",
+    "Escape / Start: pause",
+    "Mouse: drag, click, wheel"
+  ],
+  "offlineReady": true,
+  "registryPending": true
+}

@@ -6,9 +6,12 @@ import path from "node:path";
 import { promisify } from "node:util";
 
 const exec = promisify(execFile);
+const LOCAL_REPOSITORY = "LuminaryLabs-Dev/NexusArcade-Games";
 const index = JSON.parse(await readFile("registry/index.json", "utf8"));
 for (const game of index.games) {
   const manifest = JSON.parse(await readFile(game.manifestPath, "utf8"));
+  const localManifest = JSON.parse(await readFile(path.join("games", game.slug, "install", "manifest.json"), "utf8"));
+  assert.deepEqual(localManifest, manifest, `${game.id} local install manifest must mirror registry manifest`);
   assert.equal(manifest.id, game.id);
   assert.equal(manifest.slug, game.slug);
   assert.equal(manifest.version, game.version);
@@ -24,7 +27,7 @@ for (const game of index.games) {
     assert(!file.path.split("/").includes(".."), `${game.id} contains path traversal`);
     paths.add(file.path);
     let bytes;
-    if (manifest.source.repository === "LuminaryLabs-Dev/NexusArcade-Prototypes") {
+    if (manifest.source.repository === LOCAL_REPOSITORY) {
       const object = `${manifest.source.ref}:${manifest.source.basePath}/${file.path}`;
       ({ stdout: bytes } = await exec("git", ["show", object], { encoding: "buffer", maxBuffer: 100 * 1024 * 1024 }));
     } else {

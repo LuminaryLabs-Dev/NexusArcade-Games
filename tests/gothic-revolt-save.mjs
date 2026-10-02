@@ -8,7 +8,7 @@ globalThis.localStorage = {
   removeItem: (key) => values.delete(key)
 };
 
-const { clearSave, freshSave, loadSave, storeSave } = await import('../prototypes/gothic-revolt/src/save-system.js?unit');
+const { clearSave, freshSave, loadSave, storeSave } = await import('../games/gothic-revolt/source/src/save-system.js?unit');
 assert.deepEqual(loadSave(), freshSave());
 values.set('gothic-revolt-review-v1', '{bad json');
 assert.deepEqual(loadSave(), freshSave(), 'corrupt saves fall back safely');
