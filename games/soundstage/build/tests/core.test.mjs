@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {newRun,makeLevel,chainNote,targetSpeed,tick,respawn,completeSave,freshSave,parseSave} from '../src/core.mjs';
+test('five finite connected level layouts',()=>{for(let i=0;i<5;i++){const l=makeLevel(i);assert.equal(l.pads.length,30);for(let j=1;j<30;j++){assert.ok(l.pads[j].x-l.pads[j-1].x-l.pads[j-1].width<2);assert.ok(Math.abs(l.pads[j].y-l.pads[j-1].y)<1);}assert.ok(l.finish<l.length);}});
+test('note phrases accelerate and have a strict speed ceiling',()=>{const s=newRun(0);for(const p of s.level.pads)chainNote(s,p);assert.equal(s.combo,30);assert.equal(s.phrase,7);assert.ok(targetSpeed(s)<=9.89);assert.ok(targetSpeed(s)>5.8);});
+test('same instrument cannot farm combo or score',()=>{const s=newRun(0);chainNote(s,s.level.pads[0]);const score=s.score;chainNote(s,s.level.pads[0]);assert.equal(s.combo,1);assert.equal(s.score,score);});
+test('wrong note resets phrase and speed',()=>{const s=newRun(0);chainNote(s,s.level.pads[0]);chainNote(s,{id:'bad',note:2,type:'key'});assert.equal(s.combo,0);assert.equal(targetSpeed(s),5.8);});
+test('timeout clears chain; assist lengthens window',()=>{const s=newRun(0,true);chainNote(s,s.level.pads[0]);assert.equal(s.chainLeft,8);s.chainLeft=.001;tick(s,{axis:0},.02);assert.equal(s.combo,0);});
+test('fall preserves collected items and checkpoint',()=>{const s=newRun(1);s.checkpoint=6;s.collected=['note-0'];s.visited=['pad-0'];s.combo=8;respawn(s);assert.equal(s.checkpoint,6);assert.deepEqual(s.collected,['note-0']);assert.equal(s.combo,0);assert.equal(s.x,s.level.pads[6].x+.8);});
+test('jump and landing are simulated without renderer',()=>{const s=newRun(0);tick(s,{axis:0,jumpPressed:true},1/120);assert.ok(s.vy>0);for(let i=0;i<180;i++)tick(s,{axis:0},1/120);assert.equal(s.grounded,true);assert.equal(s.y,0);});
+test('completion unlocks exactly next level and best records persist',()=>{const s=newRun(0);s.completed=true;s.score=700;s.time=45;const out=completeSave(freshSave(),s);assert.equal(out.unlocked,2);assert.equal(out.records[0].score,700);s.score=100;s.time=50;assert.deepEqual(completeSave(out,s).records[0],out.records[0]);});
+test('incomplete runs cannot unlock levels',()=>assert.throws(()=>completeSave(freshSave(),newRun(0))));
+test('save corruption recovers without crashing',()=>{for(const raw of ['no',null,'{}','{"version":2}','{"version":1,"unlocked":99,"records":[]}'])assert.deepEqual(parseSave(raw),freshSave());});
+test('campaign saves round trip',()=>{const s=freshSave();s.unlocked=3;s.records[0]={score:300,time:45};assert.deepEqual(parseSave(JSON.stringify(s)),s);});
+test('invalid level and delta bounded',()=>{assert.throws(()=>makeLevel(5));const s=newRun(0);tick(s,{axis:99},NaN);assert.equal(s.time,0);tick(s,{axis:1},100);assert.equal(s.time,.025);});
+test('a scripted player can reach each campaign finish',()=>{for(let level=0;level<5;level++){const s=newRun(level,true);for(let i=0;i<20000&&!s.completed;i++){const pad=s.level.pads.find(p=>s.x>=p.x-.1&&s.x<=p.x+p.width+.1);const edge=pad?pad.x+pad.width-s.x:0;tick(s,{axis:1,jumpPressed:s.grounded&&edge<1.2},1/120);}assert.equal(s.completed,true,`level ${level} unreachable at ${s.x}, falls ${s.falls}`);}});
