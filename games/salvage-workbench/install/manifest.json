@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "NXA-000013",
+  "slug": "salvage-workbench",
+  "version": "0.1.0",
+  "entry": "index.html",
+  "offlineReady": false,
+  "source": {
+    "repository": "LuminaryLabs-Dev/NexusArcade-Games",
+    "ref": "b663d3be79c38a405aa4421fe254cc5006161c9a",
+    "basePath": "games/salvage-workbench/build"
+  },
+  "files": [
+    {
+      "path": "composition.json",
+      "bytes": 1151,
+      "sha256": "276ee6dfbe73ad21cbb811e72b213b24fcd829a66bc8b1c17ec0f9da053c7883"
+    },
+    {
+      "path": "engine-imports.json",
+      "bytes": 94134,
+      "sha256": "019eb37cc978e73a733276f6804650542984b128f6c90d2feaa20d2d763f33f3"
+    },
+    {
+      "path": "index.html",
+      "bytes": 99494,
+      "sha256": "f03b8ff8d0c9acb65b78c69891d7fbaddc03245b74923c85e1cc012cf345852d"
+    },
+    {
+      "path": "src/main.mjs",
+      "bytes": 16531,
+      "sha256": "87f36b5d69da3b4c3fe11ad3c037754eeecd1ea8e0406a90a67d2da351bcb9d4"
+    },
+    {
+      "path": "src/stage-state.mjs",
+      "bytes": 6328,
+      "sha256": "db6572d1364d5d94087181999b979060a7384004b70884fdfb8c2af332332ad7"
+    },
+    {
+      "path": "tests/stage-state.test.mjs",
+      "bytes": 4185,
+      "sha256": "cf1fcc4fff5b4aea33828bd9b8d9b62d25a0b543688522052247348789463488"
+    }
+  ],
+  "runtimeDependencies": [
+    "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/index.js",
+    "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/index.js",
+    "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/index.js"
+  ]
+}

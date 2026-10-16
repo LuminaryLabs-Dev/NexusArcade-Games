@@ -7,7 +7,7 @@
   "offlineReady": true,
   "source": {
     "repository": "LuminaryLabs-Dev/NexusArcade-Games",
-    "ref": "6969b403ea524b2af53da69405671412289d53f7",
+    "ref": "b663d3be79c38a405aa4421fe254cc5006161c9a",
     "basePath": "games/wrong-floor/build"
   },
   "files": [

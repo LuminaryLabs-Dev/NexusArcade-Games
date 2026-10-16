@@ -14,5 +14,10 @@
     "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/index.js",
     "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/index.js"
   ],
-  "controls": ["A/D or arrows: move", "Space: jump", "Escape: pause", "Touch: directional and jump buttons"]
+  "controls": [
+    "A/D or arrows: move",
+    "Space: jump",
+    "Escape: pause",
+    "Touch: directional and jump buttons"
+  ]
 }

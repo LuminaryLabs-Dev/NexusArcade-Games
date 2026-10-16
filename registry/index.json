@@ -56,7 +56,7 @@
         "Escape"
       ],
       "manifestPath": "registry/games/NXA-000003.json",
-      "thumbnail": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusArcade-Games@6969b403ea524b2af53da69405671412289d53f7/games/bumble-beez/build/cover.png"
+      "thumbnail": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusArcade-Games@b663d3be79c38a405aa4421fe254cc5006161c9a/games/bumble-beez/build/cover.png"
     },
     {
       "id": "NXA-000004",
@@ -95,7 +95,7 @@
         "Touch"
       ],
       "manifestPath": "registry/games/NXA-000005.json",
-      "thumbnail": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusArcade-Games@6969b403ea524b2af53da69405671412289d53f7/games/gothic-revolt/build/cover.webp"
+      "thumbnail": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusArcade-Games@b663d3be79c38a405aa4421fe254cc5006161c9a/games/gothic-revolt/build/cover.webp"
     },
     {
       "id": "NXA-000006",
@@ -137,7 +137,7 @@
         "Gamepad"
       ],
       "manifestPath": "registry/games/NXA-000007.json",
-      "thumbnail": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusArcade-Games@6969b403ea524b2af53da69405671412289d53f7/games/rift-runner/build/cover.webp"
+      "thumbnail": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusArcade-Games@b663d3be79c38a405aa4421fe254cc5006161c9a/games/rift-runner/build/cover.webp"
     },
     {
       "id": "NXA-000008",
@@ -192,7 +192,7 @@
         "Escape / Start: pause"
       ],
       "manifestPath": "registry/games/NXA-000010.json",
-      "thumbnail": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusArcade-Games@6969b403ea524b2af53da69405671412289d53f7/games/wrong-floor/build/cover.webp"
+      "thumbnail": "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusArcade-Games@b663d3be79c38a405aa4421fe254cc5006161c9a/games/wrong-floor/build/cover.webp"
     },
     {
       "id": "NXA-000011",
@@ -211,6 +211,44 @@
         "Escape / P: pause"
       ],
       "manifestPath": "registry/games/NXA-000011.json"
+    },
+    {
+      "id": "NXA-000013",
+      "slug": "salvage-workbench",
+      "title": "Salvage Workbench",
+      "description": "Guide a tiny repair rover across a giant desk, retrieve a fan fuse with a magnetic grapple, restore the airflow, and glide to the battery.",
+      "genre": "3D Platform Adventure",
+      "version": "0.1.0",
+      "status": "prototype",
+      "featured": false,
+      "sortOrder": 9999,
+      "controls": [
+        "WASD / Arrow keys: move",
+        "Space: jump / glide",
+        "Hold E: grapple or interact",
+        "Hold right mouse + Q: retrieve fuse",
+        "R: restart",
+        "Drag: look around"
+      ],
+      "manifestPath": "registry/games/NXA-000013.json"
+    },
+    {
+      "id": "NXA-000014",
+      "slug": "soundstage",
+      "title": "Soundstage",
+      "description": "Chain musical phrases to accelerate across five instrument-platforming stages. Unlock the campaign, collect bonus notes and improve your best scores.",
+      "genre": "Musical Platformer",
+      "version": "0.1.0",
+      "status": "prototype",
+      "featured": false,
+      "sortOrder": 14,
+      "controls": [
+        "A/D or arrows: move",
+        "Space: jump",
+        "Escape: pause",
+        "Touch: directional and jump buttons"
+      ],
+      "manifestPath": "registry/games/NXA-000014.json"
     }
   ]
 }

@@ -13,6 +13,12 @@
     "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/index.js",
     "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/index.js"
   ],
-  "controls": ["WASD / Arrow keys: move", "Space: jump / glide", "Hold E: grapple or interact", "Hold right mouse + Q: retrieve fuse", "R: restart", "Drag: look around"],
-  "registryPending": true
+  "controls": [
+    "WASD / Arrow keys: move",
+    "Space: jump / glide",
+    "Hold E: grapple or interact",
+    "Hold right mouse + Q: retrieve fuse",
+    "R: restart",
+    "Drag: look around"
+  ]
 }
