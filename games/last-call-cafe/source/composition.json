@@ -1,0 +1,23 @@
+{
+  "schema": "nexusengine-game-composition/v1",
+  "engine": {
+    "repository": "LuminaryLabs-Dev/NexusEngine",
+    "revision": "447816ea39e89fa7095b7a1ffdf46d8fba7f68cd",
+    "packageVersion": "0.0.4"
+  },
+  "domains": [
+    {
+      "path": "n:authoring",
+      "factory": "nexusengine/domains/authoring:createAuthoringDomain",
+      "use": "Create the café espresso machine as a validated mesh.cube source document. Its real vertex and face geometry is projected into the counter illustration."
+    }
+  ],
+  "gameOwned": {
+    "state": "source/src/core.mjs",
+    "simulation": "Deterministic café service queue, patience, recipe progress, rush clock, and upgrades; independent of rendering and input.",
+    "input": "Keyboard action codes and accessible action buttons mapped to café prep steps.",
+    "rendering": "Canvas 2D illustration and DOM ticket board; the espresso machine uses NexusEngine-authored mesh geometry."
+  },
+  "optionalKits": [],
+  "physicsProvider": null
+}

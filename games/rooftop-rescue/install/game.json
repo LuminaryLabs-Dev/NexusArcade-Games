@@ -1,0 +1,21 @@
+{
+  "id": "NXA-000016",
+  "title": "Rooftop Rescue",
+  "slug": "rooftop-rescue",
+  "description": "Pilot a rescue aircraft through a five-minute city evacuation. Glide between rooftops to save fuel, collect survivors, and land at the marked pad to unload, refuel, and repair.",
+  "genre": "Arcade Flight Rescue",
+  "status": "prototype",
+  "version": "0.1.0",
+  "featured": false,
+  "sortOrder": 16,
+  "offlineReady": true,
+  "runtimeDependencies": [],
+  "controls": [
+    "A / D or arrows: horizontal flight",
+    "W / Up: powered climb, uses fuel",
+    "S / Down: descend",
+    "Hold E: rescue at a rooftop",
+    "Escape: pause",
+    "Touch: hold the on-screen flight controls"
+  ]
+}

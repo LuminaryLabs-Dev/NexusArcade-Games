@@ -1,0 +1,20 @@
+{
+  "id": "NXA-000015",
+  "title": "Last Call Caf\u00e9",
+  "slug": "last-call-cafe",
+  "description": "Serve a five-minute caf\u00e9 rush by preparing espresso, lattes, and food in order. Manage the queue, earn tips, and choose counter upgrades before the closing wave.",
+  "genre": "Arcade Time Management",
+  "status": "prototype",
+  "version": "0.1.0",
+  "featured": false,
+  "sortOrder": 15,
+  "offlineReady": true,
+  "runtimeDependencies": [],
+  "controls": [
+    "1\u20138: prep the highlighted recipe step",
+    "Enter: serve the finished order",
+    "Escape: pause or resume",
+    "1\u20133: choose a counter upgrade at a rush break",
+    "Mouse / touch: use station and upgrade buttons"
+  ]
+}

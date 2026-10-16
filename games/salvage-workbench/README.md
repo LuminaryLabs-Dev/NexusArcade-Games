@@ -45,3 +45,7 @@ Repository source was inspected through the GitHub connector only; no repository
 - Verify actual browser/CDN loading, WebGL support, controls and visual layout on the target website. Not performed in this draft.
 - Review the first-stage pacing and ensure recovery/checkpoint semantics match the larger game plan.
 - Tests are written but not executed. No app, test suite, build, browser, or CI workflow has been run.
+
+
+## Runtime repair audit, 2026-10-16
+Runtime dependencies are now bundled and integrity-verified as part of the installed payload. See `docs/prototype-runtime-provenance.md` at the repository root. The real bundled Authoring API and pinned BrowserInstaller were exercised in Node; the latter used CacheStorage/service-worker stand-ins. Browser rendering, browser lifecycle and human playability still require review. Source/build copies match. No Chrome, repository clone/pull, or GitHub CI was used for this pass.

@@ -1,7 +1,5 @@
-import * as THREE from 'three';
-import { createEngine } from 'nexusengine';
-import { createAuthoringDomain } from 'nexusengine/domains/authoring';
-import { createSimulationKit } from 'nexusengine/domains/simulation';
+import * as THREE from './three-runtime.mjs';
+import { createEngine,createAuthoringDomain } from './engine-runtime.mjs';
 import { createStageState, applyStageAction, stepStage, isNearAnchor, isNearControl, isNearFuse, isInAirflowCorridor } from './stage-state.mjs';
 
 const $ = (sel) => document.querySelector(sel);
@@ -23,7 +21,7 @@ const camera = new THREE.PerspectiveCamera(57, 1, 0.1, 100);
 const ambient = new THREE.HemisphereLight('#edfff5', '#61534a', 2.0); scene.add(ambient);
 const sun = new THREE.DirectionalLight('#fff1d0', 3.2); sun.position.set(-8, 18, 10); sun.castShadow = true; sun.shadow.mapSize.set(1024, 1024); scene.add(sun);
 
-const engine = createEngine({ kits: [...createAuthoringDomain(), createSimulationKit()] });
+const engine = createEngine({ kits: createAuthoringDomain() });
 const project = engine.n.authoringProject;
 const stageGroup = new THREE.Group(); scene.add(stageGroup);
 const robot = new THREE.Group(); scene.add(robot);
@@ -43,8 +41,8 @@ const materials = Object.fromEntries(Object.entries(palette).map(([k, color]) =>
 async function authoredBox(id, size, material, position, rotation = [0, 0, 0]) {
   if (disposed) return null;
   const epoch = project.context().epoch;
-  const receipt = project.execute({ requestId: `salvage-${id}`, epoch, operations: [{ id: 'mesh.cube', args: { id, size } }] });
-  if (receipt?.ok === false) throw new Error(`Authoring rejected ${id}`);
+  const receipt = project.execute({ requestId: `salvage-${id}`, epoch, operations: [{ id: 'mesh.cube', args: { id, size: 1 } }] });
+  if (receipt?.status !== 'completed') throw new Error(`Authoring rejected ${id}`);
   const doc = project.getDocument(id);
   if (!doc?.content?.vertices?.length || !doc?.content?.faces?.length) throw new Error(`Authoring produced no mesh for ${id}`);
   const positions = [], indices = [];
@@ -60,7 +58,7 @@ async function authoredBox(id, size, material, position, rotation = [0, 0, 0]) {
   geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
   geometry.setIndex(indices); geometry.computeVertexNormals();
   const mesh = new THREE.Mesh(geometry, materials[material]);
-  mesh.name = id; mesh.position.set(...position); mesh.rotation.set(...rotation); mesh.castShadow = true; mesh.receiveShadow = true;
+  mesh.name = id; mesh.scale.set(...size); mesh.position.set(...position); mesh.rotation.set(...rotation); mesh.castShadow = true; mesh.receiveShadow = true;
   stageGroup.add(mesh);
   return mesh;
 }
@@ -113,7 +111,7 @@ function cue() {
   const osc = audioContext.createOscillator(), gain = audioContext.createGain();
   osc.type = 'sine'; osc.frequency.value = state.lastCue === 'stage-clear' ? 880 : 540;
   gain.gain.setValueAtTime(0.055, audioContext.currentTime); gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.16);
-  osc.connect(gain); gain.connect(audioContext.destination); osc.start(); osc.stop(audioContext.currentTime + 0.17);
+  osc.connect(gain); gain.connect(audioContext.destination); osc.start(); osc.stop(audioContext.currentTime + 0.17);osc.onended=()=>{osc.disconnect();gain.disconnect();};
 }
 
 function stageText() {
@@ -143,6 +141,8 @@ function listen(target, type, handler, options) { target.addEventListener(type, 
 const observer = new ResizeObserver(resize); observer.observe(canvas); resize();
 listen(window,'keydown', (e) => { keyState.add(e.code); if (['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)) e.preventDefault(); if (e.code === 'KeyR') { state = applyStageAction(state, { type: 'retry' }); updateUI(true); } });
 listen(window,'keyup', (e) => keyState.delete(e.code));
+listen(window,'blur',()=>{keyState.clear();dragging=false;aiming=false;previous=null;});
+listen(document,'visibilitychange',()=>{if(document.hidden){keyState.clear();dragging=false;aiming=false;previous=null;}});
 listen(canvas,'pointerdown', (e) => { dragging = true; aiming = e.button === 2; previous = [e.clientX, e.clientY]; canvas.setPointerCapture(e.pointerId); });
 listen(canvas,'pointerup', () => { dragging = false; aiming = false; previous = null; });
 listen(canvas,'pointercancel', () => { dragging = false; aiming = false; previous = null; });
@@ -209,7 +209,7 @@ function frame(now) {
     state = stepStage(state, { ...axes, jump: keyState.has('Space') && !gliding, glide: gliding }, dt);
     interact();
     if (state.stage === 'install-fuse' && Math.abs(state.position.z + 8.5) < 3.2) state = applyStageAction(state, { type: 'checkpoint', id: 'fan-deck' });
-    robot.position.set(state.position.x, Math.max(0.02,state.position.y), state.position.z);
+    robot.position.set(state.position.x, state.position.y, state.position.z);
     robot.rotation.y = yaw;
     const target = new THREE.Vector3(state.position.x + Math.sin(yaw) * 9, state.position.y + 5.2, state.position.z + Math.cos(yaw) * 9);
     camera.position.lerp(target, reducedMotion ? 0.2 : 0.12);
@@ -232,3 +232,5 @@ function frame(now) {
 }
 
 assembleWorkbench().then(() => { if (!disposed) { updateUI(true); frameHandle = requestAnimationFrame(frame); } }).catch((error) => { if (!disposed) { $('#error').hidden=false; $('#error').textContent=`Workbench authoring error: ${error.message}. Try reloading the game.`; } });
+
+window.addEventListener('pageshow',event=>{if(event.persisted)location.reload();});

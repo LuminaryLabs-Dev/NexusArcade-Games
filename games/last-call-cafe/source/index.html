@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1e353a"><title>Last Call Café</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="game" aria-label="Last Call Café rush game">
+    <header class="masthead">
+      <div><span class="eyebrow">NIGHT SHIFT · LAST CALL</span><h1>Last Call Café</h1></div>
+      <div class="metrics"><div class="metric"><small>TIME TO CLOSE</small><strong id="elapsed">5:00</strong></div><div class="metric"><small>COINS</small><strong id="score">0</strong></div><div class="metric"><small>SERVED</small><strong id="served">0</strong></div><div class="metric hearts"><small>TEAM ENERGY</small><strong id="hearts">♥♥♥</strong></div><button class="pause" id="pause">Pause</button></div>
+    </header>
+    <progress class="rush-progress" id="rushBar" max="300" value="0" aria-label="Five minute café shift"></progress>
+    <section class="floor">
+      <div class="art-frame"><canvas id="cafeArt" aria-label="Illustration of the cozy café kitchen" role="img"></canvas><div class="art-caption"><span>THE COUNTER</span><span id="engineState">Checking authoring kit…</span></div></div>
+      <aside class="tickets">
+        <div class="section-head"><div><span class="eyebrow">THE QUEUE</span><h2>Tickets</h2></div><span id="combo" class="streak">Streak 0</span></div>
+        <div id="line" class="line" aria-live="polite"></div>
+        <article class="active-ticket"><span class="eyebrow">NOW PREPPING</span><h3 id="activeOrder">Counter clear</h3><p id="orderHint">Next customer is just around the corner</p><div class="ticket-notch"></div></article>
+        <p class="notice" id="notice" role="status" aria-live="polite">The café opens in a moment.</p>
+      </aside>
+    </section>
+    <section class="workbench" aria-label="Café preparation stations">
+      <div class="station-head"><div><span class="eyebrow">BUILD THE ORDER</span><h2>Prep stations</h2></div><p>Follow the highlighted step, then serve before patience runs out.</p></div>
+      <div class="actions">
+        <button data-action="grind"><span>01</span><b>Grind</b><small>Beans</small></button><button data-action="brew"><span>02</span><b>Brew</b><small>Espresso</small></button><button data-action="steam"><span>03</span><b>Steam</b><small>Milk</small></button><button data-action="pour"><span>04</span><b>Pour</b><small>Latte art</small></button><button data-action="warm"><span>05</span><b>Warm</b><small>Oven</small></button><button data-action="chop"><span>06</span><b>Chop</b><small>Greens</small></button><button data-action="toast"><span>07</span><b>Toast</b><small>Grill</small></button><button data-action="plate"><span>08</span><b>Plate</b><small>Finish</small></button><button class="serve" data-action="serve"><span>↵</span><b>Serve</b><small>Ring it up</small></button>
+      </div>
+      <footer class="footnote"><span>1–8 prep · Enter serve · Esc pause</span><span id="storage">Best progress is saved on this device.</span></footer>
+    </section>
+  </main>
+  <section class="overlay" id="intro" aria-label="Start the shift"><div class="modal"><span class="eyebrow">THE 5-MINUTE RUSH</span><h2>One last shift.<br>One full counter.</h2><p>Read each ticket, prep its recipe in order, and serve it before your guests leave. Keep the line moving to earn tips and protect your team's energy.</p><ul><li>Espresso: grind → brew</li><li>Oat latte: grind → steam → pour</li><li>Warm croissant: warm → plate</li><li>Garden toast: chop → toast → plate</li></ul><p class="best-line">Personal best: <b id="bestLabel">0</b> coins · <b id="servedBestLabel">0</b> served</p><button id="start" class="primary">Open the café</button></div></section>
+  <section class="overlay" id="upgrade" hidden aria-label="Choose a counter upgrade"><div class="modal"><span class="eyebrow">A QUIET MOMENT</span><h2>Upgrade the counter</h2><p>Choose one improvement before the next wave.</p><div class="upgrade-grid"><button data-upgrade="calm-counter"><span>1</span><b>Calm Counter</b><small>Everyone can wait longer.</small></button><button data-upgrade="sharp-tools"><span>2</span><b>Sharp Tools</b><small>Wrong turns cost no patience.</small></button><button data-upgrade="generous-tips"><span>3</span><b>Generous Tips</b><small>Quick orders earn better tips.</small></button></div></div></section>
+  <section class="overlay" id="endCard" hidden aria-label="Shift result"><div class="modal"><span class="eyebrow">SHIFT COMPLETE</span><h2 id="resultTitle">Closed on a high note</h2><p id="resultCopy"></p><button id="restart" class="primary">Work another shift</button></div></section>
+  <script type="module" src="./src/app.mjs"></script>
+</body>
+</html>

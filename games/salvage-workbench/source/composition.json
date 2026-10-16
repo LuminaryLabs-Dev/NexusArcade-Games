@@ -10,11 +10,6 @@
       "path": "n:authoring",
       "factory": "nexusengine/domains/authoring:createAuthoringDomain",
       "use": "Create each original procedural prop as a validated mesh.cube source document; render its portable vertices/faces with the game presentation layer."
-    },
-    {
-      "path": "n:simulation",
-      "factory": "nexusengine/domains/simulation:createSimulationKit",
-      "use": "Compose the real deterministic simulation-state kit and advance its engine clock per visible frame."
     }
   ],
   "gameOwned": {

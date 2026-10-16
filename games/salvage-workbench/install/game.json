@@ -5,14 +5,9 @@
   "description": "Guide a tiny repair rover across a giant desk, retrieve a fan fuse with a magnetic grapple, restore the airflow, and glide to the battery.",
   "genre": "3D Platform Adventure",
   "status": "prototype",
-  "version": "0.1.0",
-  "offlineReady": false,
-  "runtimeDependencies": [
-    "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
-    "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/index.js",
-    "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/index.js",
-    "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/index.js"
-  ],
+  "version": "0.1.1",
+  "offlineReady": true,
+  "runtimeDependencies": [],
   "controls": [
     "WASD / Arrow keys: move",
     "Space: jump / glide",

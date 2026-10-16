@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import {createEngine,createAuthoringDomain} from '../src/engine-runtime.mjs';import {authorUnitCube} from '../src/authoring.mjs';
+test('bundled NexusEngine executes Authoring and produces usable cube geometry',()=>{const e=createEngine({kits:createAuthoringDomain()});const c=authorUnitCube(e);assert.equal(c.receipt.status,'completed');assert.equal(c.positions.length,108);assert(c.positions.every(Number.isFinite));e.tick(1/60);});
+test('runtime bridge has no external imports and both dependency bundles parse',async()=>{const three=await import('../src/three-runtime.mjs');const g=new three.BoxGeometry();assert(g.attributes.position.count>0);g.dispose();const html=fs.readFileSync(new URL('../index.html',import.meta.url),'utf8');assert(!html.includes('cdn.jsdelivr.net'));});

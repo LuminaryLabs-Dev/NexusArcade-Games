@@ -1,0 +1,1950 @@
+{
+  "pin": "447816ea39e89fa7095b7a1ffdf46d8fba7f68cd",
+  "buildTool": "esbuild@0.25.12",
+  "sources": {
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/LICENSE": {
+      "bytes": 1070,
+      "sha256": "4a0ae6ed06f277f289a4b0c20b6949640aa02bc491f0cb46b2be24d843256ca7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/engine.js": {
+      "bytes": 18785,
+      "sha256": "26c8664c1132bb31f3756f91cb285c739a46fcdb3543eea352c1ff7e120052ff"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/runtime-kit.js": {
+      "bytes": 8048,
+      "sha256": "a5126162f7b9b2a21de9f4b70f267abbcf79f83538257a5edff86b4f6ec3e543"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/realtime/kits/realtime-kit/index.js": {
+      "bytes": 3470,
+      "sha256": "0cda44b96646deb5fdf14bac4f3a68c5c3403b341197a20d645d2c39ccfc55a5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/sequence/kits/sequence-kit/index.js": {
+      "bytes": 3148,
+      "sha256": "a8f25b7055fb3094b798865ef426685a85418a77e98f33b101c82586fff47cef"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/kits/runtime-lifecycle-kit/index.js": {
+      "bytes": 1605,
+      "sha256": "ac113c82aad996ac53bafb12d83ed9665b23ccd6469d0bdd60a9f4035e872b94"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/sequence/runtime/sequence-runtime.js": {
+      "bytes": 12872,
+      "sha256": "555ac9168d0fef7eddeb785ccdbdeca21de2f352dc097fa19d7bbdf18cfe5dc8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/ecs.js": {
+      "bytes": 22250,
+      "sha256": "e5aad6de67cba4051d886bbf91f2500cf6dab462787320fd3fa20cfab2688782"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/realtime/contracts/surfaces.js": {
+      "bytes": 2932,
+      "sha256": "9d845b4581049861625311622af8eab032aacbdcb4c4164934be278153b82e3d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/domain-path.js": {
+      "bytes": 6533,
+      "sha256": "9ae2dfee6cd91c003197633940745f7ed571c06b70906d67715d839d6e38d467"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/manifest-domain-service-kit.js": {
+      "bytes": 302,
+      "sha256": "91c683a057069c682f68b90755f691e2abae79b8368e5e5d49030b7cee5665a0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/sequence/runtime/sequence-node-library.js": {
+      "bytes": 11833,
+      "sha256": "1d4edf5a7da704f651ea6979a85f298a662f5216ffb04884275632b34bc13c47"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/sequence/runtime/sequence-node-kit.js": {
+      "bytes": 4533,
+      "sha256": "254019bb6164752d012a1e102ab52014cbb3813e86409bdd8b488c724aaaf0da"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/domain-kit.js": {
+      "bytes": 11875,
+      "sha256": "b28b8251bd198c8b7a95063552e1c959b2a26eccb7259c8c20feb5cc2ded6a74"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/manifest-kit-contract.js": {
+      "bytes": 1619,
+      "sha256": "0c782f29fef22de8f8c1bc209ecd6669b09916401573fa1eca5e6fab20f0c216"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/domain-service-kit.js": {
+      "bytes": 12102,
+      "sha256": "e8a140f3c772da54f06bb2fa023c27b7733bfdaca5887ce5ad02134664e63537"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/sha256.js": {
+      "bytes": 3268,
+      "sha256": "acf2a03ff6dd7aa4b05701f69beb12d0cff890e02c30e9b5c4b2b6d489dc2162"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/idempotency-ledger.js": {
+      "bytes": 2827,
+      "sha256": "46147d83419266c6bdb3a1cb2966e5924f671b5cffdd6d1214f0870a1decfe2f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/serializable-state.js": {
+      "bytes": 1711,
+      "sha256": "83642eaac3e02a5998d36286e0636714efbe5f29e9fb50fc83c41a826fb40f71"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/catalog.js": {
+      "bytes": 1784,
+      "sha256": "0efa4cbce364b042443ecbcb2d92cff1bdd70b52be38d7485edc200e3aa52812"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/domain-api.js": {
+      "bytes": 6271,
+      "sha256": "6759caa64600c2a45f0aeb63e360081872c22e73b122c79a0541f1f98066f58f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/agent/domain.manifest.js": {
+      "bytes": 1371,
+      "sha256": "bcd7d97507f22fba146588bcb244176e96294156a41819dc8c014e7beafb4fee"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/actor/domain.manifest.js": {
+      "bytes": 4360,
+      "sha256": "7d9d00d48838ee1909f805f0f872b340dce26571082aea46cf1cf52f337f02c9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/domain.manifest.js": {
+      "bytes": 1717,
+      "sha256": "1571894bc567b46bbaebb7e79aa73a83703bcfd1145a7f75f8a3520a00a1740f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/domain.manifest.js": {
+      "bytes": 5201,
+      "sha256": "25ed355f385d8d83269f0dde91a0bd91a217f401fa3ebd0e20f480dff19d45ea"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/compute/domain.manifest.js": {
+      "bytes": 12287,
+      "sha256": "cc656b7141ae215bb4eb4a2378b3f5c79b46b1f927d769d1097e089d957aa0dc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/composition/domain.manifest.js": {
+      "bytes": 5261,
+      "sha256": "99cb2805a3e715bb9658a1e0444afe1cd2bb68b725a2a8f84c466bab718e495e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/asset/domain.manifest.js": {
+      "bytes": 1551,
+      "sha256": "51a6a530a21d34abc61efaab47d6edb130b694180860c5d7f6b1f04b8e0e0bfd"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/host/domain.manifest.js": {
+      "bytes": 6203,
+      "sha256": "1aab304f5a66637fc94db119814c5a58debba04edd1c77148f8ba8d9ac576a66"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/diagnostics/domain.manifest.js": {
+      "bytes": 2558,
+      "sha256": "d7ef55cd95ab2f8aadefbb57b7a48ad54af97e506bc3450efb29314422c8f2a0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/domain-manifest.js": {
+      "bytes": 19624,
+      "sha256": "32d50a9c072c80ad0e9b3ec42fc22eb5f9d7e613e7d695d63eedac4ecef0a9c6"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/mcp/domain.manifest.js": {
+      "bytes": 5267,
+      "sha256": "5879238e92702c47e21c248e38e5668c5e6659683e85b68ba0ba467e4350d0be"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/domain.manifest.js": {
+      "bytes": 4467,
+      "sha256": "1a40c6a3efa6a0266780ef5225b6aa829212114e0dc1eaaf8e68f53d372da955"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/policy/domain.manifest.js": {
+      "bytes": 1281,
+      "sha256": "7c0e886a502c485cdd0edb5d978d5c9fcb82de94bdf1ef3a69d3bea36f351afc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/domain.manifest.js": {
+      "bytes": 3135,
+      "sha256": "5d351e7935381a35066d732deddf4afaf8d8168a6df3cecd2014851fce129652"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/presentation/domain.manifest.js": {
+      "bytes": 14435,
+      "sha256": "63a120774da182dce307ddbf84504963b9f111edc151d972790a3990b5527d66"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/network/domain.manifest.js": {
+      "bytes": 8267,
+      "sha256": "3a4640c72a548c9240d6c9830cccf50e1ed9409eca68a8a5d9e796358a314998"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/domain.manifest.js": {
+      "bytes": 6087,
+      "sha256": "50de99e1a92dd1c133d5cd47ea7dedde07356870958e4c81594aa254845ab9ec"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/domain.manifest.js": {
+      "bytes": 8587,
+      "sha256": "bdad3ff5cba550aa541d20c2a9fc13822a6a14b116a484ee87b3b782636c3e91"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/object/domain.manifest.js": {
+      "bytes": 17828,
+      "sha256": "1bbb5051dc9649a2e7cb609bd5938d058cce9fb0ca766661b3ab7f9fba904f22"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/spatial/domain.manifest.js": {
+      "bytes": 3362,
+      "sha256": "3e6f93e6fb53e5e38527d48380adf184d1c222938914ce3b136837cb9abfb8b3"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/domain.manifest.js": {
+      "bytes": 13279,
+      "sha256": "a225509377b2e35ccccf622424643d73655ff353c697af1cbc6a8ec5e2bb9d67"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/domain.manifest.js": {
+      "bytes": 8904,
+      "sha256": "5fce5b73dcdf4fcce4ee5f7c10ba9018f5ac865e4462b7543173a483e2f5110d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/manifest-input.js": {
+      "bytes": 4038,
+      "sha256": "c66ef7201c8f3329006ec3ad7ffe2708be29d24dcc6d25d53a9a91c1b421e405"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/subdomain-manifests.js": {
+      "bytes": 3291,
+      "sha256": "fa147578fb90afb6f4a69bd652992d2e4a74ff8b9965fb71676527e1205bb1d1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/realtime/contracts/tick-context-scheduler.js": {
+      "bytes": 1908,
+      "sha256": "d12494911f4a31abfeb0ed7eb940a538ed3e8ce1e50dc2a5455a03952d6226bf"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/kits/authoring-domain-contract-kit/index.js": {
+      "bytes": 1385,
+      "sha256": "b0b50ebf206afbe5d8aae562c40627c6b3a728adb41a18863bc5148b3498b198"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/project/kits/authoring-project-document-kit/index.js": {
+      "bytes": 1526,
+      "sha256": "b3afcf35aaf476192893c81b2899f4ff077c188bddcb31425b19b5218357b7d5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/kits/authoring-mesh-document-kit/index.js": {
+      "bytes": 1488,
+      "sha256": "d815e2ed00578e75497aea346415b708d673cbe6920ba8ab8400558ccff47307"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/sequence/runtime/sequence-node-runtime.js": {
+      "bytes": 47782,
+      "sha256": "52a9a434948111ee5334b2c814417e6beb3ba76a3254b202f762128b34722061"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/kit-manifests.js": {
+      "bytes": 3947,
+      "sha256": "22e41d52f8cd68a56aaeaa16d80a77ddd913fb32241b318d229ea344ee30c9f0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/modifier/kits/authoring-modifier-service-kit/kit.manifest.js": {
+      "bytes": 1117,
+      "sha256": "1e2d87fe8b96327aa7ef4814a7c8273f605a35024cb563fdd1f048bfe5d712ef"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/sequence/kits/authoring-sequence-service-kit/kit.manifest.js": {
+      "bytes": 1097,
+      "sha256": "e826901a8413f5990423cf2e8a578d2bec2d89fad237eb09f1d0a7548fd821eb"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/publishing/subdomain.manifest.js": {
+      "bytes": 626,
+      "sha256": "2a234af3a8de40f01bbe7d6e36a50f1b7c7f1c98059625ccebdc7bbade6a5db7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/modifier/subdomain.manifest.js": {
+      "bytes": 610,
+      "sha256": "f2e6bdaf282c750d2e7a2914eab74ef9d0ff9c6c2a84f93c7a3694749bd4c2f0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/publishing/kits/authoring-publishing-service-kit/kit.manifest.js": {
+      "bytes": 1139,
+      "sha256": "f2b950bf21b7bbfcfbffe991a28fd6586ea222819a3ef7d6d573c8c43a27dbb0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/assembly/kits/authoring-assembly-service-kit/kit.manifest.js": {
+      "bytes": 1234,
+      "sha256": "aa59edee3ccbc5f8efdfc26974be6a0aec5ac80100427f4900c8b08b6a9f99f3"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/skin/subdomain.manifest.js": {
+      "bytes": 648,
+      "sha256": "9ab67dbed8047d69877094944bfd0079a8a8e7822ac4a6a45fc04790dc962f8a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/paint/kits/authoring-paint-service-kit/kit.manifest.js": {
+      "bytes": 1157,
+      "sha256": "d57584604d57837b96776aa9b7161dcb1f6229fd0928ebda71f1dffe061a2e50"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/sequence/subdomain.manifest.js": {
+      "bytes": 590,
+      "sha256": "da85019f01a3f00fd4a99bad8a3a4852b6953685c22a5f55c941792ed1254243"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/rig/kits/authoring-rig-service-kit/kit.manifest.js": {
+      "bytes": 1053,
+      "sha256": "aecfae54e595091336c68f73e987497357e4db70e8c04baa35386e448ae0cd86"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/domain-composition/subdomain.manifest.js": {
+      "bytes": 649,
+      "sha256": "765ede6b1c834ede96493ab449aab5b10a9a04c8925c326406f7935bf91aaecc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/skin/kits/authoring-skin-service-kit/kit.manifest.js": {
+      "bytes": 1143,
+      "sha256": "7cb739d6fb1205b57afcd8f434561983d9f77ddd830622831494428ed6997f0a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/io.manifests.js": {
+      "bytes": 2252,
+      "sha256": "cffdd09ec292b80fe1879e87977a961454b839f92d3e3a16bf3d562769697b82"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/rig/subdomain.manifest.js": {
+      "bytes": 561,
+      "sha256": "e12ef863b1e54d231cb90f2e6c804290bf0aab83a697b3b76c7586efb744b6a8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/animation/kits/authoring-animation-service-kit/kit.manifest.js": {
+      "bytes": 1187,
+      "sha256": "a3302a8505f71f59bb0afc44ca52e7b97a26afe42b91c93b4021570ce8fde2bf"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/editing/subdomain.manifest.js": {
+      "bytes": 662,
+      "sha256": "d1530dab34d5ba6b259cccee08f8f5fb8d91cee1615640700de55bfcf4067c55"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/assembly/subdomain.manifest.js": {
+      "bytes": 727,
+      "sha256": "9247fa020bc749e093747620106b087a781985801f3cb68295b20cc70446034d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/animation/subdomain.manifest.js": {
+      "bytes": 677,
+      "sha256": "84058931063aa864ddf0dbd7cd8ede4a4b255942f424058d0813b82fb7cd5331"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/project/subdomain.manifest.js": {
+      "bytes": 571,
+      "sha256": "fb85787bf01e07a10d1c43652ea3e0333a861123e23cfa06b28bdfd467f32cfc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/sculpt/subdomain.manifest.js": {
+      "bytes": 616,
+      "sha256": "1ef0d0fae6d547242aa3fb082d25fda9aa9b7df5cd967e617ff748deec2d92a1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/paint/subdomain.manifest.js": {
+      "bytes": 659,
+      "sha256": "c75862bd1b06f507031f01e2804c1cfef65f95326e3b83f7ce270dcb1394e1cc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/project/kits/authoring-project-document-kit/kit.manifest.js": {
+      "bytes": 629,
+      "sha256": "4577b47440f0196904b5579363b9daedb8ba44887352dda348b829289afee3c7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/kits/authoring-domain-contract-kit/kit.manifest.js": {
+      "bytes": 1294,
+      "sha256": "45b82a3e63a09b14872cad1abf82ac66cab9ac336a47322c4c74a16aa544c91a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/brush/kits/authoring-brush-service-kit/kit.manifest.js": {
+      "bytes": 1134,
+      "sha256": "8cd84f007c8089884b00b9d76b3a68d2f895534e5ef1288235d21f5dc993d601"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/subdomain.manifest.js": {
+      "bytes": 559,
+      "sha256": "9fbb067ed5786554d906839b7ae9c2a3f8ddfc94e55287705e534cfa2fde421a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/material/kits/authoring-material-service-kit/kit.manifest.js": {
+      "bytes": 1098,
+      "sha256": "62e81387b92bd7ee949aa197fa45e314f2fd4a19d3480174bbcda487ffcb8623"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/workspace/kits/authoring-workspace-service-kit/kit.manifest.js": {
+      "bytes": 1103,
+      "sha256": "df3fdb76841fb7e58257a1e05c16896566db0ebcc3073cc1a1b9cd0915582d82"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/curve/subdomain.manifest.js": {
+      "bytes": 589,
+      "sha256": "b62697555a286eab91d683dc0ea36831d8a907c238ff3815c303e282dc8b8c0d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/sculpt/kits/authoring-sculpt-service-kit/kit.manifest.js": {
+      "bytes": 1117,
+      "sha256": "47fcd276c9a9b15e236d93efb545bbbdc4e0c3a69fd86b95b34bffdc1226e0c5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/uv/kits/authoring-uv-service-kit/kit.manifest.js": {
+      "bytes": 1060,
+      "sha256": "676a7debb3c91498c8b5d3ab341912a264d6f7657f81ef9634bb72568b00ef79"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/workspace/subdomain.manifest.js": {
+      "bytes": 593,
+      "sha256": "87b16783705f69d7103300073ed5abd7343bf08dcd8daa9cc1bfe7433ec8871f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/uv/subdomain.manifest.js": {
+      "bytes": 571,
+      "sha256": "52aa2621cd56c4929accf0258d5b2555737e41e9183234bb7f2e4a563545aa94"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/editing/kits/authoring-editing-session-kit/kit.manifest.js": {
+      "bytes": 1187,
+      "sha256": "885f8f07622ee3cea4fa6626e9d90c8653f12bd63b53d6eb3e1f0767d6f36aaf"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/material/subdomain.manifest.js": {
+      "bytes": 591,
+      "sha256": "618e8696663c61368ebaf7b46154d80b8e8f899092cc591a83fc7768ab5a51b7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/domain-composition/kits/authoring-domain-composition-service-kit/kit.manifest.js": {
+      "bytes": 1185,
+      "sha256": "6a787e8610656861dd6f2f5037445b8b7beeb32c9256b30554bd14179fc17022"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/curve/kits/authoring-curve-service-kit/kit.manifest.js": {
+      "bytes": 1087,
+      "sha256": "acbdab7353374fc2c464742dc889ab359f1c5dbdc7fc9f56d698eab94de14c66"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/brush/subdomain.manifest.js": {
+      "bytes": 636,
+      "sha256": "2f6b0b8e3a3851353ad4aab11585228a5d61f059c2e1e6ff4cbc30384938ebaf"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/kits/authoring-mesh-document-kit/kit.manifest.js": {
+      "bytes": 1078,
+      "sha256": "41e53bdd45bc48b4bf0ca85bb27d3f1676506e9134a9ce1ff9fd88faca95dada"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/release.js": {
+      "bytes": 1305,
+      "sha256": "c8dc30c9a084b92a7f9340f3f44ad3c518782b8c0f771192c7fdefbc98644f9e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/body-manifests.js": {
+      "bytes": 1090,
+      "sha256": "41ecb47e3f7f3853260a4b6d188c048e90b5be19af2667812da101af16406b58"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/subdomain.manifest.js": {
+      "bytes": 1859,
+      "sha256": "2455d685046a5288d192128432ed43c2de403246599315367f967343bccc2ab8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/subdomain.manifest.js": {
+      "bytes": 1597,
+      "sha256": "8ee49d320d47c426fb503be7a67fa1b0f06f2a8d7199516f2848b16b466fe71b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/constraints-manifests.js": {
+      "bytes": 1029,
+      "sha256": "a66373e0bd338edfdf2e9e54f8be50c77363bced8123dd63be7596eb5eec4900"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/collider-manifests.js": {
+      "bytes": 1191,
+      "sha256": "fa035d33c3adc44be84580d16571fe9b9065f1463f59fcdb977e5d2b537a0247"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/lifecycle/lifecycle-manifests.js": {
+      "bytes": 619,
+      "sha256": "0e953e4dc682a7ad9d5d820e97b5e1ff394b0903747735c437d32be0f038a4ea"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/contracts/contract-manifests.js": {
+      "bytes": 720,
+      "sha256": "4bc5fed08d9a4fb4638a986a9757edd9cd294dc5f64ddf08c6a8876048c27b1d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/subdomain.manifest.js": {
+      "bytes": 1415,
+      "sha256": "3990bf0ca08f0a78a4b122aae00f5b63e477728a9accedd3a9184a26469665d6"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/contracts/subdomain.manifest.js": {
+      "bytes": 895,
+      "sha256": "f7f4c40d039c7fc92b532fdd5ecea747adb74a26a7f3b3e1e4b8b9b95250e9f8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/detection-manifests.js": {
+      "bytes": 1092,
+      "sha256": "c19aa35d6c034f16392465f95730eeaed8b2eed9ef8c5799a9095104d5a92959"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/subdomain.manifest.js": {
+      "bytes": 1379,
+      "sha256": "9a496dac79439311f93a53f8e1b473beae17ecfd5de4839d4a8ce33cfeec29c8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/subdomain.manifest.js": {
+      "bytes": 1386,
+      "sha256": "afc3e898bc1574b0acbdd2332812129bca5fe82df8d4d86d9818902fa84ee50b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/shape-manifests.js": {
+      "bytes": 1239,
+      "sha256": "29c51361e656997b6cfd0b13fbcf1188ce3fc44fdd0dc90073feeaea7f9cd786"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/material/subdomain.manifest.js": {
+      "bytes": 1262,
+      "sha256": "a01a62c3a39cf6842287b3af53a4b3718a1e1c855696121fc94f1703977fe5aa"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/lifecycle/subdomain.manifest.js": {
+      "bytes": 1163,
+      "sha256": "e5ed6bff27398937177c54fab898bfa0637136df7ec33f587707363246d79636"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/material/material-manifests.js": {
+      "bytes": 664,
+      "sha256": "16ff3f6ec508e16d89de32718ca1b254220cde1cba89182762648d6c08d81285"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/subdomain.manifest.js": {
+      "bytes": 1424,
+      "sha256": "db924147b8036942a9cc38877e3af3cd436db81fdb729664fecc65795e69e9ee"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/world-manifests.js": {
+      "bytes": 671,
+      "sha256": "4b1b4d4a8b7863801144be49fd95155e496fd86f7d9bec730f73e6a445c09dda"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/restored-behavior-manifests.js": {
+      "bytes": 1687,
+      "sha256": "b8856fabeac74c169a5974fe290adc7c4bc8d882309392fb4f8671ac381d227a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/presentation/adapters/camera-world-occlusion-adapter-kit/kit.manifest.js": {
+      "bytes": 825,
+      "sha256": "4424571e477e8a908b9ea7d9d0eb4b0f849bf692dd4d2c4dcf593a0c62015f9d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/presentation/camera/third-person/subdomain.manifest.js": {
+      "bytes": 803,
+      "sha256": "6c0669bb5168820f7ff97332d5d3473ee97bf3db538f1d23cde4dedfffc4089a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/presentation/camera/third-person/kits/third-person-camera-kit/kit.manifest.js": {
+      "bytes": 799,
+      "sha256": "39e2269e373394be3e57e0fed2b0092316927a51910fe04e324cf8c5c3277e6f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/subdomain.manifest.js": {
+      "bytes": 1034,
+      "sha256": "609b3c0d56c98452655e851eedcba962f8b0a05e7957986c6b95f648fa41b9cf"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/contract-manifests.js": {
+      "bytes": 786,
+      "sha256": "b13230235338224b0f4db0a49fc582faf9319913f288cce754f93d3d730069a8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/subdomain.manifest.js": {
+      "bytes": 976,
+      "sha256": "e46ce2a2d849f2b731499bd9b139c1d22a674a83170f62932f0f202af4c7e02f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/lifecycle/lifecycle-manifests.js": {
+      "bytes": 612,
+      "sha256": "44a555b7a04ccd6874dd6839ac6275471c7aa64bf5f0f7d4f5986122fb09ca14"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/lifecycle/subdomain.manifest.js": {
+      "bytes": 1104,
+      "sha256": "b81cb8d7b0726f53f6e89e9fb63f260aaabe3a1258b564eaac3e5bb30dc5db11"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/device-manifests.js": {
+      "bytes": 880,
+      "sha256": "1cf0b3ff99dc2dae6e1fd9fd495e1eb4108d88a689b74f05de62f39307e6e68e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/subdomain.manifest.js": {
+      "bytes": 1371,
+      "sha256": "9af3c87296bd609e71ad79c3a3878a3bfa8430940a10f6ead598fb7c0c1dfbe8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/surface-manifests.js": {
+      "bytes": 807,
+      "sha256": "e1522473aaba995bf729c6a754e10da934ccf048c97e73b78c62de43d9905734"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/subdomain.manifest.js": {
+      "bytes": 1329,
+      "sha256": "0dd7560ea17c0b363ac7b8835d07e07067c9f76741256f66575435ad65fbe92b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/resource-manifests.js": {
+      "bytes": 1030,
+      "sha256": "a37c0efd27382b7e50b82be527f9115a9b9048a24126245cf72708b24f583adf"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/subdomain.manifest.js": {
+      "bytes": 1613,
+      "sha256": "c7641b8f64ee6107e3f27dc383c36e96eba204719e925b4babd166ce000a7f1e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/buffer-manifests.js": {
+      "bytes": 764,
+      "sha256": "31beddd49fc82cfdbb26a552da882429e33a7851702425eec90a7b3cec3a6323"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/subdomain.manifest.js": {
+      "bytes": 1413,
+      "sha256": "24b1f9850bc642eba16d1cc9f96339d39f88765c5b54ca9c27024998eb803f98"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/texture-manifests.js": {
+      "bytes": 1020,
+      "sha256": "019230b655eb040a3f9ac14083fd41b942fee0d26acc6f0e5255d33be04212a6"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/subdomain.manifest.js": {
+      "bytes": 1767,
+      "sha256": "99abd098cdc56a4e6268bce225e7bb057bab363849699119c1dd30cabecf28d4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/shader-manifests.js": {
+      "bytes": 1128,
+      "sha256": "86e0bfc51ae90aeec082f60519fe586bf7993a7b350049d5bf75051c6afa31ec"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/subdomain.manifest.js": {
+      "bytes": 1766,
+      "sha256": "a790d71c7daeddc7cb959596e9e474c5f2df3d5f35e3e1e38f98eb503da0e58f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/material-manifests.js": {
+      "bytes": 920,
+      "sha256": "73a965e5510295591b72372270d6219d8e978c4081a8ba5648ac917ce0978cba"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/subdomain.manifest.js": {
+      "bytes": 1853,
+      "sha256": "48cc8cff6a96855f0831d130af93fd853e6c7dc7d6b13efb1de07119e7a10dec"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/camera-manifests.js": {
+      "bytes": 846,
+      "sha256": "fb1238f8c9cda64866bfa8e63867ac5a8ec857607a60e9ac649f39c621ab9c7c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/spatial/scale/kits/spatial-scale-kit/kit.manifest.js": {
+      "bytes": 621,
+      "sha256": "81f0587248ea3f9708006a84a67015185db9054f7c74b46d0f33fccc08801fd9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/restored-behavior-manifests.js": {
+      "bytes": 3553,
+      "sha256": "ee93fe8883e93f5eaa796def73d4759e371da38fe469ae5c6d3de4a200666601"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/spatial/scale/subdomain.manifest.js": {
+      "bytes": 639,
+      "sha256": "c9a440892d251fcfc727be366f8b612e77f3c7a885607484dc8b7a4b99ee7867"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/restored-behavior-manifests.js": {
+      "bytes": 1690,
+      "sha256": "6206c6bffb07fff481a7c821c31c6600a9629ff5b8aed17df9c58774395c9d02"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/data/observation/kits/observation-history-kit/kit.manifest.js": {
+      "bytes": 666,
+      "sha256": "6088ae496825231f2664d417d151047c70c0afa0ae71f232fd321c17fee78afb"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/sequence/schedule/subdomain.manifest.js": {
+      "bytes": 666,
+      "sha256": "8632f4f0046f4b511b6c146ad7f58b45e52ee5d94bd78f99a1b7b7409b5a9a6f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/sequence/schedule/kits/schedule-kit/kit.manifest.js": {
+      "bytes": 651,
+      "sha256": "dc8a4370294a6a76dd4089919944124e5200502ce25ccecd43126433ff8909c9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/runtime/data/observation/subdomain.manifest.js": {
+      "bytes": 667,
+      "sha256": "6ff8a73e7de49fdd72d7d8fb7f5c75bc65eba1cfb491f91443ef629e900705ca"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/analysis/subdomain.manifest.js": {
+      "bytes": 768,
+      "sha256": "15d87c323f38b2f45d9954fcee79d63c1ee4c66a4766671f53cbe365ec0f2f53"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/source/subdomain.manifest.js": {
+      "bytes": 838,
+      "sha256": "e630f30a64c3c6943a0e85cf8a4e5d448110d47ffcc2d0920cecb9f5229bdc35"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/orchestration/subdomain.manifest.js": {
+      "bytes": 832,
+      "sha256": "a40f3b56a1d61405252ecbcdc988c0c44c05ae4f640696feecd7692c050572e7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/ir/subdomain.manifest.js": {
+      "bytes": 750,
+      "sha256": "c92dd73e96b6a09d02d98ebe3fe96b94f5cca53dba0b605efd87bff5c43ed089"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/toolchain/subdomain.manifest.js": {
+      "bytes": 840,
+      "sha256": "f2a7977f960cc76b9a6b462544a5bbc12c00be7787212cb1a363c43eec084c4d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/classification/subdomain.manifest.js": {
+      "bytes": 794,
+      "sha256": "742e3c3e3558df9ab565af61993f8d2899a16ecd77328fe21da1754e15ba4c8e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/compile/subdomain.manifest.js": {
+      "bytes": 822,
+      "sha256": "95f24469dea9f64a56fc1e7ea6ecdf3fc28092bf7a7d857429b1acff6ff25221"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/proof/subdomain.manifest.js": {
+      "bytes": 758,
+      "sha256": "1e9896a5476e8b5d4e9c8b4eea691b7dfe10997c0601547e287fcd2239418c73"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/web-static/subdomain.manifest.js": {
+      "bytes": 787,
+      "sha256": "e5970321653c48a305565807204bdf85228abd1918979aac660fd8b071561ff5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/pcvr/subdomain.manifest.js": {
+      "bytes": 801,
+      "sha256": "3c8863da9ed402badad5d92d9e2a10d209e79ab5be921ba7db0369e9d20f7fd8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/subdomain.manifest.js": {
+      "bytes": 736,
+      "sha256": "975c177dee129d35fbdc4908c00a1238a5f5a0ee526af199f3a38a9824c27a4c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/web-live/subdomain.manifest.js": {
+      "bytes": 795,
+      "sha256": "4bbe45da96b92c28c7db95cc85bb8bd305807df798453f20504e5d0bfc032b94"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/artifact/subdomain.manifest.js": {
+      "bytes": 786,
+      "sha256": "30360c4058752ea12c6c75fd1eaff277e5df989f4646c5b9bf70c6bb5196cce4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/openxr/subdomain.manifest.js": {
+      "bytes": 835,
+      "sha256": "81ee0665f60951579c51b063776953935d6f23e7fb10110f1193595f413dc8d4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/project/store.js": {
+      "bytes": 26063,
+      "sha256": "477630dbc04cf7caedb2c3b77b52311acc61fdb1266699760907329454fe5234"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/android-xr/subdomain.manifest.js": {
+      "bytes": 829,
+      "sha256": "6144c0119a403f2e8cb741d50330a7f07c4e33848c27e37d24fba0576a538170"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/contracts/service-lifecycle.js": {
+      "bytes": 849,
+      "sha256": "5e344343122550928afbf1ac2045e6f8b6441ff2066c634d2369dd2e44ff0aec"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/contracts/value.js": {
+      "bytes": 5701,
+      "sha256": "4c34ca2398af5e6ebf958400c8dc70c165e0fa56af28016d67ba9c546f41f8e0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/geometry.js": {
+      "bytes": 16668,
+      "sha256": "f32d9a2318b5851bd2ba1f6e74fc4a1574fa90a7d8c98e45cb6fd725640949c9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/services.js": {
+      "bytes": 5205,
+      "sha256": "2de0344833c19489dd3fc3c4e8c971248448ef0baca2d5fdb03cbf9f755c08ea"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/source/kits/source-fingerprint-kit/kit.manifest.js": {
+      "bytes": 715,
+      "sha256": "8fd92d1b3b9f03c3a1633f982d6397045b5dbf9321ea93644b9fd4b4834c0d55"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/analysis/kits/javascript-ast-kit/kit.manifest.js": {
+      "bytes": 725,
+      "sha256": "43c54ef24be336100b834c725a9302ebc38666a4eb8e7498850cc242815fa5c9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/source/kits/project-source-kit/kit.manifest.js": {
+      "bytes": 737,
+      "sha256": "3871a7a4744f9b956b758f57af78fbef7ba08e23c6dbb465dd5c75269ac11018"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/source/kits/dependency-source-kit/kit.manifest.js": {
+      "bytes": 734,
+      "sha256": "1125ee93f075fa8e3048dd1235ce48e12d062780634300fd99d3de666dcfabfc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/source/kits/source-cache-kit/kit.manifest.js": {
+      "bytes": 681,
+      "sha256": "c5eb6e5d4eeffb43a7912d0b74e08b4af0658a6c9bc9fb44e8b76da7b866ecf0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/source/kits/module-graph-kit/kit.manifest.js": {
+      "bytes": 677,
+      "sha256": "cbe1c197ca13f1f4ab82d378ed5cf805caf4c73234bfdd3287f871b895712b11"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/compile/kits/web-module-linker-kit/kit.manifest.js": {
+      "bytes": 801,
+      "sha256": "088ea8ae520cc730b314a26e076f1335d46969b6653199f29a26ec5cf11d9672"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/compile/kits/native-runtime-link-kit/kit.manifest.js": {
+      "bytes": 735,
+      "sha256": "c7b06409f9e61efb03a3a52ca7480e723aa2f636a0394f3ba4fad0ab343dc4ae"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/toolchain/kits/toolchain-source-kit/kit.manifest.js": {
+      "bytes": 747,
+      "sha256": "9449dd57ec5a018a8e307082e712d505bcd5fea8282555ca7aaffd25600d3f52"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/analysis/kits/type-analysis-kit/kit.manifest.js": {
+      "bytes": 711,
+      "sha256": "690097464e928a8a597b50e699b6ef0cc6e57e8c985a804c551a6149c988e9ac"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/toolchain/kits/toolchain-discovery-kit/kit.manifest.js": {
+      "bytes": 739,
+      "sha256": "2dcc4c761b2ba177a8e8fc153becf7200af50d2591f67d6e1fded71649b33890"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/analysis/kits/effect-analysis-kit/kit.manifest.js": {
+      "bytes": 733,
+      "sha256": "ebde481ffda7fcf849ee2b26803b14b9431024ab6b81ff86a36937e7fbb869de"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/analysis/kits/dependency-analysis-kit/kit.manifest.js": {
+      "bytes": 727,
+      "sha256": "fd5f9a99eb4cf786ef3c6415b832ae2ba9501a18bf56a6bd9dae47a9ec1852a5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/toolchain/kits/toolchain-provision-kit/kit.manifest.js": {
+      "bytes": 793,
+      "sha256": "f995f5c787604e564fab36a9ec819e65c115b7eb5603e6607ba0e8dd97b37a67"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/ir/kits/kit-ir-kit/kit.manifest.js": {
+      "bytes": 656,
+      "sha256": "1bb28260f200c743b812d22ee44295c5d2ff810328a7a022c93db04ad659a471"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/toolchain/kits/isolated-stage-kit/kit.manifest.js": {
+      "bytes": 709,
+      "sha256": "36dea622bfd3092b36fb707042c9a6aaa49a9abb96ead749f2bd1f7be4f09afc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/ir/kits/execution-ir-kit/kit.manifest.js": {
+      "bytes": 667,
+      "sha256": "4c0d0953765b53507e4f7d9319db6bca4a98196de3257b633f9dbe5a0ff8dd35"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/toolchain/kits/process-execution-kit/kit.manifest.js": {
+      "bytes": 730,
+      "sha256": "becc511d3cae283c0b0af95204fb01a799896ae856124db54c060c259748d5f5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/kits/target-registry-kit/kit.manifest.js": {
+      "bytes": 716,
+      "sha256": "9995a1090cefe9851e169edba40b973972095c895041f3283336e77d9b44084d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/web-live/kits/web-live-target-kit/kit.manifest.js": {
+      "bytes": 802,
+      "sha256": "45ae8c466c9e2755a8ec8e33762e2e8b15acfbdfb0ae4274612a09e0b728ae1d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/ir/kits/ir-validation-kit/kit.manifest.js": {
+      "bytes": 674,
+      "sha256": "86b78e1a32322f34a4b84e1c8933188cce9f1b6f24ff2af703acccc2bcfc156a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/ir/kits/source-map-kit/kit.manifest.js": {
+      "bytes": 662,
+      "sha256": "63ef285437494ed1cb8a45fa972e401f2b69cc0efd89b0de3c4be074b08f60a9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/web-static/kits/web-static-target-kit/kit.manifest.js": {
+      "bytes": 793,
+      "sha256": "9055630a5670637f121d63b648d8babdfd062a2a67f5a68b578fac0e62bbac9d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/classification/kits/portability-classifier-kit/kit.manifest.js": {
+      "bytes": 833,
+      "sha256": "becfe280bdc19f75c08875e0dc2977d28971c126058c8926c941633692b94779"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/artifact/kits/artifact-manifest-kit/kit.manifest.js": {
+      "bytes": 726,
+      "sha256": "69aba80c1ec4aff8078a79f6355679b2d8c2792e16c68ea854af5606c4ae9837"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/openxr/kits/openxr-input-kit/kit.manifest.js": {
+      "bytes": 718,
+      "sha256": "baa9e807056e7677dad94daf33f9e42da19ba78e0f447f7da58e1853b7705516"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/orchestration/kits/build-request-kit/kit.manifest.js": {
+      "bytes": 720,
+      "sha256": "9cf32673330577f57191450a52b87bb89238d016717c95726611b286ee6021dc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/classification/kits/capability-resolution-kit/kit.manifest.js": {
+      "bytes": 777,
+      "sha256": "e5ad569c116f6444c8e76cea3fd8947e9ffa1f3ed5db04201f2bd5428f3b681c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/classification/kits/fallback-selection-kit/kit.manifest.js": {
+      "bytes": 759,
+      "sha256": "6cd4d18496292bfb708c0dc6009858c205b6fc9f4353f1f5d46d24cf5499ec3e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/openxr/kits/openxr-runtime-kit/kit.manifest.js": {
+      "bytes": 759,
+      "sha256": "e0ccf2da9a6c9c13309560376e31d96b36337c8bc43e22eee0f219b0561d408d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/openxr/kits/openxr-render-kit/kit.manifest.js": {
+      "bytes": 739,
+      "sha256": "8cf5bbe44a315ca89609882a09f9d75fef6cfcd3d9a30a9f6970af44b694ba34"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/orchestration/kits/build-execution-kit/kit.manifest.js": {
+      "bytes": 1700,
+      "sha256": "f676e89ed7518137ebd5f6bb2a5a9633f2f5f03646bbee8a4fa36031ff8e7a21"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/orchestration/kits/build-approval-kit/kit.manifest.js": {
+      "bytes": 716,
+      "sha256": "a4b44e2d8fdc3aa32f67177593165ab8d860ab61584d84155bd8ccdfb5a3e85b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/compile/kits/javascript-fallback-kit/kit.manifest.js": {
+      "bytes": 740,
+      "sha256": "1fc59cbac67d8b1de73e9772e8efb1331cfe82aad2e355f0b037708d8259c7e0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/compile/kits/runtime-abi-kit/kit.manifest.js": {
+      "bytes": 706,
+      "sha256": "e45cff6c7b73253293b9087e10255d9a64dbff0ca3f255ff0f1055541bf58a12"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/compile/kits/rust-lowering-kit/kit.manifest.js": {
+      "bytes": 704,
+      "sha256": "4baef93773c8bdfe9505d84356cd76459f1fbab9f27b250a62beec4052039a43"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/orchestration/kits/build-plan-kit/kit.manifest.js": {
+      "bytes": 788,
+      "sha256": "2ccb8cb3a1ea54a5ba9bc03abce8c46b0100c30ddb71001aaa753c4c88fcf809"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/orchestration/kits/target-set-kit/kit.manifest.js": {
+      "bytes": 716,
+      "sha256": "c3156c62cd58b9f67e66f89247d9b175da6ffffb4dad48e72d11e3bb7f595b62"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/artifact/kits/artifact-integrity-kit/kit.manifest.js": {
+      "bytes": 717,
+      "sha256": "c4ba1da6bbcae18befff38cf277827dd0033888c4a1d30543eef2996aa3346df"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/artifact/kits/artifact-output-kit/kit.manifest.js": {
+      "bytes": 713,
+      "sha256": "fde55bf7bfe93ca6b5fa4be7650fbd23c13b3c9aed773da64bea58f3137c90fa"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/orchestration/kits/build-receipt-kit/kit.manifest.js": {
+      "bytes": 725,
+      "sha256": "0336aaae4c27005e0c0a5571af6f515f1b1d2185d3539f033ceed52e7d9655ca"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/proof/kits/target-validation-kit/kit.manifest.js": {
+      "bytes": 711,
+      "sha256": "91d8f581738edf160e30d8ce99d1adcd8b2c8bb421dbb741beebbc7e483d5848"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/pcvr/kits/pcvr-target-kit/kit.manifest.js": {
+      "bytes": 838,
+      "sha256": "ae4390fd7067833cc8c8cac2a112410ebb1c0be70f895f8a61728cb21b955444"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/proof/kits/cross-runtime-parity-kit/kit.manifest.js": {
+      "bytes": 728,
+      "sha256": "0a454e99350bb7f72d3962e170b4c837adf9b2706f2f6d46edaed95e4e670520"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/proof/kits/project-immutability-kit/kit.manifest.js": {
+      "bytes": 752,
+      "sha256": "7fa44fd5fd3f09b1dc8f8d17e923f26c19fe95971ef397d58a2f87cb586e05fb"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/target/android-xr/kits/android-xr-target-kit/kit.manifest.js": {
+      "bytes": 886,
+      "sha256": "4f464df601e2154fe31e4f7ae54ad56dea8a1501b79a4ac2164a17be11bf5b75"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/artifact/kits/artifact-cache-kit/kit.manifest.js": {
+      "bytes": 711,
+      "sha256": "36bd2435b4f9b20a7f58a663b761cfa4dae78e9c95203008b3029675dfe65683"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/create/kits/authoring-create-service-kit/kit.manifest.js": {
+      "bytes": 844,
+      "sha256": "0ec645ca8f4a6710f65b223b98c4ccd8f0a70f88bcf988530c92f6988c639b9b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/importing/kits/authoring-import-commit-kit/kit.manifest.js": {
+      "bytes": 820,
+      "sha256": "1dd780a33fdbb3485ec7febd103c798d223e8b64ee79d845a55905d4426ed813"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/importing/kits/authoring-import-registry-kit/kit.manifest.js": {
+      "bytes": 814,
+      "sha256": "348de9aa7ce081857dd14d9704ed5e57b0bbd96a584346055479cf4c16a1597e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/persistence/kits/authoring-load-kit/kit.manifest.js": {
+      "bytes": 823,
+      "sha256": "0dfd22e5571d3259e572473ce7a1b47d25a60d8eb6612800b25e3b49a7d6c7a0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/importing/kits/authoring-import-service-kit/kit.manifest.js": {
+      "bytes": 902,
+      "sha256": "d79fb3184eda1ffc460d7e20a0994d1ded7a1311673af71d6b68d4d9e9bead50"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/importing/kits/authoring-import-validation-kit/kit.manifest.js": {
+      "bytes": 842,
+      "sha256": "959eaf0572864630dda8eb8b8a23a7606faa7f84cd9bcd23f14f8ec13dd42ded"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/persistence/kits/authoring-save-kit/kit.manifest.js": {
+      "bytes": 808,
+      "sha256": "58197b4b024f3610aa0d5209efa1e2498a57652acf2f0992dd73ec213e1db070"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/publishing/export/kits/authoring-export-registry-kit/kit.manifest.js": {
+      "bytes": 848,
+      "sha256": "1fee53505dd20c85b040d83e021060e96d433956a7c07d1d025f52c5fc526854"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/persistence/kits/authoring-storage-provider-registry-kit/kit.manifest.js": {
+      "bytes": 883,
+      "sha256": "9558e42209a7678e95f4b1b3d42d1313254a261cba378b3756b2b4ac6b50377d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/persistence/kits/authoring-project-package-kit/kit.manifest.js": {
+      "bytes": 848,
+      "sha256": "3789fc445609041b8ffffaaf97332483d012b5823ff53204afce445dada6fc5a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/persistence/kits/authoring-persistence-service-kit/kit.manifest.js": {
+      "bytes": 880,
+      "sha256": "5f0a064c868e460a714fa3685cd6afd19088215694fb1869fcef4ea1da0c656f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/publishing/export/kits/authoring-export-validation-kit/kit.manifest.js": {
+      "bytes": 879,
+      "sha256": "6701cfe85c19243d190c6563dad53dc066e21400155be500dcac47e14bdfb7ec"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/publishing/export/kits/authoring-export-service-kit/kit.manifest.js": {
+      "bytes": 979,
+      "sha256": "d263ae01e36f76e8456c871ef5d0336d46143c75e077a7cb667867a69b304963"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/publishing/export/kits/authoring-export-receipt-kit/kit.manifest.js": {
+      "bytes": 858,
+      "sha256": "992aa7954306ae689fa8adb3d51fa65e9a6a96c55de450410c57d8773558dfcc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/validation/kits/authoring-project-validation-kit/kit.manifest.js": {
+      "bytes": 831,
+      "sha256": "3992382f41da8b091bbc7cd984f2ccff544c9a535b95db5112d10fa7d2c11b70"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/create/subdomain.manifest.js": {
+      "bytes": 645,
+      "sha256": "209314ac52228f6948247be9310b8e64e8a3ba353e519cfdd8ae7da0dc6db27c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/publishing/export/kits/authoring-export-capability-kit/kit.manifest.js": {
+      "bytes": 863,
+      "sha256": "daf005b5f2438766517e8c8f150e82297cc6c288d6455ba62831207648c6c90e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/validation/kits/authoring-format-validation-kit/kit.manifest.js": {
+      "bytes": 855,
+      "sha256": "96f23189114f85dc4bbaa81c6c0830864be3ec33825746a7c8e24ce52efcf014"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/validation/subdomain.manifest.js": {
+      "bytes": 669,
+      "sha256": "1c39fd069f0b7ccbef39a219d57edc26ce3403753ccc3177cf3e36e45b4189df"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/validation/kits/authoring-document-validation-kit/kit.manifest.js": {
+      "bytes": 866,
+      "sha256": "d6400db8d0bc6d5b0618248e4212a3070a371d2b34c9b43f0979f7a350bbc61a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/validation/kits/authoring-delivery-validation-kit/kit.manifest.js": {
+      "bytes": 832,
+      "sha256": "f88905daeb351124192509500334c797f221eaf4d0e869dd533ce66edb9b83f3"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/persistence/subdomain.manifest.js": {
+      "bytes": 675,
+      "sha256": "1cf37236c627c3407b14294cb0d14e008c99c4a85b07180e21f87160a42d4454"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/validation/kits/authoring-validation-report-kit/kit.manifest.js": {
+      "bytes": 961,
+      "sha256": "a7df28494852d36c7a5603a4ce2732a6c94b927555adebfccd023c8d344733f0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-registry-kit/kit.manifest.js": {
+      "bytes": 918,
+      "sha256": "c78fc256494ced440e9cc3f2b58c4abfcbf437f0a9410cae58bbb13c9fa933e4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/publishing/export/subdomain.manifest.js": {
+      "bytes": 725,
+      "sha256": "600af9bdfa6a994ecd41a086ba7b3fcf930dce2a9809c31f4f993f1712b208c8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/importing/subdomain.manifest.js": {
+      "bytes": 663,
+      "sha256": "93a46d3dd5c1ebdfeaaed8be72472644b0ebe9bced4bc8ac711207d8aec528a6"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-inertia-kit/kit.manifest.js": {
+      "bytes": 620,
+      "sha256": "2d27939de7166e3fbf0c90ee0414c080d9393ff0da29b1862fcad58bf9a9c4f0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-damping-kit/kit.manifest.js": {
+      "bytes": 612,
+      "sha256": "ebcf2368523e1719f1a4246c23e45fc3ba1be7110c6bae271dc3a6a208ac3544"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-sleep-kit/kit.manifest.js": {
+      "bytes": 653,
+      "sha256": "4771d83ef0be78b95d9214f0251075d0b058b95429632344f29df903f8dd4444"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-wake-kit/kit.manifest.js": {
+      "bytes": 583,
+      "sha256": "f07d39bee04545671d25b5d78c5494de303e86f061508dec0f33ab600054ce60"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-mass-kit/kit.manifest.js": {
+      "bytes": 592,
+      "sha256": "49e0271e301917450531db3af77438cfa7ee3a2d72ef30f8f56a80a7ce0a688e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-identity-kit/kit.manifest.js": {
+      "bytes": 618,
+      "sha256": "6b0ec5f51b6b4a4b8a107b29088a5f343be1e8eefd835a5658859061ec136b0f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-lifecycle-kit/kit.manifest.js": {
+      "bytes": 637,
+      "sha256": "6d4c58ddcdeccf3820b75acf945dc90f878fb4bdeb413b1d0c7e331b6a9fca92"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-type-kit/kit.manifest.js": {
+      "bytes": 586,
+      "sha256": "cd31dec5ddd763a88274b2197a21d87c28ddf442968e5f74d3ed7b08f9236ba9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-state-kit/kit.manifest.js": {
+      "bytes": 898,
+      "sha256": "adb9eb68643d3da4235c8bcd3da61e826730051f4ab36a5bc880d00fbde761e1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-pose-kit/kit.manifest.js": {
+      "bytes": 587,
+      "sha256": "e6778bb3bd41345618987c61a0c6d20e54cdb69299de92f69525392972ef092d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-velocity-kit/kit.manifest.js": {
+      "bytes": 620,
+      "sha256": "b8f88fc5155fab9e44fd6147253cfd990658ee276fe08db72fdf254c314d8acf"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/constraint-registry-kit/kit.manifest.js": {
+      "bytes": 1412,
+      "sha256": "dcaa2c253d5d42e56a467b4dd0aa8ce6f6aa6f8a253b5f8de78a20d929a82b5f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/body/kits/body-force-kit/kit.manifest.js": {
+      "bytes": 602,
+      "sha256": "a247a02742c6be1bf0370fa05ab89f7eeaefa534bf11910ba49d591d42753e07"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/hinge-constraint-kit/kit.manifest.js": {
+      "bytes": 846,
+      "sha256": "9b6b1e27cff6b18c500b174f7c3381096f39d525efc6411c09a5352b776d6f5c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/distance-constraint-kit/kit.manifest.js": {
+      "bytes": 901,
+      "sha256": "3062988aa85fc7a4c7057c34fc0d4fed91572b227218ce78ed22bb34bf49a6ad"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/ball-socket-constraint-kit/kit.manifest.js": {
+      "bytes": 912,
+      "sha256": "24df1103ffcf72d29b45ab22167a2d2442f936d3ea202c2c2b36ad7661588ceb"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/limit-constraint-kit/kit.manifest.js": {
+      "bytes": 854,
+      "sha256": "a48ee9556dbd7a6c9560e2dc4d753d58d1db5a430e3180a4c571effb56d88ef6"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/fixed-constraint-kit/kit.manifest.js": {
+      "bytes": 872,
+      "sha256": "2bdb4116b1582af390c7d2ab87f5bbb8c01913787925ee746397ed5a09778450"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/drive-constraint-kit/kit.manifest.js": {
+      "bytes": 859,
+      "sha256": "6ee6a709e3ccb6f6edd0bbbce1cf4efcad197944c85827426e8fd3b51a55fe42"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/slider-constraint-kit/kit.manifest.js": {
+      "bytes": 853,
+      "sha256": "1e3741c9cceec78e8465d529e00336b7c39dad7e6734473d21b0cd2bc9a0007d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/cone-twist-constraint-kit/kit.manifest.js": {
+      "bytes": 905,
+      "sha256": "b26db6cfcb9e86619b072073e27120cf2b35f2190c6b080bfb38e543a816b0f3"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/motor-constraint-kit/kit.manifest.js": {
+      "bytes": 843,
+      "sha256": "483063c7731f1ae186cb31bda294e3cec721b4d46f31d027ec6943e8269be971"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/spring-constraint-kit/kit.manifest.js": {
+      "bytes": 861,
+      "sha256": "7ad9b643f147252e3fbb2b83503dce56fc69bfddb69dca9c32901e8e0672ba99"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/lifecycle/kits/physics-snapshot-kit/kit.manifest.js": {
+      "bytes": 715,
+      "sha256": "4499f046e906bc341b66e3eb58cb096dc38809aeaa36046f7774aef0e122d5ed"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/constraints/kits/constraint-break-kit/kit.manifest.js": {
+      "bytes": 854,
+      "sha256": "01274153c2ac7d99cf70a5ee4f8ed4e4e89c8b1abfdd11b9838b2ef8fd309482"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/lifecycle/kits/physics-startup-kit/kit.manifest.js": {
+      "bytes": 647,
+      "sha256": "84eaf5270f2e0efbbf54a19f99232f66be7c5af690bd81a2b052814b3affa53b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/lifecycle/kits/physics-step-kit/kit.manifest.js": {
+      "bytes": 779,
+      "sha256": "8f54780b8912c6e773a88f2d629cad94539cb1ca42f2e849658b501e40836e7e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/lifecycle/kits/physics-reset-kit/kit.manifest.js": {
+      "bytes": 675,
+      "sha256": "5ffca45434bb2cb05631fb12947e8967fe48c893a638d5d080b27e1999f8ae5d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/lifecycle/kits/physics-shutdown-kit/kit.manifest.js": {
+      "bytes": 645,
+      "sha256": "4922071644ef826a8910c3715ead2b768c9c39624cb78aad08a0c17ece1d4c54"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collider-attachment-kit/kit.manifest.js": {
+      "bytes": 708,
+      "sha256": "bb1364ac363dbc6ae7106ba9fec36a4dc5e8c394da1bbeae44652d2b66a16420"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collider-identity-kit/kit.manifest.js": {
+      "bytes": 640,
+      "sha256": "874374d294417212ee32079828b4a5bec217f616d646372642d485eff78d7845"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/lifecycle/kits/physics-installation-kit/kit.manifest.js": {
+      "bytes": 706,
+      "sha256": "1bd117f1b96a09f8512db5b3cb86a0330e5ce484eeea0d13775a9cdec932a269"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collider-pose-kit/kit.manifest.js": {
+      "bytes": 623,
+      "sha256": "54a4beb8c4d171a2472078f65553f7fffe950bccf28e636b554251341a2c7ea5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collision-layer-kit/kit.manifest.js": {
+      "bytes": 610,
+      "sha256": "b3673c489430851d4fa3c7b9967da1bef608a234a4e8d590996899db6a50197e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collider-material-kit/kit.manifest.js": {
+      "bytes": 668,
+      "sha256": "6d425172563efe74aa49647beb1387028eb9060334e814f7ca5cd112c3b30ceb"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collider-filter-kit/kit.manifest.js": {
+      "bytes": 718,
+      "sha256": "2c409f02821bde5d88642de6d937ecabfc42f6595967ebf64b91295ac7ddee09"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collision-group-kit/kit.manifest.js": {
+      "bytes": 669,
+      "sha256": "2446365db4fb9d7b42cff968f0c24b3d6215357b39d9c956c7288d8f4975487d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collision-mask-kit/kit.manifest.js": {
+      "bytes": 630,
+      "sha256": "c3fd8ee3876df6aae0a28931528c5d6f79c9e7edb5fa06fe93ed916766707587"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/trigger-collider-kit/kit.manifest.js": {
+      "bytes": 662,
+      "sha256": "fa43e6640e5cb074230d2f43f8d55985bafbc99400377256ed87876914daae61"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collider-lifecycle-kit/kit.manifest.js": {
+      "bytes": 660,
+      "sha256": "54f2edfd3881446b0a1960806a88226d28b05fd4890e542c1ac0e8e6ae9a87a4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/sensor-collider-kit/kit.manifest.js": {
+      "bytes": 653,
+      "sha256": "cd6c5e6e4bb59bb81e537c780912fa1347503a2053957cc5720a540a04ab9837"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/collider/kits/collider-registry-kit/kit.manifest.js": {
+      "bytes": 1121,
+      "sha256": "77ef1a0b23105efe3174425249d7850dfa481850876f5dce8978727e76867f06"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/contracts/kits/physics-domain-contract-kit/kit.manifest.js": {
+      "bytes": 658,
+      "sha256": "4e9253a5b76f65ebeada1a5551b932fe45d89f5228a705837b8ad75ef03143ed"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/contracts/kits/physics-provider-contract-kit/kit.manifest.js": {
+      "bytes": 669,
+      "sha256": "5e7cc1b0c0fe1975d545414e01b07ee87b6f97339cc7411253ed660794e16dd8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/contracts/kits/physics-query-schema-kit/kit.manifest.js": {
+      "bytes": 627,
+      "sha256": "abdb85875cc23f5301abeb0b6ad9fc9fc8f6149bcc5f7647654fa4d36f81d288"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/contracts/kits/physics-state-schema-kit/kit.manifest.js": {
+      "bytes": 633,
+      "sha256": "13527255db47c2265e0191644b91348c9237076f5bcc9f138d3714960e74653d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/contracts/kits/physics-command-schema-kit/kit.manifest.js": {
+      "bytes": 629,
+      "sha256": "854dc827a4051772ac7a91d6f15660363c1e789958c7ec09e3ce64896a823e23"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/contracts/kits/physics-event-schema-kit/kit.manifest.js": {
+      "bytes": 607,
+      "sha256": "1783c8736f3b9651316b53529d130d4c917a452a1b2edd174669b7096ff2a00a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/broad-phase-kit/kit.manifest.js": {
+      "bytes": 810,
+      "sha256": "a53987f8031bcccc2405abee59af4fb3bf77d8035c09c699f2e715d04ad99f53"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/gjk-detection-kit/kit.manifest.js": {
+      "bytes": 633,
+      "sha256": "b004709154de595f0309eac9c75a0d2e0959990d512405d605de64df994701d4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/collision-detection-result-kit/kit.manifest.js": {
+      "bytes": 662,
+      "sha256": "e416b37a00dc5bf8c6fc14bf90ff5e21f7dc0ae90fd4a5b62651c3a14c2af2ea"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/narrow-phase-kit/kit.manifest.js": {
+      "bytes": 785,
+      "sha256": "061f611864bc1be119838937a5098cc545ca4297e687a312e408454d1214770b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/spatial-partition-kit/kit.manifest.js": {
+      "bytes": 683,
+      "sha256": "83b7267a0d198af0f7165e9eefdd1ce0542e3f5736dd2627d03523f9e556615e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/epa-penetration-kit/kit.manifest.js": {
+      "bytes": 640,
+      "sha256": "69884004f7810387b12c4c198d7c83f088ba264a63611c97a5a676c606fbdb89"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/dynamic-tree-kit/kit.manifest.js": {
+      "bytes": 630,
+      "sha256": "0313262928c6080a6b408c096b0a7ae884588c4bb0fe2bf130d06644730fdf2b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/sweep-and-prune-kit/kit.manifest.js": {
+      "bytes": 647,
+      "sha256": "d8d807a7eb5c6b9316db33101e38138acba737b30eb30223dac8923392164d6e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/continuous-collision-kit/kit.manifest.js": {
+      "bytes": 719,
+      "sha256": "73da830406c6009a94df59f7f504718323aae1b82ce38f201a236ffe2d1b7d22"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/broad-phase-pair-kit/kit.manifest.js": {
+      "bytes": 640,
+      "sha256": "eeef9bcf07067552b46535020995df0fa81342ea2beb2397614f37e4d83b86b2"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/detection/kits/shape-intersection-kit/kit.manifest.js": {
+      "bytes": 692,
+      "sha256": "4a2b391ed1acf9037e1f89ffcfdc23a27ffac05b08785bfae9b5ffa9afb17ad4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/shape-identity/kit.manifest.js": {
+      "bytes": 595,
+      "sha256": "84f4fd8ee1a0b8c7676962345176ac4ae101ec48d789d9bb02eb143f6cad77aa"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/box-shape/kit.manifest.js": {
+      "bytes": 538,
+      "sha256": "7e098988091c6f088c8e4a69d99dcd1f402ff756067c60ed8cfadbe2cca1bcd9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/shape-validation/kit.manifest.js": {
+      "bytes": 612,
+      "sha256": "e7d5dbf5f932915f8eacf73d7c2623986ab27a61eb8bd68964d31331cee90420"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/shape-registry/kit.manifest.js": {
+      "bytes": 634,
+      "sha256": "9163d5873d2798d576d8a97e2278f76e7c9166d26f23651cbfcf32d11db3073b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/sphere-shape/kit.manifest.js": {
+      "bytes": 559,
+      "sha256": "4a114091cd659006137492aaa358cf35dcbc1ec6a701f0daa14997d972c3d326"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/cone-shape/kit.manifest.js": {
+      "bytes": 545,
+      "sha256": "18b6cf92013429f4ef457b9fc45ddbaa5b72e3fffb06cf8a74a2e6a65a73f8c6"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/capsule-shape/kit.manifest.js": {
+      "bytes": 566,
+      "sha256": "b7b3f4cd06b07a02b7d2b8ab6c7a13acf476e165dfc60435bebcc5c340336ca1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/cylinder-shape/kit.manifest.js": {
+      "bytes": 573,
+      "sha256": "ca3e858122ea4c7d81dcb997698f0556c995ddd10f3d7095496dcc66e46e9d3e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/convex-shape/kit.manifest.js": {
+      "bytes": 564,
+      "sha256": "de87264ca45932ed5222f6009aa096d2cec326341b236d1d1702298eead57219"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/plane-shape/kit.manifest.js": {
+      "bytes": 561,
+      "sha256": "afe9096247f5ea2c3e2a2305777b387f916617310b155bf09c2b0bacac1ed163"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/triangle-mesh-shape/kit.manifest.js": {
+      "bytes": 614,
+      "sha256": "72ae8e8bfd9150b50f665f7bcf524945d48d5063c93b7ee59b48e0c17cc835fd"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/material/kits/physics-material-kit/kit.manifest.js": {
+      "bytes": 943,
+      "sha256": "e9cd06786e39a7c527e9cf52dff1fde54d515eca2ca0c520b29707e8846febd6"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/compound-shape/kit.manifest.js": {
+      "bytes": 597,
+      "sha256": "5357ecdb04ee576fb85f477e67296382101a8d05f5d4809aa9031c6b186a1cd3"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/heightfield-shape/kit.manifest.js": {
+      "bytes": 602,
+      "sha256": "3e75195f0f4d7246f88ec35f79d7c4f990631c9d461b3d07356a33204333cc07"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/shape/kits/scaled-shape/kit.manifest.js": {
+      "bytes": 593,
+      "sha256": "84c2dac16a51500ab20d5203877b6f2fb2142c46f67dba8a7816f5f4b709c174"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/material/kits/material-combine-policy-kit/kit.manifest.js": {
+      "bytes": 768,
+      "sha256": "59a36d6b63416b5ae4184dae9859c8431ee6a4e64af2321fe67582f93bd27962"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/material/kits/friction-material-kit/kit.manifest.js": {
+      "bytes": 660,
+      "sha256": "06ef9f51a53be4dcc8e001db458a6df81fa6d4b070950d59cdee905dbec84c1a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/material/kits/restitution-material-kit/kit.manifest.js": {
+      "bytes": 683,
+      "sha256": "4294cfe264b0b64a6e8869c941f4c5d90db7e98c543bb0abb153e6938dd88c55"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/material/kits/surface-material-kit/kit.manifest.js": {
+      "bytes": 647,
+      "sha256": "882ac68ae03a293cbb94061dbe813217dd83730a6ac0e029c5c4b438e9e4e901"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/kits/physics-world-settings-kit/kit.manifest.js": {
+      "bytes": 661,
+      "sha256": "91fc349ab5e3f1ac652dd1559ad685ce0b8c538df2bc7da37da3f069594d2692"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/material/kits/density-material-kit/kit.manifest.js": {
+      "bytes": 635,
+      "sha256": "90a664d06df332236c536cd42c41313c50816c97d9968a6e91d1c0e923848b45"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/kits/simulation-region-kit/kit.manifest.js": {
+      "bytes": 743,
+      "sha256": "174f80b39c37a8b64179f2231ddc8d5a147f44e3f1058b54965e69dc62136f0a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/kits/wind-field-kit/kit.manifest.js": {
+      "bytes": 691,
+      "sha256": "927fc613a3157c64ddebec26361200502c5abe15a71fe900ed56502b429af357"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/kits/gravity-field-kit/kit.manifest.js": {
+      "bytes": 712,
+      "sha256": "e3dded0b533c3ce9b5bab72d6bb3b7b8a1b1355685e0b876088b7b73aad13ff1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/kits/time-scale-kit/kit.manifest.js": {
+      "bytes": 694,
+      "sha256": "cffb03ab0aca18ef0e150c013fadef9c91fab716f6235e3cd45f5e3cf0370b2e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/kits/physics-world-kit/kit.manifest.js": {
+      "bytes": 945,
+      "sha256": "ab0fc75479dae83101f8ebb2eaef02e5691162a19bd6a1e8ac4a8b612311229d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/physics/world/kits/force-field-kit/kit.manifest.js": {
+      "bytes": 709,
+      "sha256": "b4b2261769c47ebe4a81047e5f1b463559fd4aa9cc8e24aa04cded7b280ed8c9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/adapters/request-economy-adapter-kit/kit.manifest.js": {
+      "bytes": 728,
+      "sha256": "bafb1b344f30fd7d28cc8b2bd9c6edbc9156803033f9b2577d028e2f96819543"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/assistance-target/subdomain.manifest.js": {
+      "bytes": 720,
+      "sha256": "9e954c4f7cff2a20922f4bf5c876617f7cb1ea2ce49ad0a366e702dbca1c6421"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/assistance-target/kits/assistance-target-kit/kit.manifest.js": {
+      "bytes": 710,
+      "sha256": "ee009caf474de93309f929eab7241aef9af953668438947920ba432a503eaa85"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/environmental-affordance/kits/environmental-affordance-kit/kit.manifest.js": {
+      "bytes": 753,
+      "sha256": "98503bd9d6aff8894a39d493712e8c19cd07553fd9e32238af1bf31874b7c4dc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/environmental-affordance/subdomain.manifest.js": {
+      "bytes": 725,
+      "sha256": "218dc2bb979d268ab9f76103fcad5f65ce4f492b7e3930765c387abcf1baca43"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/request/subdomain.manifest.js": {
+      "bytes": 629,
+      "sha256": "dbf976793659476cc60216bf35f0afe0332fd792c05445d9e59498f586fb96b0"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/adapters/occupant-request-adapter-kit/kit.manifest.js": {
+      "bytes": 723,
+      "sha256": "6bbce850d81d266798492e4bb0a2512f050972d20da05e1a1b97b86ce86d5a94"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/request/queue/subdomain.manifest.js": {
+      "bytes": 720,
+      "sha256": "46db80b3ebd6f424c912eb20b78789f2480fa692817fc6873452f5e03ae8e3f8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/adapters/transport-request-adapter-kit/kit.manifest.js": {
+      "bytes": 742,
+      "sha256": "b7103e5509809effd8e783ea56d61007008d505b554ca308c51bd60641c7b970"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/transfer-zone/subdomain.manifest.js": {
+      "bytes": 717,
+      "sha256": "c67ba7fd19bd5d99ebdd17717214fa40623358a2110fe16416d0268d1842350e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/request/fulfillment/subdomain.manifest.js": {
+      "bytes": 737,
+      "sha256": "bed3e9e8912ae393aab639a9f29114efd0deaa87951d935ae450e3bff3d74f7c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/request/fulfillment/kits/request-fulfillment-kit/kit.manifest.js": {
+      "bytes": 715,
+      "sha256": "bd8d80c67946cfae698d00b590d865921b401b9e5680029cf53bf6be9d5af67e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/request/queue/kits/request-queue-kit/kit.manifest.js": {
+      "bytes": 676,
+      "sha256": "365013e49b09d6eed1a65c22eed6262397a67cb5ae5c6be82fcaf1f57f6edba8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/interaction/transfer-zone/kits/transfer-zone-kit/kit.manifest.js": {
+      "bytes": 660,
+      "sha256": "05b663e5e8627ecec8d9892b2363997791c1109508592e08eba8d81bf9a2c439"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/kits/render-event-schema-kit/kit.manifest.js": {
+      "bytes": 609,
+      "sha256": "4aabbcdec5eacb5f62f0c40a09c7b608d0cce5e04156d99db7cd9d56d6cadd1c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/kits/render-domain-contract-kit/kit.manifest.js": {
+      "bytes": 639,
+      "sha256": "b91d2cb1c5f9f8685caa03822385eb01a6a013499356f94dd610ae1a4f1d9919"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/kits/render-provider-contract-kit/kit.manifest.js": {
+      "bytes": 652,
+      "sha256": "8a77e68740e232d8597b517312078e15e5c83f45fd5c75960af83440a1c17e93"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/kits/render-pass-schema-kit/kit.manifest.js": {
+      "bytes": 636,
+      "sha256": "431c4bc940e06da7baa9decab2184f1637fc301e1bca1d42a883fe81c3fb4ab3"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/kits/render-frame-schema-kit/kit.manifest.js": {
+      "bytes": 594,
+      "sha256": "9f2cc33de96ada59c40b7df44972f02f79dc6a2bf9a06a3cc7d81a381a580c21"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/kits/render-resource-schema-kit/kit.manifest.js": {
+      "bytes": 638,
+      "sha256": "159d11c489796f4d53674b3871ba1e6695f08f1ec041b350bcc2f27dd38c73e1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/contracts/kits/shader-schema-kit/kit.manifest.js": {
+      "bytes": 601,
+      "sha256": "01676430f7b87ba975562a642dd4c89c4d828b67f2ba75eee77b3a629ba9a79d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/lifecycle/kits/render-snapshot-kit/kit.manifest.js": {
+      "bytes": 687,
+      "sha256": "cb441608d13bdbd52489dcba18f16d59b589a5c8898bb35c6a9433b7069d8f33"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/lifecycle/kits/render-installation-kit/kit.manifest.js": {
+      "bytes": 676,
+      "sha256": "a96fda9949d12dea1a88eb5384d567a93dbcf098f75440c80dc460ff28e61425"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/lifecycle/kits/render-startup-kit/kit.manifest.js": {
+      "bytes": 619,
+      "sha256": "e0947f4b35860fea43d0f0514e793c7ef50c4bb65c374ec88d41ea36b5e13e58"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/lifecycle/kits/render-shutdown-kit/kit.manifest.js": {
+      "bytes": 617,
+      "sha256": "0bc8708c07a5a4aace2fc7129f2692513b6c639262f17897099f0a6ede51f000"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/lifecycle/kits/render-recovery-kit/kit.manifest.js": {
+      "bytes": 691,
+      "sha256": "6ab9c87cebe6030685772e4f3de7078f1b23a89fecdffd4d23c804e9fe849dc7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/lifecycle/kits/render-reset-kit/kit.manifest.js": {
+      "bytes": 648,
+      "sha256": "473573f5c528e316ee507ea57994157003adacea6c468dd1b76fd9d6319f3d06"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/device-diagnostics-kit/kit.manifest.js": {
+      "bytes": 783,
+      "sha256": "7b94bd8022980a2d82fb6507547f9813cf85c87bcf43bcb2f99232c744282f8a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/render-device-contract-kit/kit.manifest.js": {
+      "bytes": 664,
+      "sha256": "eaf3491a7246aaba790245fb2316cdf9aaf6d1352def7f44bef71674738e0692"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/device-feature-kit/kit.manifest.js": {
+      "bytes": 642,
+      "sha256": "c5eab0c1d4b8257c180de1cc0b503f0077c3133ea74a4c9d593d7c2dcf10765e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/device-limit-kit/kit.manifest.js": {
+      "bytes": 618,
+      "sha256": "01bdbbd53503a3698df8958f298c2723a23feac5561b32a427252c92df705f93"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/device-capability-kit/kit.manifest.js": {
+      "bytes": 719,
+      "sha256": "e6b08208088eedddd2a29ecbd2a8516cc19278edef8b2545d96c502e5ffaa535"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/device-memory-kit/kit.manifest.js": {
+      "bytes": 682,
+      "sha256": "a72781a92864822a5840a020072014a82b6ead558875fde68e6efbd01e7a50e2"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/device-queue-kit/kit.manifest.js": {
+      "bytes": 679,
+      "sha256": "14dcfff8459f8495bf3e8ef5dd6e668c5093a767f4f59a5baf6f117b3f0ff4ab"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/device-lifecycle-kit/kit.manifest.js": {
+      "bytes": 724,
+      "sha256": "d1195785fa18ffb706546db3ff4a1bd1b41739b704834be1f1c458b5dc62ba8d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/device/kits/device-loss-kit/kit.manifest.js": {
+      "bytes": 644,
+      "sha256": "5a40349ccc12ec364cbdea2e6ea19e839403caab6090114b791981f5475c9732"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/surface-format-kit/kit.manifest.js": {
+      "bytes": 647,
+      "sha256": "8ee2ed34d0d465fae8de7877494d0a77c5a0fbe76ec4d713b1684b818a4c52de"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/offscreen-surface-kit/kit.manifest.js": {
+      "bytes": 679,
+      "sha256": "504a3a60ec2dc00519774f8bd17180ef311ec53ae804f806d2f8fbad989a6be4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/render-surface-kit/kit.manifest.js": {
+      "bytes": 666,
+      "sha256": "74ab3b28d40bac6b61600c6466155d046eac8782c4d6487a2ec9d3dfeeaf6f30"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/swapchain-surface-kit/kit.manifest.js": {
+      "bytes": 699,
+      "sha256": "07a8281f97cff9a563b5db907476bc01d1c37118b689945d60df531ea0a7eb1d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/viewport-kit/kit.manifest.js": {
+      "bytes": 600,
+      "sha256": "49f27fa79734a0c8ee8993420a9bb649fd5b38443371e5082ea62da1aa517d5b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/window-surface-kit/kit.manifest.js": {
+      "bytes": 663,
+      "sha256": "c47d3367c32876f0b348179a51bd00bef23835292fc5aa281c2e3058f0c4e9b9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/fullscreen-kit/kit.manifest.js": {
+      "bytes": 637,
+      "sha256": "1f6d1dc9f16e0e977463fcb0cbadbc656a9c1c77b2e02748c2b748349fb32af5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/scissor-kit/kit.manifest.js": {
+      "bytes": 610,
+      "sha256": "01bc84276f4e89d3367ba88de98ff56b60b49024b6f2a713ac3505536bec83bf"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/surface/kits/resize-kit/kit.manifest.js": {
+      "bytes": 610,
+      "sha256": "7cbdd876708202657f696eae843b364a1c3d103c9b2f2d430119832364809869"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/render-resource-contract-kit/kit.manifest.js": {
+      "bytes": 737,
+      "sha256": "a0b6f1c236163c5b7bf45be0cf7caa66ae69c3630b833f6d0a1347d82b5c28e4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-identity-kit/kit.manifest.js": {
+      "bytes": 666,
+      "sha256": "15b754b092b82e62f31048d0c908f45e259e7c401aac90096bf660812fc9d719"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-lifecycle-kit/kit.manifest.js": {
+      "bytes": 862,
+      "sha256": "6e7b9345d2f84926905e3cf915a7ba0fe9ef4c7c2b2c62ca4b0b0799bd5088f9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-state-kit/kit.manifest.js": {
+      "bytes": 601,
+      "sha256": "45232703bcd0083e3684ec111ee688041338037131eb0335f69cf8440ca54bf2"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-reference-kit/kit.manifest.js": {
+      "bytes": 654,
+      "sha256": "624363494c1963bb713aed56bde36bce048abe220d6b0cca5f47747bfc0d0c4e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-integrity-kit/kit.manifest.js": {
+      "bytes": 657,
+      "sha256": "0ed759c7789843487e50bab131cfba9f96e3d1784f53e2f580b811410dbec018"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-cache-kit/kit.manifest.js": {
+      "bytes": 687,
+      "sha256": "bb3a6bc74879bc4ebae74565ebe1948f982774c63b44d1c11d820db84ca7c7b1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-budget-kit/kit.manifest.js": {
+      "bytes": 704,
+      "sha256": "d23897c574934ad555d99ce71b7c0d13fba4dd06825317cc4e154b5b5b3258b2"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-upload-kit/kit.manifest.js": {
+      "bytes": 765,
+      "sha256": "6f2564de99a84091b061f401cb74480fd30ee33fbaaa2fd767b4e2d05d52f68e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/resource/kits/resource-release-kit/kit.manifest.js": {
+      "bytes": 736,
+      "sha256": "c64a6016ca2afce8ac9bc28634f2ba93f516f13b0f24482e38c26f8cb122c256"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/kits/buffer-resource-kit/kit.manifest.js": {
+      "bytes": 723,
+      "sha256": "ad273c53d53343927c1f251c67f07ff52c4e0b643da76a8bf47a0dfd19bc0ced"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/kits/vertex-buffer-kit/kit.manifest.js": {
+      "bytes": 658,
+      "sha256": "7b16470a356de5c0142ab6e3a574f189194140575d55ad4b0e1314e6974b0be4"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/kits/buffer-layout-kit/kit.manifest.js": {
+      "bytes": 628,
+      "sha256": "b8722a51cf8b1c72efcb656432f4e727fdd4f60cf0267e2ef31cc01a12e44f0a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/kits/uniform-buffer-kit/kit.manifest.js": {
+      "bytes": 676,
+      "sha256": "3f4508fe845a5469e13a8746ed85d4c0bbef3d8921ce0986a8be24ebae53f148"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/kits/indirect-buffer-kit/kit.manifest.js": {
+      "bytes": 664,
+      "sha256": "07e86f92a1b3f722a66fe59a0cb9e49d6f91eb810edd462c5d711ea5efb75871"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/kits/index-buffer-kit/kit.manifest.js": {
+      "bytes": 638,
+      "sha256": "b3177037348428c944733ca0159ab6b540329d091f559be3daa5534ea206048e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/kits/storage-buffer-kit/kit.manifest.js": {
+      "bytes": 675,
+      "sha256": "d001ddbdd85af5f0814cccda39d62ef119f7dc950f05206a3a4e02002de82308"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/buffer/kits/instance-buffer-kit/kit.manifest.js": {
+      "bytes": 672,
+      "sha256": "14a9d225ccd8444cd85bf48759ded15c26d33af1435c0ff2981514ca84d32916"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/texture-residency-kit/kit.manifest.js": {
+      "bytes": 718,
+      "sha256": "a51cb0a34e76423f97a1ab0956d8bc42e195542ded33b9214b8365eeddaa9e49"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/texture-format-kit/kit.manifest.js": {
+      "bytes": 625,
+      "sha256": "e6cd70aed954fd82d4dbb49a2dd0004deec0958d5531bcb3d00bb535f41d033c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/texture-resource-kit/kit.manifest.js": {
+      "bytes": 740,
+      "sha256": "95d975f364aa0aae2d70855ae47c85f4ca7a26146b77d2a812b3051b3d996191"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/texture-2d-kit/kit.manifest.js": {
+      "bytes": 609,
+      "sha256": "71acdc680a75e668f362e2b18fd1c89e0591175b2e35877dd1057d24e4e656bc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/texture-cube-kit/kit.manifest.js": {
+      "bytes": 634,
+      "sha256": "d1a7958dec8f4cbcaae1082615773d7a592b5770b61b04ad36b00e72ff77c430"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/texture-array-kit/kit.manifest.js": {
+      "bytes": 647,
+      "sha256": "ed647122c1e7a893ce40fc7f8923b6ebd888d294a33f353e76602cc6161f9201"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/render-target-texture-kit/kit.manifest.js": {
+      "bytes": 698,
+      "sha256": "e11b15e22e8156f5ec9495ee7c809b82b87639bd4f2277404ca987c580c950d5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/depth-texture-kit/kit.manifest.js": {
+      "bytes": 671,
+      "sha256": "103164d8cb7e357f3888252bdea2cc2f04abe850f83d26a689bb6f3e085ab8c8"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/shadow-texture-kit/kit.manifest.js": {
+      "bytes": 679,
+      "sha256": "9e9d1d4c763fda4f29326507f6efbd82537d851cd8d3a68c3366e561ddad3638"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/mipmap-kit/kit.manifest.js": {
+      "bytes": 629,
+      "sha256": "4d469c899e197915f75fc1e52e8c4e27318a8678f6985d7c360f1defb081eb1f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/texture/kits/texture-stream-kit/kit.manifest.js": {
+      "bytes": 782,
+      "sha256": "53bac3bf9960cc6f91b84a85b3ce3ab639eb8975ac8c968e2ba7f34803f9d1bb"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-language-kit/kit.manifest.js": {
+      "bytes": 627,
+      "sha256": "d157932be2a4e2baa51ca87e0c203ab10b6b0a3000e7cc9a408e9b7c1e7e1a0c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-module-kit/kit.manifest.js": {
+      "bytes": 650,
+      "sha256": "55dc420e24c93c57ce7ba660227acb9cec2e374a804a7da428d0549155ab7963"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-source-kit/kit.manifest.js": {
+      "bytes": 598,
+      "sha256": "12b3eaf08c2910ed94d804c4567f6847c98453bd50e94e2328aef6a96e6bb149"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-include-kit/kit.manifest.js": {
+      "bytes": 637,
+      "sha256": "1d8fc9c9b5728e5f5a6eb089b52dbae5472dca922fe1173bfe46785d1fe8c4a3"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-permutation-kit/kit.manifest.js": {
+      "bytes": 653,
+      "sha256": "322cf326c70f658dea5cdfb95446c813530197d67c7a6382b918e41e8f4c14b7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-program-kit/kit.manifest.js": {
+      "bytes": 625,
+      "sha256": "cd847251104e70e87ab38f1dead296c1ffb4bb699971d85a506335110199e93e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-cache-kit/kit.manifest.js": {
+      "bytes": 722,
+      "sha256": "f932cad8751981edd3c5c321c5495fc1a4efad96e339876f7305b1a931f24fa5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-variant-kit/kit.manifest.js": {
+      "bytes": 612,
+      "sha256": "9f7f4a08809501cfd6bcd02f8bb2627f58a1eaf6bd8655e1da099c5e1c44bd81"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-error-kit/kit.manifest.js": {
+      "bytes": 575,
+      "sha256": "6e4b9c15482d2210f835a020fcd95ca656b38297afc007608ece66f4a349f9ca"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-compile-kit/kit.manifest.js": {
+      "bytes": 819,
+      "sha256": "02c1ac0ca2868e58bc3f485b2347aefd1e2e5fb5de820d191dcc9243de12c15c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-reflection-kit/kit.manifest.js": {
+      "bytes": 718,
+      "sha256": "88b073ac10a25819c9cee46989c49d045c8a8562d86f112e3e300dfcf8108649"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/material-binding-kit/kit.manifest.js": {
+      "bytes": 642,
+      "sha256": "5c14493cc6600a0ebb0ded5a6fd8f1ba2eacd975e4da4a1fe5c4f1e9153412c2"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/shader/kits/shader-contract-kit/kit.manifest.js": {
+      "bytes": 605,
+      "sha256": "d97b88971ef83138b80b8b51246d3f6e49d044888598a546113d083a9b1f0be5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/material-cache-kit/kit.manifest.js": {
+      "bytes": 676,
+      "sha256": "0c75f5c295d63f289c290478e96db2bf62041a076803431dc0f7468850ae8e8c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/material-parameter-kit/kit.manifest.js": {
+      "bytes": 623,
+      "sha256": "175614edbfb1c595178b95b83721a066e36977a665abb529f92b3c779ee5de26"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/material-contract-kit/kit.manifest.js": {
+      "bytes": 612,
+      "sha256": "23b9814c29241271ba0e5fbc542cc2a3bfc37ee810cc4b49cb7ce62dba3d2f5f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/texture-binding-kit/kit.manifest.js": {
+      "bytes": 791,
+      "sha256": "9e50b1b3ef31095cb430266a76851b3955d04d90656f1094aef2d93ef510d401"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/material-variant-kit/kit.manifest.js": {
+      "bytes": 651,
+      "sha256": "96ade16a77cfc0ed04f0cda96dcfc0bdeb4ac2ac65c0529f08f5c034f0a4e441"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/material-validation-kit/kit.manifest.js": {
+      "bytes": 736,
+      "sha256": "49392642870fccb1e7bb96fc59913f4c166dfff644eaaa44680d134b37f766f7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/sampler-binding-kit/kit.manifest.js": {
+      "bytes": 630,
+      "sha256": "d6ee86219a0865d227b8bbe4116c342e38cc3435105b5f43c15922e5d25d70c1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/material/kits/material-instance-kit/kit.manifest.js": {
+      "bytes": 733,
+      "sha256": "f18bd84c01d926300e07fdc81a7cc9825265ca8b7dfe0fc36accac7af79b43f6"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/kits/stereo-camera-kit/kit.manifest.js": {
+      "bytes": 586,
+      "sha256": "a04047c345262d7fa2a2f5191859c9dc07b2363e08a20bc487553a97fcc85b12"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/kits/camera-binding-kit/kit.manifest.js": {
+      "bytes": 593,
+      "sha256": "fca9f20f7f48ad860f7271187b145b2af9ee2250269853c9197becd96cd61360"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/kits/camera-jitter-kit/kit.manifest.js": {
+      "bytes": 586,
+      "sha256": "f1ddc89e7aae5ca36ba12141b89b493c2941f4835efa1b5b8f8b02df81890303"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/kits/camera-projection-kit/kit.manifest.js": {
+      "bytes": 614,
+      "sha256": "7f55f76e6f96c1fd9ddf402039d19bf9efc0d0c82667a312dafa5fc3e9b0c813"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/kits/camera-reprojection-kit/kit.manifest.js": {
+      "bytes": 628,
+      "sha256": "faa5c5bd281140e3c937a9d21bf5d43b194af34e0f03440ad9b03cc2b6bd8c44"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/kits/camera-view-kit/kit.manifest.js": {
+      "bytes": 572,
+      "sha256": "0d1a4ea698eac43b500dfb94dd6279a3950df055fbd035e43bd1046dae8684e9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/kits/camera-viewport-kit/kit.manifest.js": {
+      "bytes": 600,
+      "sha256": "cb781883cc86203dee5ccbfb83a5f1fb3d4f446545de7ce72a3c48e3b053f518"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/route-field/subdomain.manifest.js": {
+      "bytes": 685,
+      "sha256": "95bac945536a72225270e4396d1652a0b02b678a736fb37c40afb3e601d6a334"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/render/camera/kits/multiview-camera-kit/kit.manifest.js": {
+      "bytes": 607,
+      "sha256": "e1ef71ab0813f6bad3b28d3441b4f18737efa6643a81d0e13247f530dfe7917a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/water-surface/kits/water-surface-kit/kit.manifest.js": {
+      "bytes": 639,
+      "sha256": "c5f646cf1e8ef40e62aa5623cddb51031fe8f08320bd866e4e2201378c595a59"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/subdomain.manifest.js": {
+      "bytes": 688,
+      "sha256": "8e2b657fdabbd10f3b5f14fd14cb14d184fc0ff2f9349786e4f576ec388313f2"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/navmesh/subdomain.manifest.js": {
+      "bytes": 699,
+      "sha256": "5ba7c13bbd57e6aabf797ac13c502be8aad148583614edb79947124980521625"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/pathfinding/subdomain.manifest.js": {
+      "bytes": 717,
+      "sha256": "39c269e0061c98954211b9f76845f34cabb5493d143b3cadc2af2a60172a6444"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/route-field/kits/route-field-kit/kit.manifest.js": {
+      "bytes": 643,
+      "sha256": "9204af54ce87cc0f52ca26aa8bb5dffb40b0030fd23327456e0848d9074df47f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/pathfinding/kits/pathfinding-kit/kit.manifest.js": {
+      "bytes": 682,
+      "sha256": "e106caefd49f907875be9796cab0acd22f0c3f2a614a0e3bca1c75aaa7951a0b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/landmark-guidance/kits/landmark-guidance-kit/kit.manifest.js": {
+      "bytes": 705,
+      "sha256": "e673cd617357f4910d61227eca4caa6e665e1f7591372cb184f50f83878eced2"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/landmark-guidance/subdomain.manifest.js": {
+      "bytes": 717,
+      "sha256": "917a0447897f380a91af3a7873778b8284c6de455e6d665fa58f62578d27e7fb"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/generation/kits/procedural-generation-kit/kit.manifest.js": {
+      "bytes": 711,
+      "sha256": "38690b3796eaa45c930c510e3ee2cb84e0320789bee21a4d8f61664fa8537ed5"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/terrain/subdomain.manifest.js": {
+      "bytes": 712,
+      "sha256": "0083eaff9c4714350d41ad9ad884ec3c8fcf7bba7cbf4045f609e31b504482fb"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/generation/subdomain.manifest.js": {
+      "bytes": 706,
+      "sha256": "e8ee3f92cc7c2df97cf8e1b88b70d01b4bbb5a8e1ac99ac684cf60030941e220"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/water-surface/subdomain.manifest.js": {
+      "bytes": 695,
+      "sha256": "1e11f5310b1dbb065b24562a04139745d8c8cd7719e70367bea5b6ecccf82231"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/terrain/kits/terrain-kit/kit.manifest.js": {
+      "bytes": 618,
+      "sha256": "fad0e6f06cdac4cc52a462cb2e5b9301651962e037e431878ce94f0cf251002a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/world/navigation/navmesh/kits/navmesh-kit/kit.manifest.js": {
+      "bytes": 659,
+      "sha256": "4b77b17468add26bee632ceec0d7787135600dd30b9cff7a66314fc2e1c0f319"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/motion/locomotion/subdomain.manifest.js": {
+      "bytes": 725,
+      "sha256": "f480d395390be0407e719dd7369f2a8973f8bfe29aad16a12c38cf6cd1ad67ca"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/recovery/subdomain.manifest.js": {
+      "bytes": 655,
+      "sha256": "dbbea649654d5e168d5c46dc58202794176ee1928da9acf132e1e6f4788e3068"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/motion/vehicle/subdomain.manifest.js": {
+      "bytes": 708,
+      "sha256": "49992e00f08189bc049e5d9afd328077bc52e0515db71ce27921c98b9bf4f700"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/physics/world-contact/subdomain.manifest.js": {
+      "bytes": 718,
+      "sha256": "654b8cd2debe7e392d45ee9fb8ed991601c381efd56baeb2b74ba223efe5030c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/recovery/soft-respawn/subdomain.manifest.js": {
+      "bytes": 689,
+      "sha256": "8511f642674b920446d50ff768be3613a9c726d51eec4caa32ffc7417c42c645"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/economy/subdomain.manifest.js": {
+      "bytes": 615,
+      "sha256": "7b6ee13fbc553546ab29ea808fc46d745ffe03f5341117574f12b9b9a94d8e00"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/progression/subdomain.manifest.js": {
+      "bytes": 655,
+      "sha256": "65256936880d22ee609734365990fcb83afd4645fd6e34d2e115bfad72f7a9bd"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/operations/subdomain.manifest.js": {
+      "bytes": 663,
+      "sha256": "9e205ace9ac7e1815f3493efcd50d5c267ed8f7479706a5fd6efc4b2b71e579a"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/operations/facility/subdomain.manifest.js": {
+      "bytes": 730,
+      "sha256": "a75ec7f52d9f1c98053b6fa4437dc1d04c26eaee9a770d98796718045156147c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/economy/accounts/subdomain.manifest.js": {
+      "bytes": 729,
+      "sha256": "605026c56b555b9497999d2a174e7cf3308ac034cf8e02477f90df2721dd2f57"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/operations/transport-route/subdomain.manifest.js": {
+      "bytes": 752,
+      "sha256": "53b6370a54f7f3f1d31936e2f20f9305c3a24453f153b933b8c00bc15ca58487"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/hazard-field/subdomain.manifest.js": {
+      "bytes": 689,
+      "sha256": "3cb723110a5f02af68734df465f65f48eda00dc28d71c2e48086426eb3557526"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/pursuit-pressure/subdomain.manifest.js": {
+      "bytes": 716,
+      "sha256": "a725d824b40115f51ef04b2660e30905d6a7ecb028b52c25aa4dd8a726258d9e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/operations/occupant-flow/subdomain.manifest.js": {
+      "bytes": 717,
+      "sha256": "cf806e4542314b5655eec77a2be04d732e8d41645b751c950f4cfc17a2fa4c5b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/economy/cargo/subdomain.manifest.js": {
+      "bytes": 687,
+      "sha256": "32dca9faaeb81879c97443b99800be4ccadfb253050dc6057f2249da6a633e40"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/physics/world-contact/kits/world-contact-kit/kit.manifest.js": {
+      "bytes": 723,
+      "sha256": "1ddac87bc54bb0342a49ea622cab4e5eb4eaa818b51377ecab7cfb26586c04dd"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/progression/lifecycle/subdomain.manifest.js": {
+      "bytes": 753,
+      "sha256": "1dac464e99c7aa1b8f579cdbe1387cd084bb5aae660771d70dc727a9be943d3b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/motion/locomotion/kits/action-locomotion-kit/kit.manifest.js": {
+      "bytes": 702,
+      "sha256": "ffb3d6e05857e569773d708e4cbf40e8f5f8582e6e24e06ee6c4217c9e5d8c99"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/motion/vehicle/kits/vehicle-dynamics-kit/kit.manifest.js": {
+      "bytes": 688,
+      "sha256": "0b6980a5f062460447836f762da68689b77bd0b8a667b2a7e08daf557ce9d0a7"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/economy/accounts/kits/economy-account-kit/kit.manifest.js": {
+      "bytes": 703,
+      "sha256": "f10a1e233183e1c8987f56d09b08654391cb02cf289f7777d9300e0a440bf1a9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/recovery/soft-respawn/kits/soft-respawn-kit/kit.manifest.js": {
+      "bytes": 676,
+      "sha256": "769d784acb2e165f37e3a763d4fae9572fd491bcb688109a7d6a6066a625b697"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/economy/cargo/kits/cargo-manifest-kit/kit.manifest.js": {
+      "bytes": 654,
+      "sha256": "b3dcc0415a25e45e8eff3b6f0a77d9c1690d333690a06ed8f7fa78730cf3e2cc"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/adapters/locomotion-contact-response-adapter-kit/kit.manifest.js": {
+      "bytes": 796,
+      "sha256": "433eafefac63ae93519a62edebbf76e38dfe203a3b3816e6f4a85ee0c45a4c63"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/adapters/facility-economy-adapter-kit/kit.manifest.js": {
+      "bytes": 722,
+      "sha256": "faca5b4a29aa5cabbf65613e477c55f65f3db2f9682468118b7b2876dfc9a790"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/operations/occupant-flow/kits/occupant-flow-kit/kit.manifest.js": {
+      "bytes": 690,
+      "sha256": "557b6fc8420703a7c92b50641bb293d36525e587259deae8475b5c23b996c36b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/hazard-field/kits/hazard-field-kit/kit.manifest.js": {
+      "bytes": 660,
+      "sha256": "bea9b6699dddb7f6ca36bf4cb4d584e8823698664fec1fd8a22ad9c30532582b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/progression/lifecycle/kits/lifecycle-progression-kit/kit.manifest.js": {
+      "bytes": 723,
+      "sha256": "e2df7f59bc27239fdb9c92686f81696733fd433a27e8117a0240d579f26fc710"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/operations/transport-route/kits/transport-route-kit/kit.manifest.js": {
+      "bytes": 721,
+      "sha256": "3d6b508cd4de0d75d0d02aed5f06a5e7251e66131ce3925959ceb1d7883b6608"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/operations/facility/kits/facility-operations-kit/kit.manifest.js": {
+      "bytes": 703,
+      "sha256": "1485caa9f974aae35c656ee5fb46abcdd5c663a22a1ee9c2e81a98c21a8b308c"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/pursuit-pressure/kits/pursuit-pressure-kit/kit.manifest.js": {
+      "bytes": 687,
+      "sha256": "5a151adad9aa51111e68ab5b31efc3ea97feb234ec52737ad1bfeb4688c1c44e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/adapters/lifecycle-economy-adapter-kit/kit.manifest.js": {
+      "bytes": 742,
+      "sha256": "9a172867811286251f456ba51efb3c0e46a09528d3e51f2c20c854afb280a85b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/adapters/vehicle-water-response-adapter-kit/kit.manifest.js": {
+      "bytes": 760,
+      "sha256": "89df91387ac95657dc86a3fae950263384cd56cd7200dcbe52a236a9ee70430e"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/simulation/adapters/lifecycle-facility-adapter-kit/kit.manifest.js": {
+      "bytes": 747,
+      "sha256": "da78065a443bc39645e963cd17cf3df655c8e1a76d56a6bd197ae0d985f40a40"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/build/manifest-input.js": {
+      "bytes": 326,
+      "sha256": "cc676a78090f5de894e9cf87773b68e59923c1d123ffd7e56fe4e00d168c9c29"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/contracts/tool-schema.js": {
+      "bytes": 10739,
+      "sha256": "9a056e6e8d5fd8cc937245846f5b0b41feb12e0b5190dd2c84a7e2ed85af1708"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/index.js": {
+      "bytes": 336,
+      "sha256": "2ac5b7255c7c716b5e244437f942c958cfeead76ff42d3eff6f824b1960ca9b3"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/spatial/kits/transform-math-kit.js": {
+      "bytes": 5177,
+      "sha256": "9f5f75ff74a34e7879e19e19f1872eb072e32123488c4abc747a412eab7b7b12"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/contracts/transforms.js": {
+      "bytes": 3790,
+      "sha256": "5292923d6ca26d6a1cacaae0ece221ddfe91ab482e458311b00e19ef1465e740"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/evaluate.js": {
+      "bytes": 4702,
+      "sha256": "be800fd7a28dd42d3fa26e364ab2f66da4d32700b532a185768ceee5339cd55f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/primitives.js": {
+      "bytes": 5115,
+      "sha256": "9602346ffbb01abc9242d2762a77f90e9189cb62d83cd430b78966c866e9c66b"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/topology.js": {
+      "bytes": 21260,
+      "sha256": "33baddb302024339f04d6d82b62e1071bf1f0d38499d0703034e82d184cbfb9d"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/seeded-random.js": {
+      "bytes": 1404,
+      "sha256": "4c0e769d37057ace649823f6dee187d9b7b4d0f8f7c78c21bab646c3f9412421"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/promotion-guard.js": {
+      "bytes": 1196,
+      "sha256": "1d962ffe63eefcf276eb5763c9e044cf5f3d65f8f992e9eb9bef1b3b73237f36"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/progress-timer.js": {
+      "bytes": 1328,
+      "sha256": "b3253ad9100c4073a15dd0c6c9cc417604ee66ca071d64961c4c86e94eb43b4f"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/completion-ledger.js": {
+      "bytes": 1100,
+      "sha256": "546103d18a64e3069caa8e12f206e559745236d4eae6ee7e8ea95caab7e994c1"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/deterministic-replay.js": {
+      "bytes": 1436,
+      "sha256": "587b3d3f33a1ec0c5c1436ab0e67bc3cfd061a90109b5a3431ba45ebf97e2822"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/foundation/snapshot.js": {
+      "bytes": 1625,
+      "sha256": "2e2bb7c3f31f4b2c99a46d595f47983c9e5c083495fffec36d858530dfc4dad9"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/mesh/bevel.js": {
+      "bytes": 4969,
+      "sha256": "7f3dec4ad1fdf89cbba7dfbfee67bee8430af08346733fe4aff07f8a4664ed33"
+    },
+    "https://raw.githubusercontent.com/LuminaryLabs-Dev/NexusEngine/447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/spatial/kits/quaternion-math-kit.js": {
+      "bytes": 5950,
+      "sha256": "17147195f9f1cbf2d5a5fa0bf50fb2a99b58b6c8bdc8e0a3d4ad4e8b745680b5"
+    }
+  }
+}

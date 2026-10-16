@@ -43,7 +43,7 @@ function buildStage(){
   player=new THREE.Group();box(player,0,.48,0,.55,.65,.5,0x69d9e4);box(player,0,.95,0,.65,.35,.55,0xf9eee0);box(player,.17,.97,.3,.14,.12,.03,0x12202e);group.add(player);
   box(group,run.level.length/2,-7,-4,run.level.length+20,.6,30,0x222c42);
 }
-function start(index){if(!ready||index>=save.unlocked)return;enableAudio();run=newRun(index,$('assist').checked);buildStage();paused=false;keys.clear();jump=false;accumulator=0;$('panel').hidden=true;$('world').tabIndex=0;$('world').focus();$('hud').hidden=false;$('stage').textContent=`${index+1} / 5 · ${run.level.title}`;announce('Follow the phrase. Space to jump between instruments.');}
+function start(index){$('panel').querySelector('h1').textContent='Soundstage';if(!ready||index>=save.unlocked)return;enableAudio();run=newRun(index,$('assist').checked);buildStage();paused=false;keys.clear();jump=false;accumulator=0;$('panel').hidden=true;$('world').tabIndex=0;$('world').focus();$('hud').hidden=false;$('stage').textContent=`${index+1} / 5 · ${run.level.title}`;announce('Follow the phrase. Space to jump between instruments.');}
 function resume(){if(!run||run.completed)return;enableAudio();paused=false;accumulator=0;$('panel').hidden=true;$('world').focus();}
 $('resume').onclick=resume;$('menuButton').onclick=menu;$('retryLoad').onclick=()=>location.reload();
 function inputDown(event){if(['INPUT','BUTTON'].includes(event.target?.tagName)&&event.code!=='Escape')return;if(['Space','ArrowLeft','ArrowRight','ArrowUp'].includes(event.code))event.preventDefault();if(event.code==='Escape'){if(paused)resume();else menu();return;}if(!keys.has(event.code)&&['Space','ArrowUp','KeyW'].includes(event.code))jump=true;keys.add(event.code);}
@@ -60,7 +60,7 @@ function update(dt){
   $('phrase').textContent=run.level.motif.map((n,i)=>`${i===run.phraseIndex?'[':''}${NOTE_NAMES[n]}${i===run.phraseIndex?']':''}`).join(' ');$('timer').max=run.assist?8:4;$('timer').value=run.chainLeft;
 }
 function frame(now){raf=requestAnimationFrame(frame);const elapsed=Math.min((now-last)/1000,.1);last=now;
-  if(run&&!paused){accumulator+=elapsed;while(accumulator>=1/120){update(1/120);accumulator-=1/120;if(paused)break;}}
+  if(run&&!paused){accumulator+=elapsed;while(accumulator>=1/120){update(1/120);accumulator-=1/120;if(paused){accumulator=0;break;}}}
   if(run){player.position.set(run.x,run.y,0);player.rotation.z=$('motion').checked?0:-run.vx*.018;for(const o of objects){if(o.kind==='collect'){o.mesh.visible=!run.collected.includes(o.n.id);if(!$('motion').checked)o.mesh.rotation.y=now*.001;}else{o.mesh.position.y=o.p.y-.28-(run.padId===o.p.id&&run.grounded&&o.p.type==='key'?.07:0);}}
     const target=new THREE.Vector3(run.x+3,run.y+6,11);camera.position.lerp(target,$('motion').checked?1:.09);camera.lookAt(run.x+3,run.y+.8,0);
   }else{camera.position.set(5,6,12);camera.lookAt(5,0,0);}
@@ -68,9 +68,11 @@ function frame(now){raf=requestAnimationFrame(frame);const elapsed=Math.min((now
 }
 function resize(){if(!renderer)return;renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();}
 async function boot(){try{
-  const [three,core,author]=await Promise.all([import('three'),import('nexusengine'),import('nexusengine/domains/authoring')]);THREE=three;
+  const [three,core,author]=await Promise.all([import('./three-runtime.mjs'),import('./engine-runtime.mjs'),import('./engine-runtime.mjs')]);THREE=three;
   engine=core.createEngine({kits:author.createAuthoringDomain()});const authored=authorUnitCube(engine);unit=new THREE.BufferGeometry();unit.setAttribute('position',new THREE.Float32BufferAttribute(authored.positions,3));unit.computeVertexNormals();
   renderer=new THREE.WebGLRenderer({canvas:$('world'),antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x101522);scene=new THREE.Scene();scene.add(new THREE.HemisphereLight(0xcde7ff,0x362329,2));const light=new THREE.DirectionalLight(0xffe6bd,3);light.position.set(2,9,6);scene.add(light);camera=new THREE.PerspectiveCamera(48,1,.1,180);resize();window.addEventListener('resize',resize);ready=true;showLevels();$('stage').textContent='Campaign · Five stages';announce('Choose your first stage');last=performance.now();raf=requestAnimationFrame(frame);
 }catch(error){console.error(error);$('stage').textContent='Loading failed';$('notice').textContent='Could not load the engine or graphics. Check your connection and retry.';$('retryLoad').hidden=false;}}
 window.addEventListener('pagehide',()=>{cancelAnimationFrame(raf);window.removeEventListener('resize',resize);document.removeEventListener('keydown',inputDown);document.removeEventListener('keyup',inputUp);clearStage();unit?.dispose();renderer?.dispose();audio?.close().catch(()=>{});},{once:true});
 showLevels();boot();
+
+window.addEventListener('pageshow',event=>{if(event.persisted)location.reload();});

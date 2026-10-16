@@ -13,14 +13,18 @@ A/D or arrows move; Space jumps; Escape pauses. Touch buttons provide the same c
 - `source/src/app.mjs`: Three rendering, procedural instrument instances, Web Audio voices, controls and UI.
 - `source/tests/core.test.mjs`: 13 headless tests, including a scripted traversal of all five stages.
 
-Engine is pinned to `447816ea39e89fa7095b7a1ffdf46d8fba7f68cd`. Authoring owns the source cube; game-local rules own platform motion and musical state. No Nexus physics solver or unproven optional Kit is claimed. Three.js 0.165.0 (MIT) and NexusEngine (MIT) load through immutable/versioned jsDelivr URLs. The installer verifies game payload bytes; these external runtime imports are not bundled or covered by its payload hashes. An online connection is required.
+Engine is pinned to `447816ea39e89fa7095b7a1ffdf46d8fba7f68cd`. Authoring owns the source cube; game-local rules own platform motion and musical state. No Nexus physics solver or unproven optional Kit is claimed. Three.js 0.165.0 (MIT) and a minimal NexusEngine Authoring runtime are bundled in the game payload. Both are verified by the installer with every other file. Runtime source pins and licenses are recorded in docs/prototype-runtime-provenance.md.
 
 ## Verification
 
 `node --test games/soundstage/source/tests/core.test.mjs`
 
-Parent audit on 2026-10-16: 13/13 headless logic tests passed; JavaScript syntax check passed. The scripted traversal proves bounded logic reachability, not human difficulty or render quality. Browser rendering, actual CDN module loading, audio playback and real installer launch are not verified. This is a prototype, not a certified release.
+Parent audit on 2026-10-16: 13/13 headless logic tests passed; JavaScript syntax check passed. The scripted traversal proves bounded logic reachability, not human difficulty or render quality. The bundled engine executes its real Authoring operation in Node, and the actual pinned BrowserInstaller was exercised against a CacheStorage stand-in. Browser rendering, audio playback and browser service-worker launch remain unverified. This is a prototype, not a certified release.
 
-`build/` is a byte-identical copy of the browser-ready source payload, following this repository's copy-based packaging convention. No compiler or GitHub CI was used. No repository was cloned or pulled. Public distribution uses the existing NexusArcade installer on the Luminary Labs website; Games GitHub Pages is not required.
+`build/` is a byte-identical copy of the browser-ready source payload, following this repository's copy-based packaging convention. Game files are copied; dependency bundles are generated with esbuild 0.25.12. No GitHub CI was used. No repository was cloned or pulled. Public distribution uses the existing NexusArcade installer on the Luminary Labs website; Games GitHub Pages is not required.
 
 Known limits: fixed authored stage sequences, side-on movement in a 3D scene, no gamepad profile, no mid-stage persisted checkpoint, and no branching campaign. Pause freezes the simulation. Save failures surface in the campaign panel and retain in-memory progression.
+
+
+## Runtime repair audit, 2026-10-16
+Runtime dependencies are now bundled and integrity-verified as part of the installed payload. See `docs/prototype-runtime-provenance.md` at the repository root. The real bundled Authoring API and pinned BrowserInstaller were exercised in Node; the latter used CacheStorage/service-worker stand-ins. Browser rendering, browser lifecycle and human playability still require review. Source/build copies match. No Chrome, repository clone/pull, or GitHub CI was used for this pass.

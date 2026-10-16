@@ -1,0 +1,24 @@
+{
+  "schema": "nexusengine-game-composition/v1",
+  "engine": {
+    "repository": "LuminaryLabs-Dev/NexusEngine",
+    "revision": "447816ea39e89fa7095b7a1ffdf46d8fba7f68cd",
+    "packageVersion": "0.0.4"
+  },
+  "domains": [
+    {
+      "path": "n:authoring",
+      "factory": "nexusengine/domains/authoring:createAuthoringDomain",
+      "use": "Create the aircraft hull as a validated mesh.cube document and render its real authored vertex/face geometry in the flight scene."
+    }
+  ],
+  "gameOwned": {
+    "state": "source/src/core.mjs",
+    "simulation": "Deterministic flight, glide lift, wind, fuel, touchdown, rescue, delivery, hull damage, and shift clock; independent of rendering and input.",
+    "movementAndCollision": "Game-owned side-view arcade flight model with speed-sensitive rooftop touchdown; no external physics provider.",
+    "input": "Keyboard and touch controls map to horizontal thrust, powered climb, descent, and held rescue.",
+    "rendering": "Canvas 2D city, rooftop landmarks, aircraft, wind, route board, and flight HUD."
+  },
+  "optionalKits": [],
+  "physicsProvider": null
+}
