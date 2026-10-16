@@ -2,29 +2,24 @@
   "schemaVersion": 1,
   "id": "NXA-000014",
   "slug": "soundstage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "entry": "index.html",
-  "offlineReady": false,
+  "offlineReady": true,
   "source": {
     "repository": "LuminaryLabs-Dev/NexusArcade-Games",
-    "ref": "b663d3be79c38a405aa4421fe254cc5006161c9a",
+    "ref": "75919a8287201044193ce59095634a43044c0b92",
     "basePath": "games/soundstage/build"
   },
   "files": [
     {
-      "path": "engine-imports.json",
-      "bytes": 94134,
-      "sha256": "8ca5708e3e3bcc3047bf8aa209b85970251981bb373ca6514eac362717fd4f79"
-    },
-    {
       "path": "index.html",
-      "bytes": 96010,
-      "sha256": "66044d41198a40210e91c72ad26cf6847e77b8f87f7e782e5c8dc99b24e2f59f"
+      "bytes": 1841,
+      "sha256": "86533637f79afb686680bd77ee8db0fd41287928a0ab01c9750c73cecaa98f7a"
     },
     {
       "path": "src/app.mjs",
-      "bytes": 10284,
-      "sha256": "e6f10032bdd0f86976812d0658708ad1da550e02b251986b6550dfbf2fd1a993"
+      "bytes": 10455,
+      "sha256": "1826443f7019ed3b96097f83baa3fa284c0b3038e385620f61b1333d0ec5e995"
     },
     {
       "path": "src/authoring.mjs",
@@ -37,6 +32,16 @@
       "sha256": "2af260647ebfc3e23c6d1b2a287f1f5940b02240a79b521a351e83d202afa69b"
     },
     {
+      "path": "src/engine-runtime.mjs",
+      "bytes": 515673,
+      "sha256": "e0f37a55933707bad12a6af4ea7181c4d8ed2522f9f9483e4bda6c860be11353"
+    },
+    {
+      "path": "src/three-runtime.mjs",
+      "bytes": 670266,
+      "sha256": "c0f6b6bd5fcf97e5a3eee6734566cfabed20be8081b002182bc50c5d1c2abb2c"
+    },
+    {
       "path": "style.css",
       "bytes": 2323,
       "sha256": "e7cc0352a87d633715cb374d4cbb44443473dfa9ffad14b610e00959202ae227"
@@ -45,11 +50,17 @@
       "path": "tests/core.test.mjs",
       "bytes": 3241,
       "sha256": "bd4fc3e3775f5d25ef22ac6a7fce7a2b50e647b44b7b181bcb43b9f43f2e018c"
+    },
+    {
+      "path": "tests/runtime.test.mjs",
+      "bytes": 877,
+      "sha256": "fcebe500bafdcfb648bbf1ba1f861ac0c285862aa70a502898da6f2946379304"
+    },
+    {
+      "path": "THIRD-PARTY-LICENSES.txt",
+      "bytes": 3268,
+      "sha256": "29b7143678ba9e7e0279d3a2b06756edffe8840cccf9f9e3fbdfda722fd85b54"
     }
   ],
-  "runtimeDependencies": [
-    "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
-    "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/index.js",
-    "https://cdn.jsdelivr.net/gh/LuminaryLabs-Dev/NexusEngine@447816ea39e89fa7095b7a1ffdf46d8fba7f68cd/src/core-domains/authoring/index.js"
-  ]
+  "runtimeDependencies": []
 }

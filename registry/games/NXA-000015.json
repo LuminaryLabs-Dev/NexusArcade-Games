@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "NXA-000015",
+  "slug": "last-call-cafe",
+  "version": "0.1.0",
+  "entry": "index.html",
+  "offlineReady": true,
+  "source": {
+    "repository": "LuminaryLabs-Dev/NexusArcade-Games",
+    "ref": "75919a8287201044193ce59095634a43044c0b92",
+    "basePath": "games/last-call-cafe/build"
+  },
+  "files": [
+    {
+      "path": "composition.json",
+      "bytes": 985,
+      "sha256": "749a58b4538e727935efc91812bc9446c6f28ca31643556a60bd3d5f75c5832f"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4837,
+      "sha256": "38ba18bc74ce9a593e5581e8d833ffe4ec893cfe57c097d4f2879abde7d1ec36"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 12110,
+      "sha256": "f24bd6ade4dc074d014dbeb992d419d3e322b9cfc4739329757daf1ca13fed78"
+    },
+    {
+      "path": "src/core.mjs",
+      "bytes": 6849,
+      "sha256": "0fbf58f8e79a94314ea3c16ad5bfeafc90844c7fefae9d90d6cf9fbd4eb5a9b8"
+    },
+    {
+      "path": "src/engine-runtime.mjs",
+      "bytes": 515673,
+      "sha256": "e0f37a55933707bad12a6af4ea7181c4d8ed2522f9f9483e4bda6c860be11353"
+    },
+    {
+      "path": "style.css",
+      "bytes": 7216,
+      "sha256": "3c7a982fea3c58556add771f765191373cbf95d0e592bec4bb04a1b6d268ebe5"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "bytes": 3652,
+      "sha256": "a0834ac8c0852a6645cf8667b9188141daacc0e1fdca462f86832d8167ee7b10"
+    },
+    {
+      "path": "THIRD-PARTY-LICENSES.txt",
+      "bytes": 3268,
+      "sha256": "29b7143678ba9e7e0279d3a2b06756edffe8840cccf9f9e3fbdfda722fd85b54"
+    }
+  ],
+  "runtimeDependencies": []
+}

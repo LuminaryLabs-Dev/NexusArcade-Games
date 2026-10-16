@@ -7,7 +7,7 @@
   "offlineReady": true,
   "source": {
     "repository": "LuminaryLabs-Dev/NexusArcade-Games",
-    "ref": "b663d3be79c38a405aa4421fe254cc5006161c9a",
+    "ref": "75919a8287201044193ce59095634a43044c0b92",
     "basePath": "games/moonline-express/build"
   },
   "files": [

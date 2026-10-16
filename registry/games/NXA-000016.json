@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "NXA-000016",
+  "slug": "rooftop-rescue",
+  "version": "0.1.0",
+  "entry": "index.html",
+  "offlineReady": true,
+  "source": {
+    "repository": "LuminaryLabs-Dev/NexusArcade-Games",
+    "ref": "75919a8287201044193ce59095634a43044c0b92",
+    "basePath": "games/rooftop-rescue/build"
+  },
+  "files": [
+    {
+      "path": "composition.json",
+      "bytes": 1108,
+      "sha256": "8f04b748ffc318a816feb05781a451d65785bcec4a469c238c219b790f1c1fff"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3498,
+      "sha256": "244b9972e14a1b59641b686f7f8d1b6ea9808dabf006213f7506a3652f753675"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 13137,
+      "sha256": "9acfb1db7570b63d37dbccdef39eaf6b524ad0d62c566f947c44bbd1d1da9017"
+    },
+    {
+      "path": "src/core.mjs",
+      "bytes": 6327,
+      "sha256": "c1d82b048535e2d6305f7e5907fb2d8ec2be6225568e5a768a5d47e863472a9e"
+    },
+    {
+      "path": "src/engine-runtime.mjs",
+      "bytes": 515673,
+      "sha256": "e0f37a55933707bad12a6af4ea7181c4d8ed2522f9f9483e4bda6c860be11353"
+    },
+    {
+      "path": "style.css",
+      "bytes": 5510,
+      "sha256": "5d7d3e9f01de67bfbaad0dab70361e3b2e3e7890014dfe24d086166a5e7b9376"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "bytes": 4622,
+      "sha256": "2acbfbce3570ddb3faaa669f6bccc735313aef9ea86fcaaa20ffce3dc1bff92c"
+    },
+    {
+      "path": "THIRD-PARTY-LICENSES.txt",
+      "bytes": 3268,
+      "sha256": "29b7143678ba9e7e0279d3a2b06756edffe8840cccf9f9e3fbdfda722fd85b54"
+    }
+  ],
+  "runtimeDependencies": []
+}
