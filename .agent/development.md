@@ -39,3 +39,8 @@ In `.agent/runs/<run-id>/`, keep goal.md plus run.json with stage, target, base/
 - Catalogue: https://docs.google.com/spreadsheets/d/1dN6pgtmnftkkzhAUTDmN0OeX5cXayvavkgcGtpAS9DQ/edit
 
 The sheet's current raw/profile/prompt/archive schema owns preparation status. It is not proof of runtime acceptance, and this workflow does not authorize bulk sheet writes.
+
+
+## Required executable builder loop
+
+Load `.agent/plugins/nexus-arcade-builder-kit` into the actual executor before building. Follow its `references/cli.md`: inspect Engine → plan → implement → executable verification → inferred human-factors quality review → authorized registration. Failed assumptions return to inspect; defects return to plan. Missing prerequisites block, never fake a pass. Preserve the full game intent and stop at the configured execution budget. A quality pass is not permission to publish.

@@ -1,9 +1,9 @@
 ---
-name: nexus-arcade-it
+name: nexus-arcade-builder-it
 description: Route requests to create, convert, review or integrate a NexusArcade game in its content repository.
 ---
 
-# nexus-arcade-it
+# nexus-arcade-builder-it
 
 Resolve the explicit repository and game identity, then read its AGENTS.md and .agent/development.md. Keep the current request's authorization and game intent, not a remembered default task.
 
@@ -13,6 +13,6 @@ Resolve the explicit repository and game identity, then read its AGENTS.md and .
 - Candidate review: use arcade-validate-it.
 - Authorized repository integration: use arcade-integrate-it.
 
-Read ../../references/workflow.md for canonical guides and stage boundaries. The plugin may be installed in a cache, so resolve the user's repository explicitly; never assume the plugin's directory is the working repository. Scripts accept an explicit --repo path and are read-only.
+Read ../../references/workflow.md for canonical guides and stage boundaries. The plugin may be installed in a cache, so resolve the user's repository explicitly; never assume the plugin's directory is the working repository. The inspect helpers are read-only. The builder CLI can execute approved work through its configured worker; read ../../references/cli.md first. Always use arcade-load-it before building. Route inspection/planning through arcade-plan-it, implementation through arcade-build-it, quality through arcade-quality-it and registration through arcade-register-it.
 
 A plugin invocation does not grant permission to write repositories, sheets, install plugins, send messages or publish. Return actual findings, exact evidence limits and one next action. Raw ideas, curated prompts, candidate source, accepted games and public releases are different states.

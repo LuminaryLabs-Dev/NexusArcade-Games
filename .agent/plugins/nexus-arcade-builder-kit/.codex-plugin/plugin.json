@@ -1,0 +1,6 @@
+{
+  "name": "nexus-arcade-builder-kit",
+  "version": "0.2.0",
+  "description": "Load, inspect, plan, build, review and register Nexus Arcade games through an evidence-bound repair loop.",
+  "skills": "./skills/"
+}

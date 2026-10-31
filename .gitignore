@@ -1,1 +1,10 @@
 _site/
+
+# Local builder execution state and credentials are never committed
+.agent/runtime/
+.agent/runs/*/builder-state.json
+.agent/runs/*/builder.lock
+.agent/runs/*/cycle-*.log
+.agent/runs/*/cycle-*-result.json
+
+.agent/runs/*/engine-inventory.json

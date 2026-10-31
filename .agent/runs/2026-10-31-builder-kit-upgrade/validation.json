@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "outcome": "Executable Nexus Arcade Builder Kit and required guide loading workflow",
+  "plugin": {
+    "name": "nexus-arcade-builder-kit",
+    "version": "0.2.0",
+    "sourceDigest": "636bf5f113617094e263d80bc98468766a9775b34bd70d69ac2bca4d5e5f2f74",
+    "installed": true,
+    "enabled": true,
+    "installedSourceByteParity": "PASS"
+  },
+  "checks": {
+    "focusedTests": "24/24 PASS",
+    "fullRepositoryNpmTest": "PASS",
+    "actualSwitchyardHarnessExercise": "inspect -> plan -> implement fixture -> actual executable checks -> quality BLOCKED as intended",
+    "sourceBuildAndRegistryChanges": "NONE"
+  },
+  "limits": [
+    "No model-backed worker session was run.",
+    "Fixture does not prove new game implementation, human enjoyment, live browser installation or physical-device compatibility.",
+    "Switchyard publication remains a separate pending delivery."
+  ],
+  "guides": {
+    "creation": "1ftlNETOvkfZf3OBX-OIphJcdgNh4YTw8J5OCxuzcmV4",
+    "conversion": "1ZQGPlyYMqGx8gTWXwjC7vogFrTcJvyYYNsGZUJrbvOk",
+    "prompts": "1iq5wG6yhPk8MR7o4VyJHPTIlAJQgLXWYRySsUzmb6qw",
+    "sheet": "1dlpHq7X4WXTNlGpAZV64oDmKXROIljkjc9TpHZDH4TE"
+  },
+  "guideReadback": "All four inserted sections verified once, original text preserved",
+  "nextAction": "Use a real authorized worker and current gameplay evidence for the specific game delivery."
+}
