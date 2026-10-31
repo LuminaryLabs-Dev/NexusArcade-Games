@@ -1,0 +1,14 @@
+{
+  "name": "switchyard-vendor-tooling",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "vendor": "node vendor-engine.mjs",
+    "test:host": "node host-check.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "happy-dom": "20.0.2",
+    "@napi-rs/canvas": "0.1.80"
+  }
+}

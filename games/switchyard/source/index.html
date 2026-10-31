@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Switchyard — Miniature Railway Dispatcher</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div id="app-container">
+  <!-- Game Canvas -->
+  <canvas id="game-canvas"></canvas>
+
+  <!-- Heads Up Display -->
+  <div id="hud-layer" role="region" aria-label="Game Status">
+    <div class="hud-group">
+      <div class="hud-badge" id="hud-score">
+        <span>SCORE</span>
+        <span class="hud-value" id="val-score">0</span>
+      </div>
+      <div class="hud-badge" id="hud-streak">
+        <span>STREAK</span>
+        <span class="hud-value" id="val-streak">0</span>
+      </div>
+      <div class="hud-badge fever-badge" id="hud-fever">
+        <span>🔥 FEVER</span>
+        <span class="hud-value" style="color: #fef08a;">2X PTS</span>
+      </div>
+      <div class="hud-badge" id="hud-wave">
+        <span id="label-wave">WAVE</span>
+        <span class="hud-value" id="val-wave">1/10</span>
+      </div>
+    </div>
+
+    <!-- Incoming Train Preview -->
+    <div id="incoming-preview" aria-live="polite">
+      <span class="preview-label">NEXT:</span>
+      <div id="preview-list" style="display: flex; gap: 6px;">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+
+    <div class="hud-group">
+      <div class="hud-badge" id="hud-lives" aria-label="Remaining Lives">
+        <div class="lives-icons" id="lives-container">
+          <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+      </div>
+      <button class="control-btn" id="btn-pause" aria-label="Pause Game">
+        <span>⏸</span>
+        <span class="key-hint">ESC</span>
+      </button>
+      <button class="control-btn" id="btn-mute" aria-label="Toggle Sound Mute">
+        <span id="mute-icon">🔊</span>
+        <span class="key-hint">M</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tutorial Step Prompt -->
+  <div id="tutorial-banner" role="status">
+    <div class="tut-step-badge" id="tut-step-title">Tutorial Step 1 of 4</div>
+    <div class="tut-instruction" id="tut-text">Click Switch B (or press B) to set the track to Amber (▲).</div>
+    <button class="btn btn-secondary" id="btn-skip-tut" style="padding: 4px 12px; min-height: 28px; font-size: 11px; margin-top: 4px;">Skip Tutorial</button>
+  </div>
+
+  <!-- Bottom Accessible Switch/Signal Buttons -->
+  <div id="bottom-controls" role="toolbar" aria-label="Track & Signal Controls">
+    <button class="control-btn signal-go" id="btn-sig-n" aria-label="North Signal Toggle">
+      <span id="txt-sig-n">North: GO</span>
+      <span class="key-hint">[1]</span>
+    </button>
+    <button class="control-btn signal-go" id="btn-sig-s" aria-label="South Signal Toggle">
+      <span id="txt-sig-s">South: GO</span>
+      <span class="key-hint">[2]</span>
+    </button>
+    <button class="control-btn" id="btn-sw-a" aria-label="Switch A Toggle">
+      <span id="txt-sw-a">A: UPPER</span>
+      <span class="key-hint">[A]</span>
+    </button>
+    <button class="control-btn" id="btn-sw-b" aria-label="Switch B Toggle">
+      <span id="txt-sw-b">B: AMBER</span>
+      <span class="key-hint">[B]</span>
+    </button>
+    <button class="control-btn" id="btn-sw-c" aria-label="Switch C Toggle">
+      <span id="txt-sw-c">C: MAGENTA</span>
+      <span class="key-hint">[C]</span>
+    </button>
+    <button class="control-btn btn-brake" id="btn-emergency-brake" aria-label="Emergency Brake Toggle">
+      <span id="txt-brake">🛑 BRAKE</span>
+      <span class="key-hint">[E]</span>
+    </button>
+    <button class="control-btn btn-turbo" id="btn-turbo-whistle" aria-label="Whistle Turbo Boost">
+      <span>⚡ TURBO</span>
+      <span class="key-hint">[W]</span>
+    </button>
+  </div>
+
+  <!-- Title / Main Menu Overlay -->
+  <div class="overlay-panel active" id="panel-title">
+    <div class="panel-box">
+      <div style="font-size: 40px; margin-bottom: -10px;">🚂 ⇄ 🏁</div>
+      <h1 class="panel-title">SWITCHYARD</h1>
+      <p class="panel-subtitle">Top-down miniature railway dispatch arcade. Route approaching trains to their matching stations and keep the junction clear.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-label">Best Score</span>
+          <span class="stat-val" id="title-best-score">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Yard Record</span>
+          <span class="stat-val" id="title-best-wave">Wave 1</span>
+        </div>
+      </div>
+
+      <div class="button-stack">
+        <button class="btn btn-amber" id="btn-play-standard">Standard Shift (10 Waves)</button>
+        <button class="btn btn-secondary" id="btn-start-tutorial">Guided Tutorial</button>
+        <button class="btn btn-secondary" id="btn-play-endless" disabled title="Complete Standard Run to unlock">Endless Yard 🔒</button>
+        <button class="btn btn-secondary" id="btn-open-settings">Settings & Accessibility</button>
+        <button class="btn btn-secondary" id="btn-open-tests" style="font-size: 12px; min-height: 36px;">Run Logic Checks</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pause Menu Overlay -->
+  <div class="overlay-panel" id="panel-pause">
+    <div class="panel-box">
+      <h2 class="panel-title">SHIFT PAUSED</h2>
+      <p class="panel-subtitle">Traffic is held at all stations and signals.</p>
+      <div class="button-stack">
+        <button class="btn btn-amber" id="btn-resume">Resume Shift</button>
+        <button class="btn btn-secondary" id="btn-pause-settings">Settings</button>
+        <button class="btn btn-secondary" id="btn-restart-current">Restart Wave</button>
+        <button class="btn btn-secondary" id="btn-quit-title">Return to Depot Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave Cleared Overlay -->
+  <div class="overlay-panel" id="panel-wave-clear">
+    <div class="panel-box">
+      <div style="font-size: 36px;">✨ 📋</div>
+      <h2 class="panel-title">WAVE COMPLETE</h2>
+      <p class="panel-subtitle" id="wave-clear-desc">All scheduled trains routed smoothly!</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-label">Deliveries</span>
+          <span class="stat-val" id="wc-deliveries">6 / 6</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Efficiency Bonus</span>
+          <span class="stat-val" id="wc-bonus">+120</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Delivery Streak</span>
+          <span class="stat-val" id="wc-streak">x6</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Total Score</span>
+          <span class="stat-val" id="wc-total-score">720</span>
+        </div>
+      </div>
+
+      <div class="button-stack">
+        <button class="btn btn-amber" id="btn-next-wave">Proceed to Next Wave</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Victory Overlay -->
+  <div class="overlay-panel" id="panel-victory">
+    <div class="panel-box">
+      <div style="font-size: 44px;">🏆 🎉</div>
+      <h2 class="panel-title">YARD MASTER!</h2>
+      <p class="panel-subtitle">You have completed the full 10-wave standard schedule. The railway runs like clockwork thanks to your routing skill!</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-label">Final Score</span>
+          <span class="stat-val" id="vic-score">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Endless Yard</span>
+          <span class="stat-val" style="color: #4ade80;">UNLOCKED!</span>
+        </div>
+      </div>
+
+      <div class="button-stack">
+        <button class="btn btn-amber" id="btn-vic-endless">Enter Endless Yard</button>
+        <button class="btn btn-secondary" id="btn-vic-title">Return to Title</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Over Overlay -->
+  <div class="overlay-panel" id="panel-game-over">
+    <div class="panel-box">
+      <div style="font-size: 36px;">⚠️ 💥</div>
+      <h2 class="panel-title">SHIFT TERMINATED</h2>
+      <p class="panel-subtitle" id="game-over-reason">Maximum incident capacity reached. The railway has been temporarily shut down for inspection.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-label">Final Score</span>
+          <span class="stat-val" id="go-score">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Wave Reached</span>
+          <span class="stat-val" id="go-wave">Wave 4</span>
+        </div>
+      </div>
+
+      <div class="button-stack">
+        <button class="btn btn-amber" id="btn-retry-run">Retry Standard Shift</button>
+        <button class="btn btn-secondary" id="btn-go-title">Depot Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Overlay -->
+  <div class="overlay-panel" id="panel-settings">
+    <div class="panel-box">
+      <h2 class="panel-title">SETTINGS</h2>
+      <div style="display: flex; flex-direction: column;">
+        <div class="setting-row">
+          <div class="setting-label">
+            <span>Sound Mute</span>
+            <span class="setting-sub">Silence all sound effects</span>
+          </div>
+          <div class="switch-toggle" id="toggle-mute-switch">
+            <div class="switch-knob"></div>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-label">
+            <span>SFX Volume</span>
+            <span class="setting-sub">Adjust audio feedback level</span>
+          </div>
+          <input type="range" class="range-slider" id="slider-volume" min="0" max="100" value="70">
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-label">
+            <span>Reduced Motion</span>
+            <span class="setting-sub">Minimize shakes and non-essential particles</span>
+          </div>
+          <div class="switch-toggle" id="toggle-reduced-motion">
+            <div class="switch-knob"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-stack">
+        <button class="btn btn-secondary" id="btn-close-settings">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Acceptance Tests Modal -->
+  <div class="overlay-panel" id="panel-tests">
+    <div class="panel-box" style="max-width: 620px;">
+      <h2 class="panel-title" style="font-size: 20px;">Simulation Logic Checks</h2>
+      <div id="tests-output" style="text-align: left; font-family: monospace; font-size: 11px; max-height: 280px; overflow-y: auto; background: #0b0f17; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); line-height: 1.5; color: #a5f3fc;">
+        Click below to run internal diagnostic suite.
+      </div>
+      <div class="button-stack" style="flex-direction: row;">
+        <button class="btn btn-amber" id="btn-run-tests-exec" style="flex: 1;">Run Tests</button>
+        <button class="btn btn-secondary" id="btn-close-tests" style="flex: 1;">Close</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="./src/app.mjs"></script>
+</body>
+</html>

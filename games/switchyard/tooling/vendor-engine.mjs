@@ -1,0 +1,18 @@
+import { createRequire } from 'node:module';
+import { execFileSync } from 'node:child_process';
+import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import { createHash } from 'node:crypto';
+const { build, version } = createRequire(import.meta.url)('esbuild');
+if (version !== '0.25.12') throw new Error('Use locked esbuild 0.25.12.');
+const engineRoot = path.resolve(process.argv[2] || '');
+const pin = '4906076837d4020ff2e22fe98723e0922ea6af62';
+if (execFileSync('git',['-C',engineRoot,'rev-parse','HEAD'],{encoding:'utf8'}).trim() !== pin) throw new Error('Engine checkout does not match the reviewed pin.');
+if (execFileSync('git',['-C',engineRoot,'status','--porcelain','--','src'],{encoding:'utf8'}).trim()) throw new Error('Engine source must be clean.');
+const out = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../source/vendor');
+await mkdir(out,{recursive:true});
+await build({ absWorkingDir: engineRoot, stdin: { contents:"export { createEngine, defineRuntimeKit, defineResource, defineComponent, defineEvent } from './src/index.js';", resolveDir:engineRoot, sourcefile:'switchyard-engine-entry.mjs' }, bundle:true, format:'esm', platform:'browser', target:'es2022', outfile:path.join(out,'nexusengine.mjs') });
+await copyFile(path.join(engineRoot,'LICENSE'),path.join(out,'NexusEngine-LICENSE.txt'));
+const bytes = await readFile(path.join(out,'nexusengine.mjs'));
+await writeFile(path.join(out,'provenance.json'),JSON.stringify({repository:'LuminaryLabs-Dev/NexusEngine',commit:pin,version:'0.0.4',publicEntry:'nexusengine',exports:['createEngine','defineRuntimeKit','defineResource','defineComponent','defineEvent'],bundler:'esbuild@0.25.12',sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length},null,2)+'\n');

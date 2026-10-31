@@ -1,0 +1,23 @@
+{
+  "id": "NXA-000017",
+  "title": "Switchyard",
+  "slug": "switchyard",
+  "description": "Dispatch miniature trains through a branching railway. Hold entrance signals, commit routes safely, and guide each train to its matching station across ten waves and an unlockable endless yard.",
+  "genre": "Railway Dispatch",
+  "status": "prototype",
+  "version": "0.1.0",
+  "featured": false,
+  "sortOrder": 17,
+  "offlineReady": true,
+  "runtimeDependencies": [],
+  "controls": [
+    "A / B / C: switch routes",
+    "1 / 2: entrance signals",
+    "E: emergency brake",
+    "W: turbo whistle",
+    "Space / Escape: pause",
+    "M: mute",
+    "Pointer / touch: railway controls and on-screen buttons"
+  ],
+  "registryPending": true
+}

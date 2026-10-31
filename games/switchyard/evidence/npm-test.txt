@@ -1,0 +1,116 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> pretest
+> node scripts/build-site.mjs
+
+[games-build] 17 launchable game(s) built
+ - knockout-circuit [local] -> ./games/knockout-circuit/
+ - rift-runner [local] -> ./games/rift-runner/
+ - wrong-floor [local] -> ./games/wrong-floor/
+ - bubble-raft-assault [local] -> ./games/bubble-raft-assault/
+ - moonline-express [local] -> ./games/moonline-express/
+ - chroma-break [local] -> ./games/chroma-break/
+ - the-long-haul [reference] -> ./games/the-long-haul/
+ - blood-maiden [local] -> ./games/blood-maiden/
+ - arboria-planet-of-roots [local] -> ./games/arboria-planet-of-roots/
+ - gothic-revolt [local] -> ./games/gothic-revolt/
+ - bumble-beez [local] -> ./games/bumble-beez/
+ - stormbound-shelter-run [local] -> ./games/stormbound-shelter-run/
+ - soundstage [local] -> ./games/soundstage/
+ - last-call-cafe [local] -> ./games/last-call-cafe/
+ - rooftop-rescue [local] -> ./games/rooftop-rescue/
+ - switchyard [local] -> ./games/switchyard/
+ - salvage-workbench [local] -> ./games/salvage-workbench/
+
+> test
+> node scripts/validate-repo.mjs && node tests/ids.test.mjs && node tests/manifests.test.mjs && node tests/registry.test.mjs && node tests/knockout-circuit-multiplayer.mjs && node tests/gothic-revolt-save.mjs && node --test tests/wrong-floor.test.mjs && node --test tests/arboria-planet-of-roots.test.mjs && node --test tests/switchyard.test.mjs tests/switchyard-campaign.test.mjs tests/switchyard-packaging.test.mjs
+
+repository validation ok: 17 games, 107 JavaScript modules
+permanent game IDs are complete and unique
+verified 15 manifests against immutable source bytes
+registry remains pinned while source changes await promotion: NXA-000012, NXA-000017
+master registry is sorted, pinned and deterministic
+knockout-circuit multiplayer and campaign proof ok
+gothic-revolt save validation ok
+✔ seeded director preserves balance, teaching, timing, baselines, and all authored variants (84.580336ms)
+✔ an initially open first playable floor starts at zero active time (0.984755ms)
+✔ complete runs last exactly 300 active seconds across different frame rates (73.672241ms)
+✔ no input loses to a threat; permanently held close cannot bypass fresh-press rule (7.860802ms)
+✔ closing every floor ends at the third false alarm (4.207436ms)
+✔ normal automatic closure accepts once and does not count as a false alarm (1.001885ms)
+✔ exact arrival/closure tie favors sealing and a late seal fails (1.741227ms)
+✔ release waits briefly and reopens; repeated tapping does not accelerate doors (0.383836ms)
+✔ pause freezes all simulation state and requires a fresh close input after resume (2.323527ms)
+✔ practice has two rounds outside the scored run; snapshots cannot mutate live rules (4.293521ms)
+✔ assisted mode grants additional threat response time without lengthening a run (18.161568ms)
+✔ corrupt, blocked, future, and malformed saves recover; scores stay separated (1.446156ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 329.027118
+✔ planet topology is deterministic and dense (17.162816ms)
+✔ start, claim, plant, water and rain preserve the source rules (55.025683ms)
+✔ species selection accepts direct multi-step cycling (6.309477ms)
+✔ three trees complete tier one and pay the mission reward (8.098337ms)
+✔ tree yield is deterministic and uses the 3.5 second cadence (10.568045ms)
+✔ replay and reset are deterministic (36.652966ms)
+✔ timeout ends the five-minute run (112.154488ms)
+✔ domain ablation proves the authoritative systems are causal (37.247538ms)
+✔ a deterministic strategy can reach all six missions inside the arcade window (611.370007ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1024.041343
+✔ All ten authored waves can be dispatched legally with all lives intact (274.882624ms)
+✔ Switchyard permanent ID is unique across every repository game (13.269548ms)
+✔ Switchyard source and packaged payload have identical bytes and local module imports (23.259586ms)
+✔ Pinned Engine bundle matches its recorded content hash and license (6.193285ms)
+✔ Green signal actually releases a train beyond the approach (2.225914ms)
+✔ Red signal holds without growing a stationary trail, then releases (0.23189ms)
+✔ A real train reaches AMBER with correct score (0.419351ms)
+✔ A real train reaches CYAN with correct score (0.199608ms)
+✔ A real train reaches MAGENTA with correct score (0.186841ms)
+✔ A real train reaches LIME with correct score (0.106051ms)
+✔ Same-entrance queue maintains safe spacing (0.182301ms)
+✔ Switch remains locked until the rear carriage clears (0.132744ms)
+✔ Locked switch rejects rather than queues a change (0.222157ms)
+✔ Delivery is atomic, including fever and turbo bonuses (0.418705ms)
+✔ Wrong destination costs exactly one life (0.190797ms)
+✔ A collision consumes one life and resolves each train once (0.128948ms)
+✔ Terminal game over cannot award another delivery (0.056864ms)
+✔ Pause freezes movement and scheduled tutorial recovery (0.078027ms)
+✔ Tutorial progresses through both real station deliveries (0.048856ms)
+✔ Tutorial collision recovery does not leak into a new run (0.053563ms)
+✔ Twenty restarts preserve clean game state (0.082206ms)
+✔ All particle producers share the same bounded pool (0.046028ms)
+✔ Wave ten unlocks endless without changing the authored mode (0.059571ms)
+✔ Nexus Engine owns command ordering and committed observation (0.044963ms)
+✔ Nexus entity observations are removed on restart and disposal (0.073743ms)
+✔ Long host stalls have a five-tick budget, not catch-up spirals (0.047313ms)
+✔ Malformed settings cannot replace required defaults (0.046081ms)
+✔ Complete tutorial reaches title with the completion record (0.081219ms)
+✔ Denied or corrupt persistence stays usable in memory (0.063731ms)
+✔ No approach-only close-call points are farmed before clearance (0.156475ms)
+✔ Restart current wave restores its score/lives checkpoint (0.048979ms)
+✔ Wave completion bonus cannot be applied twice (0.039562ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 524.011527
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

@@ -360,6 +360,7 @@ try {
     "(()=>{Arboria.start();const s=Arboria.snapshot();const c=s.cells.find(c=>c.unlocked&&!c.isWater&&c.treeId===null);Arboria.select(c.id);Arboria.action('plant',{cellId:c.id,species:'oak'});Arboria.action('water',{cellId:c.id});Arboria.pause();Arboria.pause();return true})()",
     "(()=>{const s=Arboria.snapshot();return s.mode==='play'&&s.trees.length===1&&s.energy===104&&s.vitality>0&&document.documentElement.scrollWidth<=innerWidth&&document.documentElement.scrollHeight<=innerHeight})()"
   );
+  await scenario('Switchyard', 'games/switchyard/', 'window.switchyard?.runtime?.engine', "document.querySelector('#btn-play-standard').click();window.dispatchEvent(new KeyboardEvent('keydown',{key:'b',bubbles:true}));switchyard.runtime.step();document.querySelector('#btn-pause').click()", "switchyard.sim.state==='PAUSED' && switchyard.sim.switchB.state===1 && switchyard.runtime.engine.getLastTickCommit()?.committed===true");
   await scenario('Chroma Break', 'games/chroma-break/', 'window.__CHROMA_BREAK__', '__CHROMA_BREAK__.start();__CHROMA_BREAK__.aim(640,120);__CHROMA_BREAK__.fire();__CHROMA_BREAK__.step(.25)', "__CHROMA_BREAK__.snapshot().mode==='running' && __CHROMA_BREAK__.snapshot().shots===1");
   await scenario('Knockout Circuit', 'games/knockout-circuit/', 'window.KnockoutCircuit', 'KnockoutCircuit.startNewCampaign()', "KnockoutCircuit.getUiState().mode==='campaign' && KnockoutCircuit.getState().fighters[1].name==='Boiler Bruiser'");
   await multiplayerScenario();

@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-31",
+  "baseCommit": "1892d581821c407057226fbae7d5a41349c4a326",
+  "engineCommit": "4906076837d4020ff2e22fe98723e0922ea6af62",
+  "node": "v24.22.1",
+  "checks": {
+    "focusedSimulationCampaignPackaging": {
+      "command": "node --test tests/switchyard.test.mjs tests/switchyard-campaign.test.mjs tests/switchyard-packaging.test.mjs",
+      "passed": 32
+    },
+    "repository": {
+      "command": "npm test",
+      "status": "PASS"
+    },
+    "hostEmulation": {
+      "method": "Happy DOM + native Canvas, not Chromium",
+      "checks": [
+        "start",
+        "keyboard dispatch via Engine",
+        "signal button",
+        "pause/resume",
+        "train simulation and HUD",
+        "tutorial hidden-tab pause and explicit resume",
+        "three viewport/DPR projections",
+        "original/converted empty-yard pixel equality",
+        "ten mounts retain one loop",
+        "dispose removes input and frame"
+      ],
+      "passed": 10,
+      "browserAcceptance": "NOT RUN",
+      "physicalMobile": "NOT RUN",
+      "cssLayout": "NOT RUN"
+    }
+  },
+  "remaining": {
+    "chromium": "BLOCKED: sandbox socket() Operation not permitted; elevated launch environment could not create restricted sessions mount",
+    "macCodingTask": "BLOCKED before execution: coding-session usage limit",
+    "physicalMobile": "NOT RUN",
+    "webAudioListening": "NOT RUN",
+    "cssLayout": "NOT RUN",
+    "installerPlayer": "NOT RUN",
+    "independentGameplayReview": "NOT RUN",
+    "arcadeStandardCompatibility": "PENDING: ten-wave authored mode retained; five-minute/upgrade requirement not silently substituted",
+    "publicRegistry": "NOT PROMOTED"
+  },
+  "sourceInputSHA256": "799c441d582a96df3d1176f15b9130e0b4c7ec271c4c4262b58c3dab20444611",
+  "canvasParity": {
+    "method": "original versus converted empty-yard render using the same native Canvas adapter",
+    "result": "byte-for-byte pixel equality",
+    "browserEvidence": false
+  }
+}

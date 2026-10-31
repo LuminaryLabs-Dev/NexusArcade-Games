@@ -1,0 +1,16 @@
+{
+  "repository": "LuminaryLabs-Dev/NexusEngine",
+  "commit": "4906076837d4020ff2e22fe98723e0922ea6af62",
+  "version": "0.0.4",
+  "publicEntry": "nexusengine",
+  "exports": [
+    "createEngine",
+    "defineRuntimeKit",
+    "defineResource",
+    "defineComponent",
+    "defineEvent"
+  ],
+  "bundler": "esbuild@0.25.12",
+  "sha256": "ccee3bb178afdeef69e60b7ed67ed8d930a9a3717c39f333a68cfa2f54ce3f79",
+  "bytes": 1184038
+}
