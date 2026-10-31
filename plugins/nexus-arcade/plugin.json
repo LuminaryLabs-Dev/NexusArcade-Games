@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nexus-arcade",
+  "version": "0.1.0",
+  "description": "Convert, audit, validate and integrate NexusArcade games while preserving authored gameplay and identifying reusable capabilities.",
+  "author": { "name": "Luminary Labs" },
+  "repository": "https://github.com/LuminaryLabs-Dev/NexusArcade-Games",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Nexus Arcade",
+        "shortDescription": "Build and review Engine-backed Arcade candidates"
+      }
+    }
+  }
+}

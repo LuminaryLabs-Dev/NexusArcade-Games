@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-31-arcade-workflow",
+  "stage": "package-validated",
+  "baseCommit": "c162c16b480e81e3044a335f17bb65348a25b8c3",
+  "authority": "User explicitly approved the five-part repository workflow/plugin plan on2026-10-31.",
+  "allowed": [
+    "AGENTS.md",
+    ".agent/",
+    ".agents/plugins/marketplace.json",
+    "plugins/nexus-arcade/",
+    "kits/README.md",
+    "tests/arcade-plugin.test.mjs",
+    "package.json"
+  ],
+  "excluded": [
+    "NexusEngine Core edits",
+    "other repositories",
+    "new runtime Kit extraction without consumer proof",
+    "personal plugin installation/configuration",
+    "public registry promotion",
+    "sheet/ticket mutations"
+  ],
+  "evidence": [
+    ".agent/runs/2026-10-31-arcade-workflow/reuse-review.md",
+    ".agent/runs/2026-10-31-arcade-workflow/switchyard-inspection.json",
+    ".agent/runs/2026-10-31-arcade-workflow/validation.json"
+  ],
+  "nextAction": "Install/enable and evaluate the plugin in a supported client when authorized; retain deferred gameplay candidates until executable second-consumer proof exists."
+}

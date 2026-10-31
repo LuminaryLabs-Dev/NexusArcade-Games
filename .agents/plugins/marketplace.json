@@ -1,0 +1,10 @@
+{
+  "name": "nexus-arcade-repo",
+  "interface": { "displayName": "Nexus Arcade Repository" },
+  "plugins": [{
+    "name": "nexus-arcade",
+    "source": { "source": "local", "path": "./plugins/nexus-arcade" },
+    "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+    "category": "Productivity"
+  }]
+}

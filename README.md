@@ -2,6 +2,10 @@
 
 Authoritative source, runnable builds, install metadata, registry data, and public catalog inputs for NexusArcade games.
 
+## Agent workflow and Codex plugin
+
+Start with [AGENTS.md](AGENTS.md) and [.agent/development.md](.agent/development.md). The [Nexus Arcade plugin](plugins/nexus-arcade/README.md) packages conversion, reuse auditing, validation and integration skills. Its repository marketplace makes it discoverable without automatically installing or enabling it. Run `npm run check:agent` to validate the package. Shared gameplay candidates are recorded in `.agent/reuse-candidates.json`; no candidate becomes a Core domain or extracted Kit merely by being listed.
+
 ## Repository contract
 
 Every game lives at:

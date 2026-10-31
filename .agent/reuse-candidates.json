@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-31",
+  "engineCommit": "4906076837d4020ff2e22fe98723e0922ea6af62",
+  "optionalKitsTree": "9bd2d6dd459069d8515b4fccb351aa4e26ac5259",
+  "records": [
+    {
+      "id": "runtime-lifecycle",
+      "classification": "core-existing",
+      "responsibility": "Fixed ticking, phase order, semantic events and committed state observations",
+      "sources": [
+        "games/switchyard/source/src/runtime.mjs"
+      ],
+      "alternatives": [
+        {
+          "source": "https://github.com/LuminaryLabs-Dev/NexusEngine/blob/4906076837d4020ff2e22fe98723e0922ea6af62/src/engine.js",
+          "status": "implemented",
+          "finding": "Public createEngine already owns these universal contracts."
+        }
+      ],
+      "consumers": [
+        {
+          "game": "switchyard",
+          "finding": "Uses Runtime Lifecycle and Realtime Kits."
+        }
+      ],
+      "decision": "reuse-existing",
+      "reason": "Do not build an Arcade replacement for Core scheduling/ECS.",
+      "evidence": [
+        "games/switchyard/evidence/validation.json"
+      ],
+      "nextAction": "Verify each new consumer pin and reuse the actual public interface."
+    },
+    {
+      "id": "path-network-traversal",
+      "classification": "arcade-candidate",
+      "responsibility": "Advance an authored moving body through directed path segments while preserving trailing-body route history",
+      "sources": [
+        "games/switchyard/source/src/simulation.mjs"
+      ],
+      "alternatives": [
+        {
+          "source": "https://github.com/LuminaryLabs-Dev/NexusEngine/blob/4906076837d4020ff2e22fe98723e0922ea6af62/src/core-domains/world/navigation/route-field/kits/route-field-kit/services.js",
+          "status": "implemented-partial-fit",
+          "finding": "Owns route descriptors and nearest-marker queries, not demonstrated articulated-body traversal."
+        },
+        {
+          "source": "https://github.com/LuminaryLabs-Dev/NexusEngine-Kits/blob/9bd2d6dd459069d8515b4fccb351aa4e26ac5259/manifests/kits/generic-route-cargo-extraction-kit.json",
+          "status": "migration-placeholder",
+          "finding": "realBehavior=false, no package export or parity proof; not a usable implementation."
+        }
+      ],
+      "consumers": [
+        {
+          "game": "switchyard",
+          "finding": "Curved arc-length segments and carriage history require route commitment."
+        },
+        {
+          "game": "moonline-express",
+          "finding": "Four x-threshold lane hops with passed[] flags; no path segments or trailing consist."
+        }
+      ],
+      "decision": "defer",
+      "reason": "Second-consumer source audit does not prove a shared traversal contract.",
+      "evidence": [
+        ".agent/runs/2026-10-31-arcade-workflow/reuse-review.md"
+      ],
+      "nextAction": "Find a second actual segment/trailing-body consumer and test a minimal adapter before extracting."
+    },
+    {
+      "id": "rear-clear-reservations",
+      "classification": "arcade-candidate",
+      "responsibility": "Keep a route switch reserved until every relevant trailing body clears it",
+      "sources": [
+        "games/switchyard/source/src/simulation.mjs"
+      ],
+      "alternatives": [
+        {
+          "source": "https://github.com/LuminaryLabs-Dev/NexusEngine-Kits/blob/9bd2d6dd459069d8515b4fccb351aa4e26ac5259/manifests/kits/route-clearance-domain-kit.json",
+          "status": "migration-placeholder",
+          "finding": "RPG-combat migration placeholder; realBehavior=false and no validated module."
+        }
+      ],
+      "consumers": [
+        {
+          "game": "switchyard",
+          "finding": "Distance-based reservations per train retain locks through rear clearance."
+        },
+        {
+          "game": "moonline-express",
+          "finding": "Junction changes are read once as points cross thresholds; no consist reservation requirement."
+        }
+      ],
+      "decision": "defer",
+      "reason": "A similar railway theme is insufficient evidence for shared rear-clear semantics.",
+      "evidence": [
+        "tests/switchyard.test.mjs",
+        ".agent/runs/2026-10-31-arcade-workflow/reuse-review.md"
+      ],
+      "nextAction": "Validate occupancy and release semantics in a second genuinely dependent game."
+    },
+    {
+      "id": "physical-queue-spacing",
+      "classification": "arcade-candidate",
+      "responsibility": "Maintain body-length separation between moving objects waiting for an entrance signal",
+      "sources": [
+        "games/switchyard/source/src/simulation.mjs"
+      ],
+      "alternatives": [
+        {
+          "source": "https://github.com/LuminaryLabs-Dev/NexusEngine/blob/4906076837d4020ff2e22fe98723e0922ea6af62/src/core-domains/interaction/request/queue/kits/request-queue-kit/services.js",
+          "status": "different-responsibility",
+          "finding": "Owns request patience/fulfillment/expiry, not spatial body separation."
+        }
+      ],
+      "consumers": [
+        {
+          "game": "switchyard",
+          "finding": "Uses predecessor distance and consist length."
+        },
+        {
+          "game": "last-call-cafe",
+          "finding": "Customer order queue has capacity, patience and recipe progression, not physical distances."
+        }
+      ],
+      "decision": "defer",
+      "reason": "Queue naming does not establish compatible state or constraints.",
+      "evidence": [
+        "tests/switchyard.test.mjs",
+        ".agent/runs/2026-10-31-arcade-workflow/reuse-review.md"
+      ],
+      "nextAction": "Retain physical spacing locally; compare another spatial queue before extraction."
+    },
+    {
+      "id": "elapsed-dispatch-scheduling",
+      "classification": "core-existing",
+      "responsibility": "Advance repeatable or one-shot timed events without losing residual time",
+      "sources": [
+        "games/switchyard/source/src/simulation.mjs"
+      ],
+      "alternatives": [
+        {
+          "source": "https://github.com/LuminaryLabs-Dev/NexusEngine/blob/4906076837d4020ff2e22fe98723e0922ea6af62/src/core-domains/runtime/sequence/schedule/kits/schedule-kit/services.js",
+          "status": "implemented",
+          "finding": "Existing advance, setPaused and setScale APIs; contracts preserve residual scheduling time."
+        },
+        {
+          "source": "https://github.com/LuminaryLabs-Dev/NexusEngine-Kits/blob/9bd2d6dd459069d8515b4fccb351aa4e26ac5259/manifests/kits/npc-schedule-domain-kit.json",
+          "status": "migration-placeholder",
+          "finding": "No validated module; not an alternative to the current Core schedule atom."
+        }
+      ],
+      "consumers": [
+        {
+          "game": "switchyard",
+          "finding": "Authored finite spawn schedule delays release when entrance capacity is full."
+        },
+        {
+          "game": "moonline-express",
+          "finding": "Continuous randomized spawn interval tied to active elapsed time."
+        }
+      ],
+      "decision": "reuse-existing",
+      "reason": "Universal elapsed-time scheduling is already Core-owned; authored wave/capacity policies remain game-specific.",
+      "evidence": [
+        ".agent/runs/2026-10-31-arcade-workflow/reuse-review.md"
+      ],
+      "nextAction": "When adaptation is authorized, compose authored dispatch policy over the verified Core schedule contract; do not create a duplicate scheduler."
+    },
+    {
+      "id": "switchyard-authored-game",
+      "classification": "game-specific",
+      "responsibility": "Railway layout, destination matching, waves, score balance, artwork and tutorial",
+      "sources": [
+        "games/switchyard/source/src/simulation.mjs",
+        "games/switchyard/source/src/renderer.mjs"
+      ],
+      "alternatives": [],
+      "consumers": [
+        {
+          "game": "switchyard",
+          "finding": "These choices define the specific game and its fantasy."
+        }
+      ],
+      "decision": "keep-game-specific",
+      "reason": "Moving authored content into Core or a shared Kit would couple other games to Switchyard.",
+      "evidence": [
+        "games/switchyard/README.md"
+      ],
+      "nextAction": "Preserve intent during future conversion or independent review."
+    }
+  ]
+}

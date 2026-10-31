@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "game": "switchyard",
+  "id": "NXA-000017",
+  "status": "prototype",
+  "registryPending": true,
+  "sourceBuildIdentical": true,
+  "sourceFiles": 14,
+  "buildFiles": 14,
+  "payloadBytes": 1318275,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 11981,
+      "sha256": "9a0614a07a19be237a32f0897f185774fdcde8a58919137d29ea31ad5fe94466"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 2250,
+      "sha256": "38863a9fb538d217b7f089865fd4676b048731802c889c31e04929c07b032e1c"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 8432,
+      "sha256": "6056926b75c6f670daefcdef4dc69cc75187c2c49a5576487cba38780ce3a245"
+    },
+    {
+      "path": "src/checks.mjs",
+      "bytes": 10342,
+      "sha256": "cdb35473dfe726389658fe68c6844f9cf9fe2734e761a7f78bb0d63d45ff06bb"
+    },
+    {
+      "path": "src/constants.mjs",
+      "bytes": 1184,
+      "sha256": "96ee66eb588d8cd35b2aec8a2d9f685a9e80b73dc5f23edaf8011edb9b5625ae"
+    },
+    {
+      "path": "src/renderer.mjs",
+      "bytes": 21911,
+      "sha256": "50a12bf1ebbb2323082198a6ae6f4afe101ef0f0e574c83faf804df47e739bc1"
+    },
+    {
+      "path": "src/runtime.mjs",
+      "bytes": 3978,
+      "sha256": "dc7c7c3bab2744d4967dee7dc923e89b0eda0bfae5ade6ab5bf66d36861a999d"
+    },
+    {
+      "path": "src/simulation.mjs",
+      "bytes": 37565,
+      "sha256": "1254928e66fd745f638bde28e0b5ef1de1576e72017c145a1a5663951771264a"
+    },
+    {
+      "path": "src/storage.mjs",
+      "bytes": 2233,
+      "sha256": "c32e6c419bb3622cd8638a66c63bf4dcf822fab067b4fe1ca3a25b773c161844"
+    },
+    {
+      "path": "src/ui.mjs",
+      "bytes": 20242,
+      "sha256": "2d9dff241916a9d82ded202cf6b60772bd20dc38f6ccb6183a27a0045985ec06"
+    },
+    {
+      "path": "style.css",
+      "bytes": 12629,
+      "sha256": "1ba1417807229d6ff92b4d79272f1454ab3adf36371344bb5fa1c250f6b06fa6"
+    },
+    {
+      "path": "vendor/NexusEngine-LICENSE.txt",
+      "bytes": 1070,
+      "sha256": "4a0ae6ed06f277f289a4b0c20b6949640aa02bc491f0cb46b2be24d843256ca7"
+    },
+    {
+      "path": "vendor/nexusengine.mjs",
+      "bytes": 1184038,
+      "sha256": "ccee3bb178afdeef69e60b7ed67ed8d930a9a3717c39f333a68cfa2f54ce3f79"
+    },
+    {
+      "path": "vendor/provenance.json",
+      "bytes": 420,
+      "sha256": "eb0604ca0e3a4ba1f1b65e8865c60733942ddd47f82ff2009d9279e4a8c33703"
+    }
+  ],
+  "scope": "Structural inspection only; gameplay, browser and acceptance are not assessed."
+}

@@ -8,7 +8,8 @@
     "build:site": "node scripts/build-site.mjs",
     "build:registry": "node scripts/build-registry.mjs",
     "pretest": "node scripts/build-site.mjs",
-    "test": "node scripts/validate-repo.mjs && node tests/ids.test.mjs && node tests/manifests.test.mjs && node tests/registry.test.mjs && node tests/knockout-circuit-multiplayer.mjs && node tests/gothic-revolt-save.mjs && node --test tests/wrong-floor.test.mjs && node --test tests/arboria-planet-of-roots.test.mjs && node --test tests/switchyard.test.mjs tests/switchyard-campaign.test.mjs tests/switchyard-packaging.test.mjs"
+    "test": "node scripts/validate-repo.mjs && node tests/ids.test.mjs && node tests/manifests.test.mjs && node tests/registry.test.mjs && node tests/knockout-circuit-multiplayer.mjs && node tests/gothic-revolt-save.mjs && node --test tests/wrong-floor.test.mjs && node --test tests/arboria-planet-of-roots.test.mjs && node --test tests/switchyard.test.mjs tests/switchyard-campaign.test.mjs tests/switchyard-packaging.test.mjs && node --test tests/arcade-plugin.test.mjs",
+    "check:agent": "node plugins/nexus-arcade/scripts/validate-plugin.mjs --repo ."
   },
   "engines": { "node": ">=20" }
 }

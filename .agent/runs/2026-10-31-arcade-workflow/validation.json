@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-31",
+  "baseCommit": "c162c16b480e81e3044a335f17bb65348a25b8c3",
+  "status": "package-validated",
+  "checks": {
+    "fullRepositoryTestChain": "PASS",
+    "pluginTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "skillCreatorValidation": {
+      "passed": 5,
+      "failed": 0
+    },
+    "packageValidator": "PASS",
+    "switchyardInspection": {
+      "id": "NXA-000017",
+      "sourceBuildIdentical": true
+    },
+    "secondConsumerReview": {
+      "method": "source comparison",
+      "games": [
+        "moonline-express",
+        "last-call-cafe"
+      ],
+      "decision": "Do not extract; shared runtime contracts are not established."
+    }
+  },
+  "notRun": [
+    "client installation/enabling",
+    "fresh-client skill invocation",
+    "independent model forward-test (delegation thread limit)",
+    "extracted gameplay Kit runtime parity (no Kit extracted)"
+  ],
+  "preserved": [
+    "Switchyard and all other game code/builds",
+    "public registry pointers",
+    "NexusEngine Core and optional Kit repositories",
+    "Google Sheet and ticket records",
+    "personal client configuration"
+  ]
+}

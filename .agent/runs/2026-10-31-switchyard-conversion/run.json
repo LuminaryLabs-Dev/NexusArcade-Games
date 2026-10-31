@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-10-31-switchyard-conversion",
+  "stage": "candidate-integrated",
+  "game": "switchyard",
+  "nxaId": "NXA-000017",
+  "ideaId": null,
+  "identityNote": "No exact catalogue row found; no unrelated ID borrowed.",
+  "baseCommit": "1892d581821c407057226fbae7d5a41349c4a326",
+  "candidateCommit": "c162c16b480e81e3044a335f17bb65348a25b8c3",
+  "authority": "User requested rewriting the supplied game and adding it to NexusArcade-Games, then explicitly asked the assistant to write the code.",
+  "evidence": [
+    "games/switchyard/evidence/validation.json",
+    "games/switchyard/evidence/npm-test.txt"
+  ],
+  "recordOrigin": "Reconstructed from the verified conversion commit when repository run records were authorized.",
+  "nextAction": "Run actual browser and device checks, obtain independent gameplay/standard review before release promotion."
+}
