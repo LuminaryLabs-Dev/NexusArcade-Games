@@ -43,7 +43,7 @@ for(const [width,height,dpr] of [[390,640,2],[1280,720,1],[720,1200,1]]){
  viewport={width,height,left:0,top:0};Object.defineProperty(window,'devicePixelRatio',{value:dpr,configurable:true});app.renderer.resize();app.renderer.render();
  assert.ok(Number.isFinite(app.renderer.scale)&&app.renderer.scale>0);const origin=app.renderer.screenToWorld(app.renderer.offsetX,app.renderer.offsetY);assert.ok(Math.abs(origin.x)<1e-8&&Math.abs(origin.y)<1e-8);
 }
-// Compare unchanged authored rendering against the preserved original using the
+// Compare authored rendering, allowing only the reviewed station-label fit repair against the preserved original using the
 // same native Canvas adapter and empty title state. This is a pixel parity check,
 // not a claim about browser CSS, typography or physical touch.
 viewport={width:1200,height:720,left:0,top:0};Object.defineProperty(window,'devicePixelRatio',{value:1,configurable:true});
@@ -55,11 +55,19 @@ const fixtureA=fixture(),fixtureB=fixture();const originalSim=new sandbox.__orig
 const oldCanvas=createCanvas(1200,720),newCanvas=createCanvas(1200,720);
 for(const c of [oldCanvas,newCanvas]){c.parentElement={getBoundingClientRect:()=>viewport};c.getBoundingClientRect=()=>viewport;}
 const oldRender=new sandbox.__original.Renderer2D(oldCanvas,originalSim),newRender=new Renderer2D(newCanvas,fixtureB.sim);oldRender.resize();newRender.resize();oldRender.render();newRender.render();
-assert.deepEqual(oldCanvas.getContext('2d').getImageData(0,0,1200,720).data,newCanvas.getContext('2d').getImageData(0,0,1200,720).data);
+const oldPixels=oldCanvas.getContext('2d').getImageData(0,0,1200,720).data,newPixels=newCanvas.getContext('2d').getImageData(0,0,1200,720).data;
+let changedPixels=0;
+for(let i=0;i<oldPixels.length;i+=4){
+ if(oldPixels.slice(i,i+4).every((v,j)=>v===newPixels[i+j]))continue;
+ const x=(i/4)%1200,y=Math.floor(i/4/1200);
+ assert.ok(x>=1070&&x<1200&&[130,290,430,590].some(c=>Math.abs(y-c)<=22),'Unexpected visual change outside station label rows');
+ changedPixels++;
+}
+assert.ok(changedPixels>0,'Station label fit repair must produce a real visible difference');
 await writeFile(path.join(evidence,'original-empty-yard.png'),oldCanvas.toBuffer('image/png'));
 await writeFile(path.join(evidence,'converted-empty-yard.png'),newCanvas.toBuffer('image/png'));
 for(let i=0;i<10;i++){app=mountSwitchyard();assert.equal(frames.size,1);}
 app.dispose();assert.equal(frames.size,0);const state=app.sim.state;click('btn-play-standard');assert.equal(app.sim.state,state);
-const report={method:'Happy DOM + native Canvas, not Chromium',checks:['start','keyboard dispatch via Engine','signal button','pause/resume','train simulation and HUD','tutorial hidden-tab pause and explicit resume','three viewport/DPR projections','original/converted empty-yard pixel equality','ten mounts retain one loop','dispose removes input and frame'],passed:10,browserAcceptance:'NOT RUN',physicalMobile:'NOT RUN',cssLayout:'NOT RUN'};
+const report={method:'Happy DOM + native Canvas, not Chromium',checks:['start','keyboard dispatch via Engine','signal button','pause/resume','train simulation and HUD','tutorial hidden-tab pause and explicit resume','three viewport/DPR projections','original/converted parity outside intentional station-label fit repair','ten mounts retain one loop','dispose removes input and frame'],passed:10,browserAcceptance:'NOT RUN',physicalMobile:'NOT RUN',cssLayout:'NOT RUN'};
 await writeFile(path.join(evidence,'host-check.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
 await window.happyDOM.abort();window.close();

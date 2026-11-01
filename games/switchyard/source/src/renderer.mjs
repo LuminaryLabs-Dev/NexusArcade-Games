@@ -336,11 +336,12 @@ export class Renderer2D {
       ctx.font = 'bold 15px -apple-system, sans-serif';
       ctx.textAlign = 'left';
       ctx.textBaseline = 'middle';
-      ctx.fillText(`${st.symbol} ${st.label}`, 26, -6);
+      // Keep the accessible destination label inside its platform on every font fallback.
+      ctx.fillText(`${st.symbol} ${st.label}`, 26, -6, 68);
 
       ctx.fillStyle = st.glow;
       ctx.font = '11px -apple-system, sans-serif';
-      ctx.fillText(`TERMINAL`, 26, 12);
+      ctx.fillText(`TERMINAL`, 26, 12, 68);
 
       ctx.restore();
     }

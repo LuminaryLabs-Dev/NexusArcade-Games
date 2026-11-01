@@ -1,0 +1,19 @@
+{
+  "method": "Happy DOM + native Canvas, not Chromium",
+  "checks": [
+    "start",
+    "keyboard dispatch via Engine",
+    "signal button",
+    "pause/resume",
+    "train simulation and HUD",
+    "tutorial hidden-tab pause and explicit resume",
+    "three viewport/DPR projections",
+    "original/converted parity outside intentional station-label fit repair",
+    "ten mounts retain one loop",
+    "dispose removes input and frame"
+  ],
+  "passed": 10,
+  "browserAcceptance": "NOT RUN",
+  "physicalMobile": "NOT RUN",
+  "cssLayout": "NOT RUN"
+}
