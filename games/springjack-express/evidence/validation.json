@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "gameId": "NXA-000018",
+  "selectedPass": 4,
+  "passBudget": 50,
+  "baseCommit": "f8e26b24c18fad5ebf95bb03351240ab47428536",
+  "sourceBlob": "90047a8cc43106ea9dda5b734489333cbfa65255",
+  "buildSha256": "fbcfc9e67d02027f367d39621112aab9d7f2e8c6c1bd59b5dab9c157a6d1d8d9",
+  "buildBytes": 22668,
+  "authoring": "Authorized fallback game-specific Canvas prototype; no third-party artwork or copied game code; GUIDE-155 v0.2, GUIDE-026, GUIDE-140 and Arcade Game Standard reviewed. Nex bootstrap guide consulted; native Nex and Arcade Builder plugin installation not verified. No Core or Kit changes.",
+  "passes": [
+    {
+      "pass": 1,
+      "sha256": "a77b39cb263d82bf08307db62d5ac79bd12b26168916a099cedab10694f19bc2",
+      "finding": "Playable initial launch/flight rendered; opening countdown incorrectly displayed 4:00; initial flight missed rewarding collisions."
+    },
+    {
+      "pass": 2,
+      "sha256": "c6bae65379e9f888f41b0ee3b4704aea1faca6e5bcf968c12cb0788b773ed0ce",
+      "finding": "Fixed countdown formatting, forgiving contact, deterministic gameplay RNG independent of effects; 21 checks passed; accelerated run 84 stamps against 8 target; upgrades too early."
+    },
+    {
+      "pass": 3,
+      "sha256": "927d2f98466bea82ca83f98eba620f1ce10eb69fac05fe65530e6bf12b5f9e64",
+      "finding": "65 delivery target; two gated progression layers with 180/400 token costs and 35/105-second minimum times; 21 checks passed; portrait view too small."
+    },
+    {
+      "pass": 4,
+      "sha256": "fbcfc9e67d02027f367d39621112aab9d7f2e8c6c1bd59b5dab9c157a6d1d8d9",
+      "finding": "Responsive logical canvas, camera adaptation and final-minute sound; desktop checks rerun, mobile touch and resize passed, nine full simulated branch scenarios. Selected as provisional prototype."
+    }
+  ],
+  "checks": {
+    "method": "Real Chromium loaded exact HTML via page.set_content. HTTP localhost and file navigation blocked by administrator. Actual UI interactions and Canvas rendering; 300/420-second edge tests and full runs accelerated through actual simulation functions, not 300-second wall-clock recordings.",
+    "passed": [
+      "title settings",
+      "clock starts 5:00",
+      "launch starts flight",
+      "pause shell",
+      "real short pause freeze and lease consumption",
+      "pause settings",
+      "resume",
+      "restart resets progress and lease",
+      "fixed-step full run results",
+      "earned bounce chain and gates",
+      "earned layered upgrades",
+      "bounded scene resources",
+      "post-results input locked",
+      "branch 0 prerequisites and spend",
+      "branch 1 prerequisites and spend",
+      "branch 2 prerequisites and spend",
+      "cumulative pause expiry and 420-second wall cap",
+      "stall recovery",
+      "exit to title",
+      "no JS errors",
+      "source/build byte parity"
+    ],
+    "additional": [
+      "Node inline script syntax",
+      "metadata slug and ID format",
+      "no external runtime asset URLs",
+      "mobile emulated touch launch and resize"
+    ],
+    "fullRun": {
+      "active": 300,
+      "stamps": 88,
+      "bestChain": 17,
+      "score": 83857,
+      "tier": 2,
+      "branch": "Control"
+    },
+    "branchScenarios": [
+      {
+        "seed": 49217,
+        "branch": 0,
+        "stamps": 96,
+        "score": 88142,
+        "active": 300,
+        "tier": 2
+      },
+      {
+        "seed": 87,
+        "branch": 0,
+        "stamps": 89,
+        "score": 76228,
+        "active": 300,
+        "tier": 2
+      },
+      {
+        "seed": 1991,
+        "branch": 0,
+        "stamps": 94,
+        "score": 92791,
+        "active": 300,
+        "tier": 2
+      },
+      {
+        "seed": 49217,
+        "branch": 1,
+        "stamps": 88,
+        "score": 83857,
+        "active": 300,
+        "tier": 2
+      },
+      {
+        "seed": 87,
+        "branch": 1,
+        "stamps": 81,
+        "score": 77623,
+        "active": 300,
+        "tier": 2
+      },
+      {
+        "seed": 1991,
+        "branch": 1,
+        "stamps": 105,
+        "score": 105229,
+        "active": 300,
+        "tier": 2
+      },
+      {
+        "seed": 49217,
+        "branch": 2,
+        "stamps": 87,
+        "score": 96943,
+        "active": 300,
+        "tier": 2
+      },
+      {
+        "seed": 87,
+        "branch": 2,
+        "stamps": 81,
+        "score": 88122,
+        "active": 300,
+        "tier": 2
+      },
+      {
+        "seed": 1991,
+        "branch": 2,
+        "stamps": 105,
+        "score": 117437,
+        "active": 300,
+        "tier": 2
+      }
+    ]
+  },
+  "notRun": [
+    "native Builder Kit bootstrap and executable stage gates",
+    "actual NexusEngine consumer integration",
+    "full repository npm test (no networked sandbox checkout)",
+    "ordinary URL navigation, real installed offline lifecycle",
+    "full real-time 300/420-second sessions",
+    "independent review, human/device playtest, audio output and hardware performance qualification",
+    "registry and Website promotion"
+  ],
+  "quality": "Candidate only; remaining pass budget 46, not represented as completed. Not release-approved."
+}

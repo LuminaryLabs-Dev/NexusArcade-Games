@@ -1,0 +1,21 @@
+{
+  "id": "NXA-000018",
+  "title": "Springjack Express",
+  "slug": "springjack-express",
+  "description": "Time a spring-powered launch, bounce off clockwork critters, slam into combo chains and deliver an urgent parcel before the five-minute festival closes.",
+  "genre": "Momentum Arcade",
+  "status": "prototype",
+  "version": "0.1.0",
+  "featured": false,
+  "sortOrder": 18,
+  "offlineReady": true,
+  "runtimeDependencies": [],
+  "controls": [
+    "Space: launch or slam",
+    "A / D or arrows: steer",
+    "Escape: pause",
+    "M: mute",
+    "Pointer / touch: on-screen controls"
+  ],
+  "registryPending": true
+}

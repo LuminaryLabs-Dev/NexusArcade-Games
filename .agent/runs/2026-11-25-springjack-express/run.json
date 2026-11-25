@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-11-25-springjack-express",
+  "stage": "candidate-integrated",
+  "game": "springjack-express",
+  "nxaId": "NXA-000018",
+  "ideaId": null,
+  "identityNote": "Repository metadata checked all 17 existing IDs; next unused NXA-000018 selected. No exact matching title in Raw Ideas A:B; no existing IDEA identity borrowed.",
+  "baseCommit": "f8e26b24c18fad5ebf95bb03351240ab47428536",
+  "candidateBlob": "90047a8cc43106ea9dda5b734489333cbfa65255",
+  "authority": "User explicitly asked to add the game and push to main, then reaffirmed use of NexusArcade-Games and to build it; authorized candidate scope.",
+  "evidence": [
+    "games/springjack-express/evidence/validation.json"
+  ],
+  "nextAction": "Bootstrap native Builder Kit in a compatible executor, verify Engine reuse map, run full repo suite and independent gameplay/installer review; iterate remaining justified passes, then promote registry and Website selection after gates."
+}
