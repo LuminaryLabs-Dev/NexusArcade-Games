@@ -1,0 +1,22 @@
+{
+  "id": "NXA-000019",
+  "title": "Cargo Crush",
+  "slug": "cargo-crush",
+  "description": "Break industrial supply containers, evade security strikes and bank as much cargo as possible in a five-minute salvage shift.",
+  "genre": "Arcade Salvage / Resource Logistics",
+  "status": "prototype",
+  "version": "0.3.0",
+  "featured": false,
+  "sortOrder": 19,
+  "offlineReady": true,
+  "runtimeDependencies": [],
+  "controls": [
+    "WASD / arrows: move",
+    "Mouse / hold click: aim and cut",
+    "Space: auto-target",
+    "1–3: upgrade",
+    "Escape: pause",
+    "Pointer / touch: menu and movement controls"
+  ],
+  "registryPending": true
+}

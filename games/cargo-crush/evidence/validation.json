@@ -1,0 +1,39 @@
+{
+  "candidate": "Cargo Crush v0.3.0",
+  "base": "b358d8d2f44b73ed1a4cf481a6c562462919946f",
+  "sourceIdentity": {
+    "reviewedHtmlSha256": "8302d688080e435f6754aff7b381319a978452025e5c6e8a8d779219f04d1490",
+    "assets": 59,
+    "assetMedia": "MC-12 crate v0.2.0 and original menu layers",
+    "packaging": "Reviewed HTML game logic unchanged; nine ordered local JS media shards reassemble the original embedded JSON byte-for-byte.",
+    "gitBlobHashes": {
+      "index.html": "41135d280dfa95c3aada412fc547c9c003d70981",
+      "media/part-00.js": "73eb46fe25e9a29f090af9968ecf114d203adce3",
+      "media/part-01.js": "c1e0b99dfaae9e8d16ee27523f4cbae834ee3f83",
+      "media/part-02.js": "94679bc7a76b15f9881066572d85efa9250bac77",
+      "media/part-03.js": "5bb3849b1b76dd9c9d93b3fd0488d83d31d8a130",
+      "media/part-04.js": "83de69d890f5cc7e897ca51e8f126c50815e8d61",
+      "media/part-05.js": "0bc0af2e35ba492c6e9cd67ece28c529c707504f",
+      "media/part-06.js": "9bce1100eed482eec9b8583d8b3684c2d052b111",
+      "media/part-07.js": "fc76239893ef676ba42d6c827115040e3d7e9eb8",
+      "media/part-08.js": "a51cb873d825ede5a771ca521c861ca742167ad6"
+    }
+  },
+  "checks": {
+    "originalCoreRegressionAgainstExactBundle": "PASS 19/19 (updated title hit-region assertion for spatial menu)",
+    "mediaScriptExecutionAndExactReconstruction": "PASS 9/9 shards, 59 assets",
+    "sourceBuildParity": "PASS identical blob IDs",
+    "browser": "BLOCKED: Chromium file navigation ERR_BLOCKED_BY_ADMINISTRATOR",
+    "repositoryWideSuite": "NOT RUN: GitHub DNS unavailable in sandbox",
+    "builderKit": "NOT RUN: native Codex executor unavailable",
+    "publicInstall": "NOT RUN",
+    "registry": "PENDING"
+  },
+  "protected": [
+    "all existing games",
+    "registry and Website pins",
+    "GitHub Actions"
+  ],
+  "authority": "User requested push to main for Arcade; candidate integration only until required runtime review is cleared.",
+  "next": "Run actual browser/menu/game lifecycle and Builder Kit qualification, then register immutable manifest and activate approved Website consumer pin."
+}
